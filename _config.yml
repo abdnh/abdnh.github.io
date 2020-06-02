@@ -1,0 +1,8 @@
+name: ANH25
+title: ANH25's blog
+permalink: /blog/:year/:month/:day/:title
+url: https://ANH25.github.io
+email: abd.nh25@gmail.com
+markdown: kramdown
+encoding: utf-8
+safe: true

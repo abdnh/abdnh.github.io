@@ -1,1 +1,10 @@
-Hello, World!
+---
+layout: default
+title: ANH25
+permalink: index.html
+---
+	<ul class="posts">
+	  {% for post in site.posts %}
+	    <li><time datetime="{{ post.date | date: "%Y-%m-%d"}}">{{ post.date | date: "%d/%m/%Y" }}</time> » <a href="{{ post.url }}" title="{{ post.title }}" dir="{% if post.layout == "post" %}ltr{% else %}rtl{% endif %}">{{ post.title }}</a></li>
+	  {% endfor %}
+	</ul>
