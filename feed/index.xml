@@ -10,7 +10,7 @@ layout: null
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
 	<id>urn:uuid:c9b04d1a-a946-485c-a6e2-b5745e097d65</id>
 	<author>
-		<name>ANH25</name>
+		<name>Abd NH</name>
 		 <uri>{{ site.url }}/</uri>
 		<email>{{ site.email }}</email>
 	</author>
