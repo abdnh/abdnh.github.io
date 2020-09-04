@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="{% if page.layout == "post" or page.layout == "default" %}en{% elsif page.layout == "ar-post" %}ar{% endif %}">
 	<head>
 		<meta charset="utf-8">
 		<title>{{ page.title }}</title>
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		<link rel="alternate" type="application/atom+xml" href="/feed/" title="Atom Feed">
+		<link rel="icon" href="data:image/gif;base64,R0lGODlhEAAQAAAAACwAAAAAAQABAAACASgAOw==">
 	</head>
 	<body>
 		<main>
