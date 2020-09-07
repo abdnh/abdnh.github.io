@@ -12,7 +12,6 @@ layout: null
 	<author>
 		<name>Abd NH</name>
 		 <uri>{{ site.url }}/</uri>
-		<email>{{ site.email }}</email>
 	</author>
 
 	{% for post in site.posts limit: 8 %}

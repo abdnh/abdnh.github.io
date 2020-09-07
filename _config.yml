@@ -2,7 +2,6 @@ name: Abd NH
 title: Abd NH's blog
 permalink: /:title
 url: https://abdnh.github.io
-email: abd.nh25@gmail.com
 markdown: kramdown
 encoding: utf-8
 safe: true
