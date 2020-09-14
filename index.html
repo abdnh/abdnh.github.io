@@ -3,7 +3,7 @@ layout: default
 title: Abd NH
 permalink: index.html
 ---
-	<ul class="posts">
+	<ul id="posts">
 	  {% for post in site.posts %}
 	    <li><time datetime="{{ post.date | date: "%Y-%m-%d"}}">{{ post.date | date: "%d/%m/%Y" }}</time> » <a href="{{ post.url }}" title="{{ post.title }}" dir="{% if post.layout == "post" %}ltr{% else %}rtl{% endif %}">{{ post.title }}</a></li>
 	  {% endfor %}
