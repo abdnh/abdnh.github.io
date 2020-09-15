@@ -21,7 +21,8 @@
                 <li><a id="source" href="https://github.com/abdnh/abdnh.github.io">Source</a></li>
             </ul>
         </footer>
-        <select name="lang" id="lang-select">
+        <div id="no-js-warn" style="color: red;">Language switching requires JavaScript</div>
+        <select name="lang" id="lang-select" disabled>
             <option id="en">English</option>
             <option id="ar">العربية</option>
         </select>
@@ -33,6 +34,8 @@
             const langSelector = document.getElementById('lang-select');
             const postList = document.getElementById('posts');
             const footer = document.getElementsByTagName('footer')[0];
+            document.getElementById('no-js-warn').style.display = 'none';
+            langSelector.disabled = false;
 
             function switchToAr() {
                 home.textContent = 'مدونة';
