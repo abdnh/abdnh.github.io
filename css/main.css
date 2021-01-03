@@ -1,3 +1,7 @@
+body {
+    background-color: #FFF8E7;
+}
+
 footer ul {
     display: flex;
     flex-wrap: wrap;
