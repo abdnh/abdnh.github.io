@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-#main-header > h1 {
+#main-header>h1 {
     font-size: 1em;
 }
 
@@ -20,10 +20,12 @@ footer ul {
     font-weight: bold;
     padding: 0;
 }
+
 footer ul li {
     margin: 5px;
 }
-@media screen and (max-width : 800px) {
+
+@media screen and (max-width: 800px) {
     ul#posts {
         text-align: center;
     }
@@ -32,9 +34,11 @@ footer ul li {
         text-align: center;
     }
 }
+
 footer {
     border-top: 1px solid #d5d5d5;
 }
+
 header[class *="post-header"] {
     border-bottom: 1px solid #d5d5d5;
     display: flex;
@@ -42,12 +46,15 @@ header[class *="post-header"] {
     justify-content: space-between;
     align-items: center;
 }
+
 header[class *="post-header ar"] {
     flex-direction: row-reverse;
 }
+
 h1, time, article {
     margin: 5px;
 }
+
 [class="post-meta ar"] {
     display: block;
 }
