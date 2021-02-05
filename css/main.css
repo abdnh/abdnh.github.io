@@ -32,9 +32,6 @@ footer ul li {
 }
 
 @media screen and (max-width: 800px) {
-    ul#posts {
-        text-align: center;
-    }
     footer ul {
         flex-direction: column;
         text-align: center;
