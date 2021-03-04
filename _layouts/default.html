@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{% if page.layout == " post" or page.layout=="default" %}en{% elsif page.layout=="ar-post" %}ar{% endif %}">
+<html lang="ar">
 
 <head>
     <meta charset="utf-8">
@@ -10,92 +10,19 @@
     <link rel="icon" href="data:image/gif;base64,R0lGODlhEAAQAAAAACwAAAAAAQABAAACASgAOw==">
 </head>
 
-<body>
+<body dir="rtl">
     <main>
         {{ content }}
     </main>
     <footer>
         <ul>
-            <li><a id="home" href="/">Blog</a></li>
-            <li><a id="about" href="/about">About</a></li>
-            <li><a id="feed" rel="alternate" type="application/atom+xml" href="/feed">Feed</a></li>
+            <li><a id="home" href="/">مدونة</a></li>
+            <li><a id="about" href="/about">حول</a></li>
+            <li><a id="feed" rel="alternate" type="application/atom+xml" href="/feed">موجز ويب</a></li>
             <li><a id="github" rel="author" href="https://github.com/abdnh">github.com/abdnh</a></li>
-            <li><a id="source" href="https://github.com/abdnh/abdnh.github.io">Source</a></li>
+            <li><a id="source" href="https://github.com/abdnh/abdnh.github.io">مصدر</a></li>
         </ul>
     </footer>
-    <div id="lang-section">
-        <div id="no-js-warn" style="color: rgb(255, 70, 70);">Language switching requires JavaScript / يتطلب تغيير اللغة
-            دعم جافا سكربت</div>
-        <label id="lang-select-label" for="lang-select">Switch Language:</label>
-        <select name="lang" id="lang-select" disabled>
-            <option id="en">English</option>
-            <option id="ar">العربية</option>
-        </select>
-    </div>
-    <script>
-        const home = document.getElementById('home');
-        const about = document.getElementById('about');
-        const feed = document.getElementById('feed');
-        const source = document.getElementById('source');
-        const langSection = document.getElementById("lang-section");
-        const langLabel = document.getElementById("lang-select-label");
-        const langSelector = document.getElementById('lang-select');
-        const postList = document.getElementById('posts');
-        const footer = document.getElementsByTagName('footer')[0];
-        document.getElementById('no-js-warn').style.display = 'none';
-        langSelector.disabled = false;
-
-        function switchToAr() {
-            home.textContent = 'مدونة';
-            about.textContent = 'حول';
-            feed.textContent = 'موجز ويب';
-            source.textContent = 'مصدر';
-            langSection.dir = "rtl";
-            langLabel.textContent = "تغيير اللغة:";
-            localStorage.setItem('lang', 'ar');
-            if (postList) postList.dir = 'rtl';
-            footer.dir = 'rtl';
-        }
-        function switchToEn() {
-            home.textContent = 'Blog';
-            about.textContent = 'About';
-            feed.textContent = 'Feed';
-            source.textContent = 'Source';
-            langSection.dir = "ltr";
-            langLabel.textContent = "Switch Language:";
-            localStorage.setItem('lang', 'en');
-            if (postList) postList.dir = 'ltr';
-            footer.dir = 'ltr';
-        }
-        function onSelectChange() {
-            let val = langSelector.selectedOptions[0].id;
-            if (val === 'en') {
-                switchToEn();
-            }
-            else {
-                switchToAr();
-            }
-        }
-        function selectLang(lang) {
-            let opt = langSelector.querySelector('#' + lang);
-            opt.selected = true;
-            onSelectChange();
-        }
-
-        langSelector.addEventListener('change', onSelectChange);
-
-        let storedLang = localStorage.getItem('lang');
-        if (storedLang) {
-            selectLang(storedLang);
-        }
-        else if (navigator.language.startsWith('ar')) {
-            selectLang('ar');
-        }
-        else {
-            selectLang('en');
-        }
-
-    </script>
 </body>
 
 </html>

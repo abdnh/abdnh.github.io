@@ -1,5 +1,5 @@
 ---
-layout: ar-post
+layout: post
 title: "تلخيص كتاب «الأسماء كلها»"
 date: 2021-02-05
 uuid: 9b447887-74b9-48e0-9855-f8f6f5ac2d0f
