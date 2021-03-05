@@ -62,3 +62,12 @@ h1, time, article {
 .post-meta {
     display: block;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
