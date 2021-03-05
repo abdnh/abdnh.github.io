@@ -11,6 +11,8 @@
 img {
     height: auto;
     max-width: 100%;
+    display: block;
+    margin: 0 auto;
 }
 
 #main-header>img {
