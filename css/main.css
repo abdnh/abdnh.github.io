@@ -1,3 +1,7 @@
+:root {
+    direction: rtl;
+}
+
 #main-header {
     display: flex;
     flex-direction: column;
