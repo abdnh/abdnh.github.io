@@ -5,7 +5,8 @@ date: 2021-03-06
 uuid: 852ad03-c049-452f-af08-2aeec0f6d036
 ---
 
-سأنشر هنا جولاتي مع برامج صخر كما قلت في [مقالة صخر]({% post_url 2021-03-06-sakhr %}).
+سأنشر هنا جولاتي مع برامج صخر كما قلت في [مقالة صخر]({% post_url 2021-03-06-sakhr %})،
+بالإضافة إلى مراجع وروابط على الإنترنت لكل ما يتعلق بصخر.
 
 ---
 
@@ -40,6 +41,39 @@ uuid: 852ad03-c049-452f-af08-2aeec0f6d036
 المطور الذي فعل هذا خرج مؤخرًا سنة 2020 بهذا السر. [^4] [^5] [^6]
 
 بوب كان مفيدًا لمايكروسوفت بعد موته أكثر مما كان في حياته على حد قول مطور آخر. [^7]
+
+## روابط خارجية
+
+سأضع هنا روابط حول كل ما يخص صخر مما أجده على الإنترنت.
+
+- ويكيبيديا:
+  - [حاسوب صخر](https://ar.wikipedia.org/wiki/%D8%AD%D8%A7%D8%B3%D9%88%D8%A8_%D8%B5%D8%AE%D8%B1)
+  - [شركة صخر](https://ar.wikipedia.org/wiki/%D8%B5%D8%AE%D8%B1_(%D8%B4%D8%B1%D9%83%D8%A9))
+  - [محمد الشارخ](https://ar.wikipedia.org/wiki/%D9%85%D8%AD%D9%85%D8%AF_%D8%A7%D9%84%D8%B4%D8%A7%D8%B1%D8%AE)، مؤسس شركة صخر.
+  - [نبيل علي](https://ar.wikipedia.org/wiki/%D9%86%D8%A8%D9%8A%D9%84_%D8%B9%D9%84%D9%8A)، من العقول الكبيرة خلف صخر.
+- مقابلات ومحاضرة على منصة TED لمؤسس شركة صخر محمد الشارخ:
+  - <https://www.youtube.com/watch?v=aBFWu4H9Bjg>
+  - <https://www.youtube.com/watch?v=lkJL-vWq2LQ>
+  - <https://www.youtube.com/watch?v=XqkH6M2BPLE>
+- مقالات منوعة:
+  - [شركة صخر ، كيف كانت و الى أين انتهت ؟! - حسوب](https://io.hsoub.com/culture/26794-%D8%B4%D8%B1%D9%83%D8%A9-%D8%B5%D8%AE%D8%B1-%D9%83%D9%8A%D9%81-%D9%83%D8%A7%D9%86%D8%AA-%D9%88-%D8%A7%D9%84%D9%89-%D8%A3%D9%8A%D9%86-%D8%A7%D9%86%D8%AA%D9%87%D8%AA)
+  - [شركة “ضخر” العربية للبرمجيات … حقيقة تم تحويلُها إلى حُلم - بالعربية](https://bilarabiya.net/13055.html)
+  - [تعرف على المهندس المصري نبيل علي محمد وإسهاماته في المعالجة الآلية للغة العربية - إم آي تي تكنولوجي ريفيو](https://technologyreview.ae/%D8%A5%D8%B3%D9%87%D8%A7%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D9%87%D9%86%D8%AF%D8%B3-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A-%D9%86%D8%A8%D9%8A%D9%84-%D8%B9%D9%84%D9%8A-%D9%85%D8%AD%D9%85%D8%AF/)
+  - [من هو الدكتور نبيل علي الذي تحتفل غوغل بميلاده الـ 82؟ - العربية](https://www.alarabiya.net/last-page/2020/01/03/%D9%85%D9%86-%D9%87%D9%88-%D8%A7%D9%84%D8%AF%D9%83%D8%AA%D9%88%D8%B1-%D9%86%D8%A8%D9%8A%D9%84-%D8%B9%D9%84%D9%8A-%D8%A7%D9%84%D8%B0%D9%8A-%D8%AA%D8%AD%D8%AA%D9%81%D9%84-%D8%AC%D9%88%D8%AC%D9%84-%D8%A8%D9%85%D9%8A%D9%84%D8%A7%D8%AF%D9%87-%D8%A7%D9%84%D9%80-82%D8%9F)
+  - [Game Gulf - The Magazine](https://the-magazine.org/11/game-gulf)
+  - [ممكن احد يعطينا معلومات عن شركة صخر واين هي اليوم - البوابة الرقمية ADSLGATE](https://www.adslgate.com/dsl/showpost.php?p=1830060)
+- روابط تحميل:
+  - برامج الأسرة:
+    - <https://www.aboharon.com/2017/04/windows-95-arabic.html>
+    - <https://www.4shared.com/rar/l1F71K2k/___online.html>
+  - برامج حاسوب صخر مع محاكي:
+    - <https://www.mediafire.com/file/73r8u8za51wx79b/Complete_Arabic_MSX_%2528Rare_Pack%2529.zip/file>
+    - روابط بديلة لمجموعة برامج منصة MSX عمومًا مع محاكي منفصل:
+      - <http://www.emulator-zone.com/doc.php/msx/bluemsx.html>
+      - <https://download.file-hunter.com/Games/MSX1/ROM/>
+      - <https://download.file-hunter.com/Games/MSX2/ROM/>
+- محتوى ثري على يوتيوب: [كمبيوتر صخر - يوتيوب](https://www.youtube.com/results?search_query=%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1+%D8%B5%D8%AE%D8%B1)
+
 
 [microsoft-bob]: https://en.wikipedia.org/wiki/Microsoft_Bob
 
