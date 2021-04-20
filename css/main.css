@@ -57,6 +57,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 h1, time, article {
@@ -84,4 +85,8 @@ figcaption {
 
 .footnotes {
     border-top: 1px solid #d5d5d5;
+}
+
+a {
+    overflow-wrap: break-word;
 }
