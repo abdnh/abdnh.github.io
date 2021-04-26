@@ -16,7 +16,7 @@ img {
     height: auto;
     max-width: 100%;
     display: block;
-    margin: 0 auto;
+    margin: 5px auto;
 }
 
 #main-header>img {
@@ -85,6 +85,15 @@ figcaption {
 
 .footnotes {
     border-top: 1px solid #d5d5d5;
+    font-size: smaller;
+}
+
+[role="doc-endnote"] {
+    transition: background-color 0.5s ease-in;
+}
+
+[role="doc-endnote"]:target {
+    background-color: rgba(255,255,125,0.5);
 }
 
 a {
