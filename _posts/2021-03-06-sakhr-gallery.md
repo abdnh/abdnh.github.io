@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "معرض صخر"
-date: 2021-03-06
 uuid: 852ad03-c049-452f-af08-2aeec0f6d036
 ---
 

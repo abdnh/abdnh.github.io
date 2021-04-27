@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "أفلام وثائقية"
-date: 2021-04-20
 uuid: 6f61d2b6-cdaa-4b69-8514-7c3cbfe3bfcb
 ---
 
