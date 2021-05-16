@@ -1,0 +1,9 @@
+.tc-tagged-RTL .tc-tiddler-title,
+.tc-tagged-RTL .tc-tags-wrapper,
+.tc-tagged-RTL .tc-tiddler-body {
+    direction: rtl;
+}
+
+.tc-tiddler-frame.tc-tagged-RTL .tc-tiddler-controls {
+    float: left;
+}
