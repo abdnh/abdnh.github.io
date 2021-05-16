@@ -1,12 +1,12 @@
 .PHONY: all serve
 
-all: notes/output/index.html
+all: curious/output/index.html
 
-notes/output/index.html:
-	tiddlywiki notes/ --output notes --build index
+curious/output/index.html:
+	tiddlywiki curious/ --output curious --build index
 
 serve:
 	jekyll serve
 
 tiddlywiki-serve:
-	tiddlywiki notes/ --listen
+	tiddlywiki curious/ --listen
