@@ -9,4 +9,4 @@ serve:
 	jekyll serve
 
 tiddlywiki-serve:
-	tiddlywiki --listen
+	tiddlywiki notes/ --listen
