@@ -5,3 +5,9 @@ url: https://abdnh.github.io
 markdown: kramdown
 encoding: utf-8
 safe: true
+
+plugins:
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from

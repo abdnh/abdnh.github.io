@@ -2,7 +2,11 @@
 layout: default
 ---
 <header class="post-header">
+	{% if page.categories contains "books" %}
+	<h1>كتاب: {{ page.title }}</h1>
+	{% else %}
 	<h1>{{ page.title }}</h1>
+	{% endif %}
 	<div>
 		<time datetime="{{ page.date | date: "%Y-%m-%d"}}" title="تاريخ الإنشاء">{{ page.date | date: "%d/%m/%Y"}}</time>
 		{% if page.modified %}

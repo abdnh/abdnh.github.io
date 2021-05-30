@@ -1,7 +1,10 @@
 ---
 layout: post
-title: "تلخيص كتاب «الأسماء كلها»"
+title: "الأسماء كلها"
 uuid: 9b447887-74b9-48e0-9855-f8f6f5ac2d0f
+categories: books
+redirect_from:
+    - /alasmaaekolaha
 ---
 
 هذا تلخيص لكتاب «الأسماء كلها» لكاتبه أبو حامد القطان. نص الكتاب متوفر مجانًا على [قناة الكتاب على تلغرام](https://t.me/Asmaae_Kollaha)،
@@ -176,11 +179,11 @@ uuid: 9b447887-74b9-48e0-9855-f8f6f5ac2d0f
 
 طبق الكاتب تقنيات المذكرات السابق ذكرها وابتكر أنظمة عربية مفيدة جدًا ننقل أمثلة منها هنا:
 
-![نظام المشابك العربي للأرقام](assets/images/ar-numbers-peg-system.png)
+![نظام المشابك العربي للأرقام](../assets/images/ar-numbers-peg-system.png)
 
-![النظام الصوتي العربي للأرقام](assets/images/ar-numbers-major-system.png)
+![النظام الصوتي العربي للأرقام](../assets/images/ar-numbers-major-system.png)
 
-![نظام المشابك للأحرف العربية](assets/images/ar-letters-peg-system.png)
+![نظام المشابك للأحرف العربية](../assets/images/ar-letters-peg-system.png)
 
 ## أفكار مشاريع
 
