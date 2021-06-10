@@ -15,7 +15,7 @@ permalink: index.html
 	{% else %}
 	{% assign title = post.title %}
 	{% endif %}
-	<li><time datetime="{{ post.date | date: " %Y-%m-%d"}}">{{ post.date | date: "%d/%m/%Y" }}</time> » <a
-			href="{{ post.url }}" dir="rtl">{{ title }}</a></li>
+	<li><time datetime="{{ post.date | date: "%Y-%m-%d"}}">{{ post.date | date: "%d/%m/%Y" }}</time> » <a
+			href="{{ post.url }}">{{ title }}</a></li>
 	{% endfor %}
 </ul>
