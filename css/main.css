@@ -95,3 +95,7 @@ figcaption {
 a {
     overflow-wrap: break-word;
 }
+
+#posts > li {
+    margin-bottom: 10px;
+}
