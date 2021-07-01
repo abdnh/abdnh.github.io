@@ -10,12 +10,26 @@ layout: default
 	<div>
 		<time datetime="{{ page.date | date: "%Y-%m-%d"}}" title="تاريخ الإنشاء">{{ page.date | date: "%d/%m/%Y"}}</time>
 		{% if page.modified %}
-		–
+		|
 		<time datetime="{{ page.modified | date: "%Y-%m-%d"}}" title="تاريخ آخر تعديل">{{ page.modified | date: "%d/%m/%Y"}}</time>
+		{% endif %}
+		{% if page.changes %}
+			| <a href="#list-of-changes" id="list-of-changes-link">آخر التعديلات</a>
 		{% endif %}
 	</div>
 </header>
-
 <article class="post">
 	{{ content }}
+	{% if page.changes %}
+		<footer id="list-of-changes">
+			<details>
+				<summary>آخر التعديلات</summary>
+				<ul>
+					{% for change in page.changes %}
+						<li>{{ change }}</li>
+					{% endfor %}
+				</ul>
+			</details>
+		</footer>
+	{% endif %}
 </article>

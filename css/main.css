@@ -1,5 +1,7 @@
 :root {
     direction: rtl;
+    --highlight-color: rgba(255,255,125,0.5);
+    --section-border: 1px solid #d5d5d5;
 }
 
 #main-header {
@@ -27,7 +29,7 @@ body {
     background-color: #FFF8E7;
 }
 
-footer ul {
+#nav-links ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -36,28 +38,29 @@ footer ul {
     padding: 0;
 }
 
-footer ul li {
+#nav-links ul li {
     margin: 5px;
 }
 
 @media screen and (max-width: 800px) {
-    footer ul {
+    #nav-links ul {
         flex-direction: column;
         text-align: center;
     }
 }
 
-footer {
-    border-top: 1px solid #d5d5d5;
+#nav-links {
+    border-top: var(--section-border);
 }
 
 .post-header {
-    border-bottom: 1px solid #d5d5d5;
+    border-bottom: var(--section-border);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding-bottom: 5px;
 }
 
 h1, time, article {
@@ -80,7 +83,7 @@ figcaption {
 }
 
 .footnotes {
-    border-top: 1px solid #d5d5d5;
+    border-top: var(--section-border);
     font-size: smaller;
 }
 
@@ -89,7 +92,7 @@ figcaption {
 }
 
 [role="doc-endnote"]:target {
-    background-color: rgba(255,255,125,0.5);
+    background-color: var(--highlight-color);
 }
 
 a {
@@ -98,4 +101,17 @@ a {
 
 #posts > li {
     margin-bottom: 10px;
+}
+
+#list-of-changes-link {
+    margin-right: 5px;
+}
+
+#list-of-changes {
+    border-top: var(--section-border);
+    padding: 10px;
+}
+
+#list-of-changes:target {
+    background-color: var(--highlight-color);
 }
