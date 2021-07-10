@@ -115,3 +115,14 @@ a {
 #list-of-changes:target {
     background-color: var(--highlight-color);
 }
+
+.post {
+    margin: 5px auto;
+    width: 1008px;
+}
+
+@media screen and (max-width: 1023px) {
+    .post {
+		width: auto;
+	}
+}
