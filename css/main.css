@@ -1,5 +1,4 @@
 :root {
-    direction: rtl;
     --highlight-color: rgba(255,255,125,0.5);
     --section-border: 1px solid #d5d5d5;
 }
