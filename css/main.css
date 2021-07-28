@@ -112,10 +112,6 @@ a {
     padding: 10px;
 }
 
-#list-of-changes:target {
-    background-color: var(--highlight-color);
-}
-
 .quote {
     font: italic 22px / 1.4em sans-serif;
     padding: 5px 10px 5px 20px;

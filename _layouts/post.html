@@ -22,17 +22,16 @@ layout: default
 	</header>
 	<article>
 		{{ content }}
-		{% if page.changes %}
-			<footer id="list-of-changes">
-				<details>
-					<summary>آخر التعديلات</summary>
-					<ul>
-						{% for change in page.changes %}
-							<li>{{ change }}</li>
-						{% endfor %}
-					</ul>
-				</details>
-			</footer>
-		{% endif %}
 	</article>
+	{% if page.changes %}
+		<article id="list-of-changes">
+			<h2>آخر التعديلات</h2>
+			<ul>
+				{% for change in page.changes %}
+					<li><time datetime="{{ change.date | date: "%Y-%m-%d"}}">{{ change.date | date: "%d/%m/%Y" }}</time>»
+					{{ change.descr }}</li>
+				{% endfor %}
+			</ul>
+		</article>
+	{% endif %}
 </div>
