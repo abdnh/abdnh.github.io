@@ -103,6 +103,8 @@ a {
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
+    border-bottom: 1px dashed #383838;
+    padding-bottom: 0.5rem;
 }
 
 #posts > li > a {
@@ -110,6 +112,8 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
     padding-right: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 #list-of-changes-link {
@@ -130,13 +134,13 @@ a {
     box-shadow: rgb(221, 221, 221) 4px 4px;
 }
 
-.post {
+main {
     margin: 5px auto;
     width: 1008px;
 }
 
 @media screen and (max-width: 1023px) {
-    .post {
+    main {
 		width: auto;
 	}
 }
