@@ -39,7 +39,11 @@ body {
 }
 
 #nav-links ul li {
-    margin: 5px;
+    margin: 0.5rem;
+}
+
+#nav-links a {
+    text-decoration: none;
 }
 
 @media screen and (max-width: 800px) {
