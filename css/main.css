@@ -103,6 +103,10 @@ a {
     overflow-wrap: break-word;
 }
 
+#posts {
+    padding-right: 1rem;
+}
+
 #posts > li {
     margin-bottom: 1rem;
     display: flex;
@@ -112,7 +116,6 @@ a {
 }
 
 #posts > li > a {
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     padding-right: 0.5rem;
