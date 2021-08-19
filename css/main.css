@@ -1,3 +1,5 @@
+@import "github.css";
+
 :root {
     --highlight-color: rgba(255,255,125,0.5);
     --section-border: 1px solid #d5d5d5;
@@ -150,4 +152,31 @@ main {
     main {
 		width: auto;
 	}
+}
+
+.highlight {
+    text-align: left;
+    direction: ltr;
+    background-color: #FEFAC1;
+    word-wrap: break-word;
+    overflow: auto;
+    padding: 0.5em;
+    margin: 1em;
+    border: 1px solid black;
+}
+
+.rouge-table {
+    width: 100%;
+}
+
+.rouge-table td, rouge-table th {
+    border: unset;
+}
+
+.highlight > pre {
+    margin: 0px;
+}
+
+.post li {
+    margin-bottom: 1rem;
 }
