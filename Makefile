@@ -8,5 +8,5 @@ curious/output/index.html:
 serve:
 	jekyll serve
 
-tiddlywiki-serve:
+tw-serve:
 	tiddlywiki curious/ --listen
