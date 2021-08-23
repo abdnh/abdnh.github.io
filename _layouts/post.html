@@ -13,25 +13,11 @@ layout: default
 			<time datetime="{{ page.date | date: "%Y-%m-%d"}}" title="تاريخ الإنشاء">{{ page.date | date: "%d/%m/%Y"}}</time>
 			{% if page.modified %}
 			|
-			<time datetime="{{ page.modified | date: "%Y-%m-%d"}}" title="تاريخ آخر تعديل">{{ page.modified | date: "%d/%m/%Y"}}</time>
-			{% endif %}
-			{% if page.changes %}
-				| <a href="#list-of-changes" id="list-of-changes-link">آخر التعديلات</a>
+			<a href="https://github.com/abdnh/abdnh.github.io/commits/master/{{ page.path }}"><time datetime="{{ page.modified | date: "%Y-%m-%d"}}" title="تاريخ آخر تعديل">{{ page.modified | date: "%d/%m/%Y"}}</time></a>
 			{% endif %}
 		</div>
 	</header>
 	<article>
 		{{ content }}
 	</article>
-	{% if page.changes %}
-		<article id="list-of-changes">
-			<h2>آخر التعديلات</h2>
-			<ul>
-				{% for change in page.changes %}
-					<li><time datetime="{{ change.date | date: "%Y-%m-%d"}}">{{ change.date | date: "%d/%m/%Y" }}</time>»
-					{{ change.descr }}</li>
-				{% endfor %}
-			</ul>
-		</article>
-	{% endif %}
 </div>

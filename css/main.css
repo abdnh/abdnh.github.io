@@ -125,15 +125,6 @@ a {
     text-decoration: none;
 }
 
-#list-of-changes-link {
-    margin-right: 5px;
-}
-
-#list-of-changes {
-    border-top: var(--section-border);
-    padding: 10px;
-}
-
 .quote {
     font: italic 22px / 1.4em sans-serif;
     padding: 5px 10px 5px 20px;

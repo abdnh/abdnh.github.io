@@ -6,10 +6,6 @@ categories: books
 redirect_from:
     - /alasmaaekolaha
 modified: 2021-07-29
-changes:
-  -
-    date: 2021-07-29
-    descr: ذكر إضافة نظام المذكرات الصوتي لأنكي
 ---
 
 هذا تلخيص لكتاب «الأسماء كلها» لكاتبه أبو حامد القطان. نص الكتاب متوفر مجانًا على [قناة الكتاب على تلغرام](https://t.me/Asmaae_Kollaha)،
