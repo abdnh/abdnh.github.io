@@ -1,8 +1,0 @@
-created: 20210616113548555
-modified: 20210811024837192
-tags: RTL
-title: آخر المنشورات
-type: text/vnd.tiddlywiki
-
-{{{ [all[tiddlers]!is[system]!sort[created]limit[10]] -[is[current]] -[tag[$:/tags/Stylesheet]] -[tag[unlisted]]}}}
-
