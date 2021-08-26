@@ -85,7 +85,7 @@ for i = length(input) - 1 downto 0 do
 لكي يرتبها البرنامج، ثم اضغط «إيقاف» واستخدم خياري «التقدم بخطوة» و«الرجوع بخطوة» لفحص عمل الخوارزمية خطوة بخطوة.
 
 {::nomarkdown}
-<iframe src="https://www.abdnh.net/counting-sort-demo/?lang=ar" allow="fullscreen" width="1008px" height="800"></iframe>
+<iframe src="https://www.abdnh.net/counting-sort-demo/?lang=ar" allow="fullscreen"></iframe>
 {:/}
 
 اضغط على هذا الرابط إذا كانت نافذة البرنامج لا تظهر كليا أو هناك مشكلة في عرضها: <https://www.abdnh.net/counting-sort-demo/?lang=ar>

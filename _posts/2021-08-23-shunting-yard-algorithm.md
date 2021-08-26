@@ -272,7 +272,7 @@ output: 2 2 3 ^ ^
 لكي يحسبه البرنامج، ثم اضغط «إيقاف» واستخدم خياري «التقدم بخطوة» و«الرجوع بخطوة» لفحص عمل الخوارزمية خطوة بخطوة.
 
 {::nomarkdown}
-<iframe src="https://www.abdnh.net/shunting-yard-algorithm-demo/?lang=ar" width="1008px" height="800"></iframe>
+<iframe src="https://www.abdnh.net/shunting-yard-algorithm-demo/?lang=ar"></iframe>
 {:/}
 
 اضغط على هذا الرابط إذا كانت نافذة البرنامج لا تظهر كليا أو هناك مشكلة في عرضها: <https://www.abdnh.net/shunting-yard-algorithm-demo/?lang=ar>

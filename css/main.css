@@ -145,6 +145,11 @@ main {
 	}
 }
 
+iframe {
+    width: 100%;
+    height: 800px;
+}
+
 .highlight {
     text-align: left;
     direction: ltr;
