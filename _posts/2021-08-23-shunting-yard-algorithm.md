@@ -312,6 +312,14 @@ output: 2 2 3 ^ ^
 
 لتطبيق للخوارزمية بلغة C، انظر هذه المكتبة التي كتبتها: <https://github.com/abdnh/math-eval>
 
+## وصلات خارجية
+
+سأضع هنا وصلات إنترنت للاستزادة أكثر حول الموضوع:
+
+- فيديوهات يوتيوب على قناة Computerphile:
+  - [Reverse Polish Notation and The Stack](https://www.youtube.com/watch?v=7ha78yWRDlE)
+  - [Reverse Polish Grows on Trees](https://www.youtube.com/watch?v=TrfcJCulsF4)
+
 [^1]: انظر [ويكيبيديا](https://ar.wikipedia.org/wiki/%D8%AA%D8%B1%D8%AA%D9%8A%D8%A8_%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA_%D8%A7%D9%84%D8%AD%D8%B3%D8%A7%D8%A8%D9%8A%D8%A9#%D8%AA%D8%B1%D8%AA%D9%8A%D8%A8_%D9%85%D8%B3%D8%AA%D9%88%D9%89_%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA) حول ترتيب العمليات.
 
 [^2]: ليس هناك في الحقيقة إجماع حول هذه القاعدة لكن يبدو أن الحساب من اليمين (right-associative) هو الشائع بين لغات البرمجة. انظر <https://codeplea.com/exponentiation-associativity-options> لمزيد من التفاصيل.
