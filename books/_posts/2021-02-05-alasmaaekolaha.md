@@ -5,7 +5,6 @@ uuid: 9b447887-74b9-48e0-9855-f8f6f5ac2d0f
 categories: books
 redirect_from:
     - /alasmaaekolaha
-modified: 2021-07-29
 ---
 
 هذا تلخيص لكتاب «الأسماء كلها» لكاتبه أبو حامد القطان. نص الكتاب متوفر مجانًا على [قناة الكتاب على تلغرام](https://t.me/Asmaae_Kollaha)،

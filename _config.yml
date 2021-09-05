@@ -9,7 +9,9 @@ safe: true
 plugins:
   - jekyll-redirect-from
   - jekyll-toc
+  - jekyll-last-modified-at
 
 whitelist:
   - jekyll-redirect-from
   - jekyll-toc
+  - jekyll-last-modified-at
