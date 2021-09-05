@@ -8,6 +8,8 @@ safe: true
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-toc
 
 whitelist:
   - jekyll-redirect-from
+  - jekyll-toc

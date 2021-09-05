@@ -18,6 +18,9 @@ layout: default
 		</div>
 	</header>
 	<article>
-		{{ content }}
+		{% if page.description %}
+		<div id="post-description">{{ page.description }}</div>
+		{% endif %}
+		{{ content | toc }}
 	</article>
 </div>

@@ -177,3 +177,9 @@ iframe {
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
+
+#post-description {
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
