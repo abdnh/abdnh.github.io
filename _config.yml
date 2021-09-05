@@ -15,3 +15,6 @@ whitelist:
   - jekyll-redirect-from
   - jekyll-toc
   - jekyll-last-modified-at
+
+include:
+  - CNAME
