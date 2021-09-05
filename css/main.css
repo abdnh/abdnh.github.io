@@ -183,3 +183,8 @@ iframe {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+#toc {
+    border: 1px solid black;
+    background-color: #FEFACF;
+}
