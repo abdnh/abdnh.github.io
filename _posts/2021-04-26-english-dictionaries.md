@@ -212,9 +212,9 @@ I can no longer put up with him (لا أستطيع تحمله بعد الآن).
 عدا عن ذلك، القاموس فيه ميزات مفيدة يشترك فيها مع قواميس أخرى ذكرتها سابقًا،
 لذلك لن أكرر الحديث عنها هنا.
 
-![واجهة قاموس Longman](assets\images\longman-dictionary-1.png){:width="600px"}
+![واجهة قاموس Longman](assets/images/longman-dictionary-1.png){:width="600px"}
 
-![شرح نحوي في قاموس Longman](assets\images\longman-dictionary-2.png){:width="600px"}
+![شرح نحوي في قاموس Longman](assets/images/longman-dictionary-2.png){:width="600px"}
 
 ### [Collins Dictionary](https://www.collinsdictionary.com/)
 
