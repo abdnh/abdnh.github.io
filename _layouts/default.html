@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.title }}</title>
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="alternate" type="application/atom+xml" href="/feed/" title="Atom Feed">
     <link rel="icon" type="image/png" href="favicon.png">
@@ -20,7 +20,7 @@
             <li><a id="about" href="/about">حول</a></li>
             <li><a id="feed" rel="alternate" type="application/atom+xml" href="/feed">موجز ويب</a></li>
             <li><a id="wiki" rel="author" href="curious/">ويكي</a></li>
-            <li><a id="source" href="https://github.com/abdnh/abdnh.github.io">مصدر</a></li>
+            <li><a id="source" href="{{ site.repo_url }}">مصدر</a></li>
         </ul>
     </footer>
 </body>

@@ -1,7 +1,6 @@
-name: Abd NH
-title: مدونة على منحنى النسيان
 permalink: /:categories/:title
-url: https://abdnh.github.io
+repo_url: https://github.com/abdnh/abdnh.github.io
+title: abdnh.net
 markdown: kramdown
 encoding: utf-8
 safe: true
