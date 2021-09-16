@@ -12,4 +12,6 @@ tw-serve:
 	tiddlywiki curious/ --listen
 
 deploy:
+	git checkout master
+	git push
 	bundle exec jgd -c _config.yml
