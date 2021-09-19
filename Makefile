@@ -1,4 +1,4 @@
-.PHONY: all serve tw-serve deploy
+.PHONY: all serve twserve deploy
 
 all: curious/output/index.html
 
@@ -8,7 +8,7 @@ curious/output/index.html:
 serve:
 	bundle exec jekyll serve
 
-tw-serve:
+twserve:
 	tiddlywiki curious/ --listen
 
 deploy:
