@@ -53,6 +53,9 @@ body {
         flex-direction: column;
         text-align: center;
     }
+    #posts > li {
+        font-size: 0.8em;
+    }
 }
 
 #nav-links {
