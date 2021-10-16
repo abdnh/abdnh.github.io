@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "خوارزمية «ساحة تحويل السكك الحديدية» لحساب العبارات الرياضية"
-tags: cs algorithm
+tags: computer algorithm
 uuid: 621bd7c1-2890-48a6-8579-4b36196530ce
 ---
 

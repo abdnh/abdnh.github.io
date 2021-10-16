@@ -9,11 +9,23 @@ plugins:
   - jekyll-redirect-from
   - jekyll-toc
   - jekyll-last-modified-at
+  - jekyll-archives
 
 whitelist:
   - jekyll-redirect-from
   - jekyll-toc
   - jekyll-last-modified-at
+  - jekyll-archives
 
 include:
   - CNAME
+
+jekyll-archives:
+  enabled: ['categories', 'tags']
+  layout: archive
+  layouts:
+    category: category-archive
+    tag: tag-archive
+  permalinks:
+    tag: '/tag/:name/'
+    category: '/category/:name/'

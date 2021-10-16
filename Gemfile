@@ -6,6 +6,7 @@ group :jekyll_plugins do
   gem "jekyll-toc", "~> 0.17.1"
   gem 'jgd', '~> 1.12'
   gem "jekyll-last-modified-at"
+  gem 'jekyll-archives'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
