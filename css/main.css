@@ -191,3 +191,12 @@ iframe {
     border: 1px solid black;
     background-color: #FEFACF;
 }
+
+#tags {
+    margin-top: 5px;
+    padding-right: 5px;
+}
+
+#tags > a {
+    margin-left: 0.5em;
+}

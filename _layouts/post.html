@@ -10,11 +10,18 @@ layout: default
 		<h1>{{ page.title }}</h1>
 		{% endif %}
 		<div>
-			<time datetime="{{ page.date | date: "%Y-%m-%d"}}" title="تاريخ الإنشاء">{{ page.date | date: "%d/%m/%Y"}}</time>
-			{% if page.last_modified_at != page.date %}
-			|
-			<a href="https://github.com/abdnh/abdnh.github.io/commits/master/{{ page.path }}"><time datetime="{{ page.last_modified_at | date: "%Y-%m-%d"}}" title="آخر تعديل">{{ page.last_modified_at | date: "%d/%m/%Y"}}</time></a>
-			{% endif %}
+			<div>
+				<time datetime="{{ page.date | date: "%Y-%m-%d"}}" title="تاريخ الإنشاء">{{ page.date | date: "%d/%m/%Y"}}</time>
+				{% if page.last_modified_at != page.date %}
+				|
+				<a href="https://github.com/abdnh/abdnh.github.io/commits/master/{{ page.path }}"><time datetime="{{ page.last_modified_at | date: "%Y-%m-%d"}}" title="آخر تعديل">{{ page.last_modified_at | date: "%d/%m/%Y"}}</time></a>
+				{% endif %}
+			</div>
+			<div id="tags">
+				{% for tag in page.tags %}
+				<a href="/tag/{{ tag }}">{{ site.data.translations[tag] | default: tag }}</a>
+				{% endfor %}
+			</div>
 		</div>
 	</header>
 	<article>
