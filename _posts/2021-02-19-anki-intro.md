@@ -2,7 +2,7 @@
 layout: post
 title: "تعريف قصير ببرنامج Anki لتذكر أي معلومة"
 uuid: 43212f57-3915-45c7-9b85-a6289249de50
-tags: anki memory
+tags: anki memory computer
 ---
 
 [أنكي][anki-wiki] (Anki) هو برنامج يساعد على تذكر أي معلومة.

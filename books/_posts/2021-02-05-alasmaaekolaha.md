@@ -3,6 +3,7 @@ layout: post
 title: "الأسماء كلها"
 uuid: 9b447887-74b9-48e0-9855-f8f6f5ac2d0f
 categories: books
+tags: memory anki
 redirect_from:
     - /alasmaaekolaha
 ---

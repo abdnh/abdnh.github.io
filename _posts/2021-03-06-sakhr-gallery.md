@@ -2,6 +2,7 @@
 layout: post
 title: "معرض صخر"
 uuid: 852ad03-c049-452f-af08-2aeec0f6d036
+tags: computer
 ---
 
 سأنشر هنا جولاتي مع برامج صخر كما قلت في [مقالة صخر]({% post_url 2021-03-06-sakhr %})،

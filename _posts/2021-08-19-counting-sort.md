@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "خوارزمية الترتيب بالعد"
-tags: computer algorithm
+tags: computer algorithms
 uuid: a60601fa-4103-4573-8d99-d7f57c05009a
 ---
 
