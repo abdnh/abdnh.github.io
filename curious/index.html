@@ -169,6 +169,8 @@ Error message and password prompt
 
 <li>$:/layout</li>
 
+<li>$:/plugins/kookma/refnotes</li>
+
 <li>$:/plugins/tiddlywiki/highlight</li>
 
 <li>$:/SiteSubtitle</li>
@@ -282,6 +284,8 @@ Error message and password prompt
 <li>كيف نتعلم مقابل كيف نظن أننا نتعلم - روبرت بيورك</li>
 
 <li>لعنة عجلة هامستر المعرفة - لم من الصعب جدا أن يصبح المرء خبيرا حقيقا - universeofmemory.com</li>
+
+<li>لم لا تعلمنا المدارس كيف نتعلم؟</li>
 
 <li>لم لا تعمل معظم تطبيقات التكرار المتباعد وكيفية إصلاح ذلك - universeofmemory.com</li>
 
@@ -10238,6 +10242,421 @@ Error message and password prompt
 <div created="20210516222939985" modified="20210516222949241" title="$:/layout" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>$:/core/ui/PageTemplate</pre>
 </div>
+<div author="Mohammad Rahmani" core-version="&gt;=5.2.0" dependents="bibtex" description="references, citations, footnotes and abbreviations in Tiddlywiki" list="readme license history" name="Refnotes" plugin-type="plugin" source="https://github.com/kookma/TW-Refnotes" title="$:/plugins/kookma/refnotes" type="application/json" version="1.7.3" revision="0" bag="default">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/plugins/kookma/refnotes/history&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/history&quot;,
+            &quot;created&quot;: &quot;20201211095732935&quot;,
+            &quot;modified&quot;: &quot;20210918162309893&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;Full change log  https://kookma.github.io/TW-Refnotes/#ChangeLog\n\n* ''1.7.2'' -- 2021.09.19 -- stable release based on TW 5.2.0\n* ''1.6.0'' -- 2021.04.02 -- development (beta) of new release\n* ''1.0.3'' -- 2019.03.20 -- first stable release\n&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/license&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/license&quot;,
+            &quot;created&quot;: &quot;20201211095732937&quot;,
+            &quot;modified&quot;: &quot;20210917161905837&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;Distributed under an MIT license.\n\nCopyright (c) 2019-2021 [[Mohammad Rahmani|https://github.com/kookma]]\n\n&lt;&lt;&lt;\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \&quot;Software\&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \&quot;AS IS\&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n&lt;&lt;&lt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/macros/abbr&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/macros/abbr&quot;,
+            &quot;created&quot;: &quot;20181022071907838&quot;,
+            &quot;modified&quot;: &quot;20210917161905845&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define abbr(term:\&quot;\&quot;, dict:\&quot;Glossary\&quot;)\n&lt;$set name=\&quot;abbreviation\&quot; \n tiddler=&lt;&lt;__dict__&gt;&gt;\n index=&lt;&lt;__term__&gt;&gt;\n emptyValue=\&quot;Term not found\&quot;&gt;\n &lt;span class=refnotes-abbr&gt;&lt;abbr title=&lt;&lt;abbreviation&gt;&gt; &gt;&lt;$text text=&lt;&lt;__term__&gt;&gt; /&gt;&lt;/abbr&gt;&lt;/span&gt;\n&lt;/$set&gt;\n\\end\n&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/macros/apa/authors&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/macros/apa/authors&quot;,
+            &quot;created&quot;: &quot;20210918154536732&quot;,
+            &quot;modified&quot;: &quot;20210918182843051&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define show-authors-in-citation()\n&lt;!-- used in ref macro APA7 --&gt;\n&lt;$vars number-authors={{{[&lt;__tid__&gt;get[bibtex-author]split[ and ]count[]]}}}&gt;\n&lt;$list filter=\&quot;[&lt;number-authors&gt;compare:number:gt[2]]\&quot; emptyMessage=\&quot;\&quot;\&quot;&lt;$view tiddler=&lt;&lt;__tid__&gt;&gt; field=\&quot;bibtex-author\&quot;/&gt;\&quot;\&quot;\&quot;&gt;\n&lt;$text text={{{[&lt;__tid__&gt;get[bibtex-author]split[ and ]first[]addsuffix[, et al.]]}}} /&gt;\n&lt;/$list&gt;\n&lt;/$vars&gt;\n\\end\n\n\\define show-authors-in-references()\n&lt;!-- display authors as comma separated list, removes \&quot;and\&quot; --&gt;\n&lt;!-- used in template --&gt;\n\\whitespace trim\n&lt;$vars authorlist={{!!bibtex-author}} replace1=\&quot; and \&quot; replace2=\&quot;,([^,]*)$\&quot; &gt;\n&lt;$vars authors={{{ [&lt;authorlist&gt;search-replace:g:regexp&lt;replace1&gt;,[, ]search-replace:g:regexp&lt;replace2&gt;,[, and $1]]}}} &gt;\n&lt;&lt;authors&gt;&gt;\n&lt;/$vars&gt;\n&lt;/$vars&gt;\n\\end\n\n\n&lt;!--\n- These macros help to format the author list in citation and references in closer format to APA7\n- The author list in referenc list is not exactly wahat APA7 standard says! to be fixed\n--&gt;\n&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/macros/apa/ref&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/macros/apa/ref&quot;,
+            &quot;created&quot;: &quot;20210407044450831&quot;,
+            &quot;modified&quot;: &quot;20210918174611274&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define ref(tid)\n\\import $:/plugins/kookma/refnotes/macros/apa/authors\n\\whitespace trim\n&lt;$set name=\&quot;ref-tid\&quot; tiddler=&lt;&lt;__tid__&gt;&gt; field=\&quot;title\&quot; emptyValue=\&quot;RefNotFound\&quot;&gt;\n&lt;div class=\&quot;refnotes-tooltip refcls\&quot;&gt;\n&lt;$reveal type=\&quot;match\&quot; default=&lt;&lt;ref-tid&gt;&gt; text=\&quot;RefNotFound\&quot;&gt;\n&lt;$link overrideClass=\&quot;link-refcls\&quot;&gt;[&lt;$view tiddler=&lt;&lt;__tid__&gt;&gt; field=\&quot;title\&quot;/&gt;]&lt;/$link&gt;\n&lt;div class=\&quot;refnotes-tooltiptext ref-notfound\&quot;&gt;&lt;b&gt;Warning&lt;/b&gt;: Reference Not Found.&lt;br&gt;Click to create it:&lt;&lt;create-notexisted-ref \&quot;$tid$\&quot;&gt;&gt;&lt;/div&gt;\n&lt;/$reveal&gt;\n&lt;$reveal type=\&quot;nomatch\&quot; default=&lt;&lt;ref-tid&gt;&gt; text=\&quot;RefNotFound\&quot;&gt;\n&lt;&lt;show-authors-in-citation&gt;&gt; (&lt;$view tiddler=&lt;&lt;__tid__&gt;&gt; field=\&quot;bibtex-year\&quot;/&gt;)\n&lt;div class=\&quot;refnotes-tooltiptext\&quot;&gt;\n&lt;$macrocall $name=\&quot;displayref-onhover\&quot; refTid=&lt;&lt;ref-tid&gt;&gt; /&gt;\n&lt;/div&gt;\n&lt;/$reveal&gt;\n&lt;/div&gt;\n&lt;/$set&gt;\n\\end&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/macros/apa/showrefs&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/macros/apa/showrefs&quot;,
+            &quot;created&quot;: &quot;20190117195536649&quot;,
+            &quot;modified&quot;: &quot;20210918174611753&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define showrefs(filter:\&quot;[&lt;currentTiddler&gt;]\&quot;, title:\&quot;Empty\&quot;, class:\&quot;ref-list\&quot;, emptyMessage:\&quot;\&quot;)\n\\import $:/plugins/kookma/refnotes/macros/apa/authors\n&lt;$vars leftDelimiter=\&quot;&lt;&lt;ref \&quot;&gt;\n&lt;$list filter=\&quot;[subfilter&lt;__filter__&gt;search:text:literal&lt;leftDelimiter&gt;limit[1]]\&quot; variable=null emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt; &gt;&lt;!-- check to see if there is any citation --&gt;\n&lt;$reveal tag=\&quot;div\&quot; type=\&quot;nomatch\&quot; default=\&quot;Empty\&quot; text=&lt;&lt;__title__&gt;&gt; &gt;\n&lt;h2&gt;$title$&lt;/h2&gt;\n&lt;/$reveal&gt;\n&lt;$wikify name=\&quot;mylist\&quot; text=\&quot;\&quot;\&quot;\n&lt;$list filter=&lt;&lt;__filter__&gt;&gt; &gt;\n&lt;$macrocall $name=\&quot;find-refs\&quot; tid=&lt;&lt;currentTiddler&gt;&gt; /&gt;\n&lt;/$list&gt;\n\&quot;\&quot;\&quot;&gt;\n&lt;ol class=\&quot;$class$\&quot;&gt;\n&lt;$list filter=\&quot;[enlist&lt;mylist&gt;trim[]sort[]]\&quot; variable=\&quot;reference\&quot;&gt;\n\n&lt;$vars currentType={{{[&lt;reference&gt;get[bibtex-entry-type]lowercase[]] ~[[miscellaneous]]}}} &gt;\n&lt;$set name=\&quot;bodyLookup\&quot; \n      filter=\&quot;[all[tiddlers+shadows]tag[$:/tags/Refnotes/ReflistTemplate]contains:list&lt;currentType&gt;] +[limit[1]get[title]]\&quot;\n            value=&lt;&lt;bodyLookup&gt;&gt; \n      emptyValue=\&quot;$:/plugins/kookma/refnotes/templates/reflist/default\&quot;&gt;\n&lt;$transclude tiddler=&lt;&lt;bodyLookup&gt;&gt; field=\&quot;text\&quot; mode=\&quot;inline\&quot;/&gt;\n&lt;/$set&gt;\n&lt;/$vars&gt;\n\n&lt;/$list&gt;\n&lt;/ol&gt;\n&lt;/$wikify&gt;\n&lt;/$list&gt;\n&lt;/$vars&gt;\n\\end&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/macros/bibtex/find-refs&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/macros/bibtex/find-refs&quot;,
+            &quot;created&quot;: &quot;20181213121411187&quot;,
+            &quot;modified&quot;: &quot;20210917161905873&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define find-refs(tid)\n&lt;$vars regexp=\&quot;(?g)&lt;&lt;ref .+?&gt;&gt;\&quot;\nregexp2='&lt;&lt;ref \&quot;*(.*?)\&quot;*&gt;&gt;'\nregexp3=\&quot;^'(.*?)'\&quot;\nregexp4=\&quot;\\[\\[(.*?)\\]\\]\&quot;\n&gt;\n&lt;$list filter=\&quot;[[$tid$]regexprefs:text&lt;regexp&gt;]\&quot;&gt;\n&lt;$list filter=\&quot;[all[current]regexprefs&lt;regexp2&gt;]\&quot;&gt;\n&lt;$list filter=\&quot;[all[current]regexprefs&lt;regexp3&gt;] ~[all[current]]\&quot; &gt;\n&lt;$list filter=\&quot;[all[current]regexprefs&lt;regexp4&gt;] ~[all[current]]\&quot; variable=p&gt;\n&lt;&lt;pwrapper&gt;&gt;\n&lt;/$list&gt;\n&lt;/$list&gt;\n&lt;/$list&gt;\n&lt;/$list&gt;\n&lt;/$vars&gt;\n\\end\n\n\\define pwrapper() \n[[[[$(p)$]]]]\n\\end&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/macros/bibtex/process-entries&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/macros/bibtex/process-entries&quot;,
+            &quot;created&quot;: &quot;20210405065852415&quot;,
+            &quot;modified&quot;: &quot;20210917161905883&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define title-tolowercase()\n&lt;$vars curTitle=&lt;&lt;currentTiddler&gt;&gt; newTitle={{{[&lt;currentTiddler&gt;lowercase[]]}}}&gt;\n&lt;$list filter=\&quot;[&lt;curTitle&gt;!match&lt;newTitle&gt;]\&quot; variable=null&gt;\n&lt;$action-sendmessage $message=\&quot;tm-rename-tiddler\&quot; from=&lt;&lt;currentTiddler&gt;&gt; to=&lt;&lt;newTitle&gt;&gt; /&gt;\n&lt;/$list&gt;\n&lt;/$vars&gt;\n\\end\n\n\\define tag-entries()\n&lt;!-- change entry type to lower case --&gt;\n&lt;$action-setfield $tiddler=&lt;&lt;currentTiddler&gt;&gt; bibtex-entry-type={{{[&lt;currentTiddler&gt;get[bibtex-entry-type]lowercase[]]}}} /&gt;\n&lt;!-- add bibtex-entry --&gt;\n&lt;$fieldmangler&gt;\n&lt;$action-sendmessage $message=\&quot;tm-add-tag\&quot; $param=\&quot;bibtex-entry\&quot; /&gt;\n&lt;/$fieldmangler&gt;\n\\end\n\n\\define process-entries(title:\&quot;Process New Bibtex Entries\&quot;)\n&lt;$button&gt; $title$\n&lt;$list filter=\&quot;[has[bibtex-title]]\&quot;&gt;\n&lt;&lt;tag-entries&gt;&gt;\n&lt;&lt;title-tolowercase&gt;&gt;\n&lt;/$list&gt;\n&lt;/$button&gt;\n\\end&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/macros/bibtex/regexprefs.js&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/macros/bibtex/regexprefs.js&quot;,
+            &quot;text&quot;: &quot;/*\\\ntitle: $:/plugins/kookma/macro/bibtex/regexprefs.js\ntype: application/javascript\nmodule-type: filteroperator\n\nFilter operator for regexp matching and returning result. All results are returned if global flag used. All sub-groups are returned if not global and sub-group hits are found.\n\nThis is a hacked version of core macro: $:/core/modules/filters/regexp.js\n\n\\*/\n(function(){\n\n/*jslint node: true, browser: true */\n/*global $tw: false */\n\&quot;use strict\&quot;;\n\n/*\nExport our filter function\n*/\nexports.regexprefs = function(source,operator,options) {\n\tvar results = [],\n\t\tfieldname = (operator.suffix || \&quot;title\&quot;).toLowerCase(),\n\t\tregexpString, regexp, flags = \&quot;\&quot;, match, global,\n\t\tgetFieldString = function(tiddler,title) {\n\t\t\tif(tiddler) {\n\t\t\t\treturn tiddler.getFieldString(fieldname);\n\t\t\t} else if(fieldname === \&quot;title\&quot;) {\n\t\t\t\treturn title;\n\t\t\t} else {\n\t\t\t\treturn null;\n\t\t\t}\n\t\t};\n\t// Process flags and construct regexp\n\tregexpString = operator.operand;\n\tmatch = /^\\(\\?([gim]+)\\)/.exec(regexpString);\n\tif(match) {\n\t\tflags = match[1];\n\t\tregexpString = regexpString.substr(match[0].length);\n\t} else {\n\t\tmatch = /\\(\\?([gim]+)\\)$/.exec(regexpString);\n\t\tif(match) {\n\t\t\tflags = match[1];\n\t\t\tregexpString = regexpString.substr(0,regexpString.length - match[0].length);\n\t\t}\n\t}\n\ttry {\n\t\tregexp = new RegExp(regexpString,flags);\n\t} catch(e) {\n\t\treturn [\&quot;\&quot; + e];\n\t}\n\n\tglobal = /g/.test(flags) ;\n\n\t// Process the incoming tiddlers\n\tif(operator.prefix === \&quot;!\&quot;) {\n\t\tsource(function(tiddler,title) {\n\t\t\tvar text = getFieldString(tiddler,title);\n\t\t\tif(text !== null) {\n\t\t\t\tif(!regexp.exec(text)) {\n\t\t\t\t\tresults.push(title);\n\t\t\t\t}\n\t\t\t}\n\t\t});\n\t} else {\n\t\tsource(function(tiddler,title) {\n\t\t\tvar text = getFieldString(tiddler,title), ret=\&quot;\&quot;;\n\t\t\tif(text !== null) {\n\t\t\t\tret = text.match(regexp) ;\n\t\t\t\tif(ret !==null) {\n\t\t\t\t\tif(global) {\n\t\t\t\t\t\tresults.push.apply(results,ret)  ; //DEBUG\n\t\t\t\t\t} else {\n\t\t\t\t\t\t// if there are  sub groups return sub groups START\n\t\t\t\t\t\tif(ret.length &gt; 1)  {     // return sub groups\n\t\t\t\t\t\t\tresults = results.concat(ret.slice(1)) ;\n\t\t\t\t\t\t} else { // if no sub-groups\n\t\t\t\t\t\t\tresults.push(ret[0]);\n\t\t\t\t\t\t} \n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t});\n\t}\n\treturn results;\n};\n\n})();&quot;,
+            &quot;type&quot;: &quot;application/javascript&quot;,
+            &quot;module-type&quot;: &quot;filteroperator&quot;,
+            &quot;created&quot;: &quot;20190120190755258&quot;,
+            &quot;modified&quot;: &quot;20210917161905893&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/macros/bibtex/utility&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/macros/bibtex/utility&quot;,
+            &quot;created&quot;: &quot;20210407045329557&quot;,
+            &quot;modified&quot;: &quot;20210917161905902&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define displayref-onhover(refTid)\n&lt;$set name=\&quot;ref-tid\&quot; value=&lt;&lt;__refTid__&gt;&gt; &gt;\n&lt;$link overrideClass=\&quot;link-refcls\&quot; to=&lt;&lt;ref-tid&gt;&gt; &gt;\n&lt;$list filter=\&quot;[&lt;ref-tid&gt;get[bibtex-entry-type]lowercase[]!match[website]]\&quot; variable=null\nemptyMessage=\&quot;\&quot;\&quot;&lt;span class=\&quot;ref-author\&quot;&gt;&lt;$view tiddler=&lt;&lt;ref-tid&gt;&gt; field=\&quot;bibtex-url\&quot;/&gt;.&lt;/span&gt;\&quot;\&quot;\&quot;&gt;\n&lt;span class=\&quot;ref-author\&quot;&gt;&lt;$view tiddler=&lt;&lt;ref-tid&gt;&gt; field=\&quot;bibtex-author\&quot;/&gt;.&lt;/span&gt;\n&lt;/$list&gt;\n&lt;/$link&gt;\n&lt;$view tiddler=&lt;&lt;ref-tid&gt;&gt; field=\&quot;bibtex-title\&quot;/&gt;. (&lt;$view tiddler=&lt;&lt;ref-tid&gt;&gt; field=\&quot;bibtex-year\&quot;/&gt;)\n&lt;/$set&gt;\n\\end\n\n\\define create-notexisted-ref(refTid)\n&lt;$set name=\&quot;myTid\&quot; value=&lt;&lt;__refTid__&gt;&gt; &gt;\n&lt;$button class=\&quot;tc-btn-invisible tc-tiddlylink\&quot;&gt;\n&lt;$action-sendmessage $message=\&quot;tm-new-tiddler\&quot;\n    title=&lt;&lt;myTid&gt;&gt; \n    bibtex-author=\&quot;\&quot; bibtex-year=\&quot;\&quot;\n    bibtex-title=\&quot;\&quot;  bibtex-abstract=\&quot;\&quot;\n    bibtex-entry-type=\&quot;\&quot; bibtex-keywords=\&quot;\&quot;\n    bibtex-doi=\&quot;\&quot; bibtex-url=\&quot;\&quot;\n    tags=\&quot;bibtex-entry\&quot;\n    /&gt;&lt;&lt;myTid&gt;&gt; \n&lt;/$button&gt;\n&lt;/$set&gt;    \n\\end&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/macros/find&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/macros/find&quot;,
+            &quot;created&quot;: &quot;20181213121411187&quot;,
+            &quot;modified&quot;: &quot;20211105070807510&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define find(text, begin, end, output:\&quot;simple\&quot;, mode:\&quot;all\&quot;)\n&lt;$vars \n  fulltext=&lt;&lt;__text__&gt;&gt;\n  start=&lt;&lt;__begin__&gt;&gt;\n  stop=&lt;&lt;__end__&gt;&gt;\n  output-macro=&lt;&lt;__output__&gt;&gt;\n&gt;\n&lt;$list variable=p1 filter=\&quot;[&lt;fulltext&gt;splitbefore&lt;start&gt;]\&quot;&gt;\n&lt;$list variable=p2 filter=\&quot;[&lt;fulltext&gt;removeprefix&lt;p1&gt;]\&quot;&gt;\n&lt;$list variable=p3 filter=\&quot;[&lt;p2&gt;splitbefore&lt;stop&gt;removesuffix&lt;stop&gt;]\&quot;&gt;\n&lt;$macrocall $name=&lt;&lt;output-macro&gt;&gt; p=&lt;&lt;p3&gt;&gt; /&gt;\n&lt;$reveal type=\&quot;match\&quot; text=\&quot;all\&quot; default=&lt;&lt;__mode__&gt;&gt; &gt;\n&lt;$macrocall $name=\&quot;find\&quot;\n  text={{{[&lt;p2&gt;removeprefix&lt;p3&gt;removeprefix&lt;stop&gt;]}}}\n  begin=&lt;&lt;start&gt;&gt;\n  end=&lt;&lt;stop&gt;&gt;\n  output=&lt;&lt;output-macro&gt;&gt;\n/&gt;\n&lt;/$reveal&gt;\n&lt;/$list&gt;\n&lt;/$list&gt;\n&lt;/$list&gt;\n&lt;/$vars&gt;\n\\end\n\n\\define simple(p)\n&lt;$text text=&lt;&lt;__p__&gt;&gt; /&gt;\n\\end\n\n\\define simple-list(p)\n&lt;li&gt;&lt;$text text=&lt;&lt;__p__&gt;&gt;/&gt;&lt;/li&gt;\n\\end\n&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/macros/footnote&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/macros/footnote&quot;,
+            &quot;created&quot;: &quot;20181214095749808&quot;,
+            &quot;modified&quot;: &quot;20210917161905912&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define fnote(note)\n&lt;div class=\&quot;refnotes-tooltip refnotes-footnote\&quot;&gt;&lt;div class=\&quot;refnotes-tooltiptext\&quot;&gt;$note$&lt;/div&gt;&lt;/div&gt;\n\\end&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/macros/numbered/refnum&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/macros/numbered/refnum&quot;,
+            &quot;created&quot;: &quot;20181210155346225&quot;,
+            &quot;modified&quot;: &quot;20210917161905920&quot;,
+            &quot;tags&quot;: &quot;disp&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define refnum(tid)\n&lt;$set name=\&quot;ref-tid\&quot; tiddler=&lt;&lt;__tid__&gt;&gt; field=\&quot;title\&quot; emptyValue=\&quot;RefNotFound\&quot;&gt;\n&lt;div class=\&quot;refnotes-tooltip refcls\&quot;&gt;\n&lt;$reveal type=\&quot;match\&quot; default=&lt;&lt;ref-tid&gt;&gt; text=\&quot;RefNotFound\&quot;&gt;\n&lt;$link overrideClass=\&quot;link-refcls\&quot;&gt;\n[&lt;$view tiddler=&lt;&lt;__tid__&gt;&gt; field=\&quot;title\&quot;/&gt;]\n&lt;/$link&gt;\n&lt;div class=\&quot;refnotes-tooltiptext ref-notfound\&quot;&gt;&lt;b&gt;Warning&lt;/b&gt;: Reference Not Found.&lt;br&gt;Click to create it:&lt;&lt;create-notexisted-ref \&quot;$tid$\&quot;&gt;&gt;&lt;/div&gt;\n&lt;/$reveal&gt;\n&lt;$reveal type=\&quot;nomatch\&quot; default=&lt;&lt;ref-tid&gt;&gt; text=\&quot;RefNotFound\&quot;&gt;\n[&lt;$view tiddler=&lt;&lt;__tid__&gt;&gt; field=\&quot;caption\&quot;&gt;&lt;$view tiddler=&lt;&lt;__tid__&gt;&gt; field=\&quot;title\&quot;/&gt;&lt;/$view&gt;]\n&lt;div class=\&quot;refnotes-tooltiptext\&quot;&gt;\n&lt;$macrocall $name=\&quot;displayref-onhover\&quot; refTid=&lt;&lt;ref-tid&gt;&gt; /&gt;\n&lt;/div&gt;\n&lt;/$reveal&gt;\n&lt;/div&gt;\n&lt;/$set&gt;\n\\end\n&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/macros/search-ui&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/macros/search-ui&quot;,
+            &quot;created&quot;: &quot;20141231095518178&quot;,
+            &quot;modified&quot;: &quot;20210917161905924&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define searchTid() xx$:/temp/search\n\\define bibtexFields() [!is[shadow]!is[system]has[bibtex-title]fields[]prefix[bibtex-]sort[]]\n\\define mainFields() bibtex-title bibtex-author bibtex-year\n\\define searchUi()\n&lt;div class=\&quot;tc-search\&quot;&gt;\n&lt;$edit-text tiddler=&lt;&lt;searchTid&gt;&gt; type=\&quot;search\&quot; tag=\&quot;input\&quot; placeholder=\&quot;search terms\&quot; default=\&quot;\&quot;/&gt; &lt;$select field=\&quot;field\&quot; tiddler=&lt;&lt;searchTid&gt;&gt; default=\&quot;bibtex-author\&quot;&gt;\n&lt;$set name=allfields filter= \&quot;[subfilter&lt;bibtexFields&gt;split[ ]join[,]]\&quot; &gt;\n&lt;option value=&lt;&lt;allfields&gt;&gt; &gt;all fields&lt;/option&gt;\n&lt;/$set&gt;\n&lt;optgroup label=\&quot;Main fields\&quot;&gt;\n&lt;$list filter=\&quot;[enlist&lt;mainFields&gt;removeprefix[bibtex-]]\&quot; variable=\&quot;field\&quot;&gt;\n&lt;option value={{{[&lt;field&gt;addprefix[bibtex-]]}}} &gt;&lt;&lt;field&gt;&gt;&lt;/option&gt;\n&lt;/$list&gt;\n&lt;/optgroup&gt;\n&lt;optgroup label=\&quot;Other fields\&quot;&gt;\n&lt;$list filter=\&quot;[subfilter&lt;bibtexFields&gt;] -[enlist&lt;mainFields&gt;] +[removeprefix[bibtex-]]\&quot; variable=\&quot;field\&quot;&gt;\n&lt;option value={{{[&lt;field&gt;addprefix[bibtex-]]}}} &gt;&lt;&lt;field&gt;&gt;&lt;/option&gt;\n&lt;/$list&gt;\n&lt;/optgroup&gt;\n&lt;/$select&gt;\n\n&lt;$reveal state=&lt;&lt;searchTid&gt;&gt; type=\&quot;nomatch\&quot; text=\&quot;\&quot;&gt;\n&lt;$button class=\&quot;tc-btn-invisible\&quot;&gt;\n&lt;$action-setfield $tiddler=&lt;&lt;searchTid&gt;&gt; text=\&quot;\&quot;/&gt;\n{{$:/core/images/close-button}}\n&lt;/$button&gt;\n&lt;/$reveal&gt;\n&lt;/div&gt;\n\\end&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/macros/showabbrs&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/macros/showabbrs&quot;,
+            &quot;created&quot;: &quot;20210404111656614&quot;,
+            &quot;modified&quot;: &quot;20211106193550015&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define showabbrs(filter:\&quot;[&lt;currentTiddler&gt;]\&quot;, dtiddler:\&quot;Glossary\&quot;, title:\&quot;Empty\&quot;, emptyMessage:\&quot;\&quot;)\n&lt;$wikify name=\&quot;indexes\&quot; text=&lt;&lt;find-all-items&gt;&gt; &gt; \n&lt;$macrocall $name=\&quot;abbr-list\&quot; indexes=&lt;&lt;indexes&gt;&gt; dtiddler=&lt;&lt;__dtiddler__&gt;&gt;  title=&lt;&lt;__title__&gt;&gt; emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt; /&gt;\n&lt;/$wikify&gt;\n\\end\n\n\\define patterndb() \\[\\[|\\]\\]\n\\define pattern()  ('.*?'|\&quot;.*?\&quot;|\\S+)\n\\define output-item(p)\n&lt;$list filter=\&quot;\&quot;\&quot;[&lt;__p__&gt;search-replace:g:regexp&lt;patterndb&gt;,[\&quot;]]\&quot;\&quot;\&quot; variable=pars&gt;\n&lt;$list filter=\&quot;\&quot;\&quot;[&lt;pars&gt;trim[]!prefix[dict:]search-replace[term:],[]splitregexp&lt;pattern&gt;trim[]!is[blank]!prefix[dict:]first[]]\&quot;\&quot;\&quot;&gt;\n&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;\n&lt;/$list&gt;\n&lt;$list filter=\&quot;\&quot;\&quot;[&lt;pars&gt;trim[]prefix[dict:]search-replace[term:],[]splitregexp&lt;pattern&gt;trim[]!is[blank]!prefix[dict:]last[]]\&quot;\&quot;\&quot;&gt;\n&lt;$text text=&lt;&lt;currentTiddler&gt;&gt;/&gt;\n&lt;/$list&gt;\n&lt;/$list&gt;\n\\end\n\n\\define find-all-items()\n&lt;$list filter=&lt;&lt;__filter__&gt;&gt; &gt;\n&lt;$macrocall $name=\&quot;find\&quot; text={{!!text}} begin=\&quot;&lt;&lt;abbr \&quot; end=\&quot;&gt;&gt;\&quot; output=\&quot;output-item\&quot;/&gt;\n&lt;/$list&gt;\n\\end\n\n\n\\define abbr-list(dtiddler, indexes, title:\&quot;Empty\&quot;, emptyMessage:\&quot;\&quot;)\n&lt;$list filter=\&quot;[&lt;indexes&gt;limit[1]]\&quot; variable=null emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt; &gt;&lt;!-- check to see if there is any abbreviations --&gt;\n&lt;$reveal tag=\&quot;div\&quot; type=\&quot;nomatch\&quot; default=\&quot;Empty\&quot; text=&lt;&lt;__title__&gt;&gt; &gt;\n&lt;h2&gt;&lt;$text text=&lt;&lt;__title__&gt;&gt; /&gt;&lt;/h2&gt;\n&lt;/$reveal&gt;\n&lt;table class=\&quot;refnotes-table-borderless\&quot;&gt;\n&lt;$list filter=\&quot;\&quot;\&quot;[subfilter&lt;__indexes__&gt;]\&quot;\&quot;\&quot; variable=\&quot;item\&quot;&gt;\n&lt;tr&gt;\n&lt;td class=\&quot;refnotes-abbr-term\&quot;&gt;&lt;$text text=&lt;&lt;item&gt;&gt; /&gt;&lt;/td&gt;\n&lt;td&gt;\n &lt;$set name=\&quot;term\&quot; tiddler=&lt;&lt;__dtiddler__&gt;&gt;  index=&lt;&lt;item&gt;&gt;  emptyValue=&lt;&lt;term-not-found&gt;&gt; &gt;\n   &lt;&lt;term&gt;&gt;\n &lt;/$set&gt;\n&lt;/td&gt;\n&lt;/tr&gt;\n&lt;/$list&gt;\n&lt;/table&gt;\n&lt;/$list&gt;\n\\end\n\n\n\\define term-not-found()\n&lt;span class=\&quot;refnotes-abbr-term-not-found\&quot;&gt;Term not found&lt;/span&gt;\n\\end\n\n\n&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/macros/showfnotes&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/macros/showfnotes&quot;,
+            &quot;created&quot;: &quot;20210404111935949&quot;,
+            &quot;modified&quot;: &quot;20210917161905937&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define showfnotes(filter:\&quot;[&lt;currentTiddler&gt;]\&quot;, title:\&quot;Empty\&quot; class:\&quot;fnote-list\&quot;, emptyMessage:\&quot;\&quot;)\n&lt;$vars leftDelimiter=\&quot;&lt;&lt;fnote \&quot;&gt;\n&lt;$list filter=\&quot;[subfilter&lt;__filter__&gt;search:text:literal&lt;leftDelimiter&gt;limit[1]]\&quot; variable=null emptyMessage=&lt;&lt;__emptyMessage__&gt;&gt; &gt;&lt;!-- check to see if there is any footnote --&gt;\n&lt;$reveal tag=\&quot;div\&quot; type=\&quot;nomatch\&quot; default=\&quot;Empty\&quot; text=&lt;&lt;__title__&gt;&gt; &gt;\n&lt;h2&gt;$title$&lt;/h2&gt;\n&lt;/$reveal&gt;\n&lt;ol class=\&quot;$class$\&quot;&gt;\n&lt;$list filter=&lt;&lt;__filter__&gt;&gt; &gt;\n&lt;$macrocall $name=\&quot;find\&quot; \n   text={{!!text}}\n   begin=\&quot;&lt;&lt;fnote \&quot;\n   end=\&quot;&gt;&gt;\&quot;\n   output=\&quot;output-fnote\&quot;\n/&gt;\n&lt;/$list&gt;\n&lt;/ol&gt;\n&lt;/$list&gt;\n&lt;/$vars&gt;\n\\end\n\n\\define output-fnote(p)\n&lt;$vars output=$p$&gt;\n&lt;li&gt;&lt;&lt;output&gt;&gt;&lt;/li&gt;\n&lt;/$vars&gt;\n\\end\n\n&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/macros/stretch-text&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/macros/stretch-text&quot;,
+            &quot;created&quot;: &quot;20210407132815001&quot;,
+            &quot;modified&quot;: &quot;20210917161905943&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define tTemp() xx$:/temp/refnotes/library/$(currentTiddler)$\n\n\\define stretchText(text, title:\&quot;...\&quot;)\n&lt;$button class=\&quot;tc-btn-invisible\&quot;&gt;$title$\n&lt;$action-listops $tiddler=&lt;&lt;tTemp&gt;&gt; $field=\&quot;text\&quot; $subfilter=\&quot;+[toggle[show]]\&quot; /&gt;\n&lt;/$button&gt;&amp;nbsp;&lt;$reveal type=\&quot;match\&quot; stateTitle=&lt;&lt;tTemp&gt;&gt; sateField=text text=\&quot;show\&quot;&gt;$text$&lt;/$reveal&gt;\n\\end\n&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/readme&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/readme&quot;,
+            &quot;created&quot;: &quot;20201211095732939&quot;,
+            &quot;modified&quot;: &quot;20211107080244453&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;; Refnotes\nRefnotes is a Tiddlywiki plugin to create and manage footnotes, abbreviations, citations, and references. Refnotes can create bibliography, but for the best performance, and to use import bibtex entries, the use of the official ''bibtex importer'' plugin is required.\n\n;Code and demo\nFor learning Refnotes features, syntax, tutorial and examples see the plugin demo and code pages\n\n* Demo: https://kookma.github.io/TW-Refnotes/\n* Code: https://github.com/kookma/TW-Refnotes\n&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/styles/abbr&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/styles/abbr&quot;,
+            &quot;text&quot;: &quot;/* Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3 */ \n.refnotes-abbr abbr[title] {\n\tcolor: inherit;\n\tfont-style: normal;\n\ttext-decoration: none;\n\tborder-bottom: 1px dotted #aaa;\n\tcursor: help;\n}\n\n.refnotes-abbr-term-not-found{\n/*\tcolor:red;*/\n\tfont-style: oblique;\n}\n\n.refnotes-abbr-term{\n/*\tcolor:blue;*/\n}\n\n\n/* Ref:https://aarontgrogg.com/lab/\nShow the title for small screen\n*/ \n/* this works based on the max-width*/\n@media only screen and (max-width: 960px) {\n.refnotes-abbr abbr:hover:after  { content: ' ('attr(title)')'; }\n}\n\n@media (hover: none) {\n/* Push the title attribute into generated content after the abbr. */\n.refnotes-abbr abbr[title]::after { \n content: ' ('attr(title)')'; }\n}\n&quot;,
+            &quot;created&quot;: &quot;20181022085407237&quot;,
+            &quot;modified&quot;: &quot;20210917161905961&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+            &quot;type&quot;: &quot;text/css&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/styles/bibtex-details&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/styles/bibtex-details&quot;,
+            &quot;text&quot;: &quot;.refnotes-details &gt; summary{\n\tpadding-left:0;\n\tpadding-top:15px;\n\tpadding-bottom:15px;\n\twidth: 160px;\n\tcursor: pointer;\n\tfont-weight:bold;\n}\n\n&quot;,
+            &quot;created&quot;: &quot;20210405105138630&quot;,
+            &quot;modified&quot;: &quot;20210917161905977&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+            &quot;type&quot;: &quot;text/css&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/styles/bibtex-entryview&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/styles/bibtex-entryview&quot;,
+            &quot;text&quot;: &quot;/* used for viewtemplate displaying the bibtex entry */\n.refnotes-bibtex-field{\n\tdisplay:table-row\n}\n.refnotes-bibtex-field span{\n\tdisplay:table-cell\n}\n.refnotes-bibtex-field span:first-of-type{\n\tfont-weight:bold;\n\tpadding-right:10px;\n\twhite-space: nowrap;\n}&quot;,
+            &quot;created&quot;: &quot;20210403171918460&quot;,
+            &quot;modified&quot;: &quot;20210917161905986&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+            &quot;type&quot;: &quot;text/css&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/styles/bibtex&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/styles/bibtex&quot;,
+            &quot;created&quot;: &quot;20181220161713706&quot;,
+            &quot;modified&quot;: &quot;20210917161905970&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;.ref-nonumber{\n/* color:blue;*/\n font-size:90%;\n list-style-type:none;\n}\n\n.ref-nonumber li{\n  padding-bottom:8px;\n}\n\n.ref-list{\n/* color:blue;*/\n font-size:90%;\n}\n\n.link-refcls{\n font-weight:400;\n/* color:#00008B;*/ /*darkblue*/\n text-decoration:none;\n color: &lt;&lt;colour tiddler-link-foreground&gt;&gt;; \t\n}\n\n.refcls{\n/* color:#00008B;*/\n color: &lt;&lt;colour tiddler-link-foreground&gt;&gt;; \n/* text-transform: capitalize;*/\n}\n\n.ref-notfound{\n/*  color: #856404 !important;*/\n/*  background-color: #fff3cd !important;*/\n}\n\n.ref-author{\n/*  color:#00008B;*/ /*color for author in tooltip*/\n}&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/styles/dropzone&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/styles/dropzone&quot;,
+            &quot;text&quot;: &quot;.bibtex-dropzone{\n\tmin-height:30px;\n\tmax-width:100%;\n\tmargin:4px auto;\n\tborder:2px dotted green;\n\ttext-align:center;\n}\n\n.bibtex-dropzone:focus {\n\tbackground: #fffedd;\n}&quot;,
+            &quot;created&quot;: &quot;20210813153817949&quot;,
+            &quot;modified&quot;: &quot;20210917161905993&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+            &quot;type&quot;: &quot;text/css&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/styles/footnote-counter&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/styles/footnote-counter&quot;,
+            &quot;text&quot;: &quot;/*automatic counter for fnote macro. The counter resets at the begining of each tiddler*/\n.tc-tiddler-frame {\n  counter-reset: fnote-count;\n}\n.refnotes-footnote {\n  counter-increment: fnote-count;\n}\n.refnotes-footnote:after {\n  content: counter(fnote-count);\n  font-size:small;\n /* color:#0000ee;*/\n  vertical-align: super;\n  line-height: 1.5;\n  margin-left: -0.1em;\n}\n&quot;,
+            &quot;created&quot;: &quot;20181214085707714&quot;,
+            &quot;modified&quot;: &quot;20210917161906001&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+            &quot;type&quot;: &quot;text/css&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/styles/library&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/styles/library&quot;,
+            &quot;text&quot;: &quot;/* in folding-editor*/\n.refnotes-library button svg{\n\tfont-size:0.8em;\n\tvertical-align: middle;\n\tmargin-right:0;\n\tmargin-left:0;\n\n}\n\n&quot;,
+            &quot;created&quot;: &quot;20210407142636629&quot;,
+            &quot;modified&quot;: &quot;20210917161906006&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+            &quot;type&quot;: &quot;text/css&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/styles/showfnotes&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/styles/showfnotes&quot;,
+            &quot;text&quot;: &quot;/* Footnote class*/\n\n.fnote-list{\n/* color:blue;*/\n font-size:90%;\n}\n\n.fnote-pretty{\n display: block;\n  margin: 0.5em;\n  margin-right: auto;\n  width: 100% !important;\n  border-collapse: collapse;\n  padding: 15px 15px 15px 25px; /*left padding=25px*/\n  border-width:  0px;\n  border-style: solid;\n  border-left-width: 1px;\n  background-color:  rgb(255,248,220);\n  color: rgb(91,49,7);\n  line-height: 1.2em; \n  font-size:0.9em;\n}\n&quot;,
+            &quot;created&quot;: &quot;20181219144814573&quot;,
+            &quot;modified&quot;: &quot;20210917161906014&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+            &quot;type&quot;: &quot;text/css&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/styles/table-borderless&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/styles/table-borderless&quot;,
+            &quot;text&quot;: &quot;/*Borderless table*/\n.refnotes-table-borderless, \n.refnotes-table-borderless th, \n.refnotes-table-borderless tr, \n.refnotes-table-borderless td{\n  border:0;\n}&quot;,
+            &quot;created&quot;: &quot;20190320094538299&quot;,
+            &quot;modified&quot;: &quot;20210917161906022&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+            &quot;type&quot;: &quot;text/css&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/styles/tooltip&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/styles/tooltip&quot;,
+            &quot;text&quot;: &quot;/* tooltip class used for ref, fnote and other macros */\n.refnotes-tooltip {\n\tposition: relative;\n\tdisplay: inline-block;\n\tcursor: pointer; \n}\n\n.refnotes-tooltip .refnotes-tooltiptext{\n\tfont-size: 0.90em; /* change if it is too small */\n}\n\n.refnotes-tooltip .refnotes-tooltiptext {\n\tvisibility: hidden;\n\tbackground-color: #fff;\n\tcolor: #222222; \n\ttext-align: left;\n\tborder-radius: 2px;\n\tpadding: 5px 10px;\n\tmax-width: 30vw;\n\tmax-height:20em;\n\toverflow-y: auto;\n\tcursor: auto;\n\twidth: max-content;\n\twidth: -moz-max-content;\n\twidth: -webkit-max-content;\n\twidth: -o-max-content;\n\n\t/* Position the tooltip */\n\tposition: absolute;\n\tz-index: 1;\n\tbottom: 100%;\n\tleft: 50%;\n\tmargin-left: -40px;\n\tbox-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);\n}\n\n.refnotes-tooltip:hover .refnotes-tooltiptext {\n\tvisibility: visible;\n\t/*opacity: 0.9;*/\n}\n\n/* for small screens */\n\n@media screen and (max-width: 960px) {\n.refnotes-tooltip .refnotes-tooltiptext {\n    /* Position the tooltip */\n  \tposition:fixed;\n    top:0;\n    left: 0;\n    margin-left: 0px;\n    bottom: unset;\n    width:100%;\n    max-width: 100vw;\n    z-index: 9999;\n}  \n\n.refnotes-tooltip:hover .refnotes-tooltiptext {\n   opacity: 1;\n}  \n  \n}&quot;,
+            &quot;created&quot;: &quot;20181215201115750&quot;,
+            &quot;modified&quot;: &quot;20210917161906027&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+            &quot;type&quot;: &quot;text/css&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/templates/reflist/article&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/templates/reflist/article&quot;,
+            &quot;created&quot;: &quot;20210406035737424&quot;,
+            &quot;list&quot;: &quot;article&quot;,
+            &quot;modified&quot;: &quot;20210918154925145&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Refnotes/ReflistTemplate&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;&lt;$wikify name=bibtexEntryTiddler text=&lt;&lt;reference&gt;&gt; &gt;\n&lt;$set name=currentTiddler tiddler=&lt;&lt;bibtexEntryTiddler&gt;&gt; field=title emptyValue=\&quot;RefNotFound\&quot;&gt;\n&lt;$reveal type=\&quot;nomatch\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;&lt;&lt;show-authors-in-references&gt;&gt;. (&lt;$view field=\&quot;bibtex-year\&quot;/&gt;). &lt;$text  text={{{ [{!!bibtex-title}lowercase[]sentencecase[]] }}} /&gt;. &lt;span style=\&quot;font-style:italic\&quot;&gt;&lt;$view field=\&quot;bibtex-journal\&quot;/&gt;&lt;/span&gt;. &lt;$view field=\&quot;bibtex-volume\&quot;/&gt;. &lt;$view field=\&quot;bibtex-pages\&quot;/&gt;. &lt;a href={{{[&lt;currentTiddler&gt;get[bibtex-doi]]}}}&gt;&lt;$view field=\&quot;bibtex-doi\&quot;/&gt;&lt;/a&gt;&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;$reveal type=\&quot;match\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;Reference &lt;b&gt;&lt;$text text=&lt;&lt;reference&gt;&gt;/&gt;&lt;/b&gt; NOT FOUND. Check your input.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;/$set&gt;&lt;/$wikify&gt;\n\n&lt;!-- APA 7 \nAuthor. (Year). Title [Translated Title] [Type of Article] [Reviewed Item]|. Journal|, Volume|(Issue)|, Pages|, Article Article Number|.| `https://doi.org/`DOI (Reprint Edition) (Original Publication) (Errata)\n--&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/templates/reflist/book&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/templates/reflist/book&quot;,
+            &quot;created&quot;: &quot;20210406035831544&quot;,
+            &quot;list&quot;: &quot;book incollection&quot;,
+            &quot;modified&quot;: &quot;20210918173607385&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Refnotes/ReflistTemplate&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define disp-bibtex-edition()\n&lt;$list filter=\&quot;[&lt;currentTiddler&gt;has[bibtex-edition]]\&quot; variable=null&gt;(&lt;$view field=\&quot;bibtex-edition\&quot;/&gt;).&lt;/$list&gt;\n\\end\n\n\n&lt;$wikify name=bibtexEntryTiddler text=&lt;&lt;reference&gt;&gt; &gt;\n&lt;$set name=currentTiddler tiddler=&lt;&lt;bibtexEntryTiddler&gt;&gt; field=title emptyValue=\&quot;RefNotFound\&quot;&gt;\n&lt;$reveal type=\&quot;nomatch\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;&lt;&lt;show-authors-in-references&gt;&gt;. (&lt;$view field=\&quot;bibtex-year\&quot;/&gt;). &lt;span style=\&quot;font-style:italic;\&quot;&gt;&lt;$text  text={{{ [{!!bibtex-title}lowercase[]sentencecase[]] }}} /&gt;&lt;/span&gt;. &lt;&lt;disp-bibtex-edition&gt;&gt; &lt;$view field=\&quot;bibtex-publisher\&quot;/&gt;.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;$reveal type=\&quot;match\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;Reference &lt;b&gt;&lt;$text text=&lt;&lt;reference&gt;&gt;/&gt;&lt;/b&gt; NOT FOUND. Check your input.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;/$set&gt;&lt;/$wikify&gt;\n\n&lt;!--\nAuthor. (Year). Title [Translated Title] (|Translator, Trans.;| Editor, Ed.^Eds.| Edition ed.,| Vol. Volume|)| [Type of Work]|. Publisher|. `https://doi.org/`DOI (Original Publication)\n--&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/templates/reflist/default&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/templates/reflist/default&quot;,
+            &quot;created&quot;: &quot;20210406035344521&quot;,
+            &quot;modified&quot;: &quot;20210918173547862&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Refnotes/ReflistTemplate&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;&lt;$wikify name=bibtexEntryTiddler text=&lt;&lt;reference&gt;&gt; &gt;\n&lt;$set name=currentTiddler tiddler=&lt;&lt;bibtexEntryTiddler&gt;&gt; field=\&quot;title\&quot; emptyValue=\&quot;RefNotFound\&quot;&gt;\n&lt;$reveal type=\&quot;nomatch\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;&lt;&lt;show-authors-in-references&gt;&gt;. (&lt;$view field=\&quot;bibtex-year\&quot;/&gt;). &lt;$text  text={{{ [{!!bibtex-title}lowercase[]sentencecase[]] }}} /&gt;.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;$reveal type=\&quot;match\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;Reference &lt;b&gt;&lt;$text text=&lt;&lt;reference&gt;&gt;/&gt;&lt;/b&gt; NOT FOUND. Check your input.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;/$set&gt;&lt;/$wikify&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/templates/reflist/inproceedings&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/templates/reflist/inproceedings&quot;,
+            &quot;created&quot;: &quot;20210411092205967&quot;,
+            &quot;list&quot;: &quot;inproceedings&quot;,
+            &quot;modified&quot;: &quot;20210918173627363&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Refnotes/ReflistTemplate&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;&lt;$wikify name=bibtexEntryTiddler text=&lt;&lt;reference&gt;&gt; &gt;\n&lt;$set name=currentTiddler tiddler=&lt;&lt;bibtexEntryTiddler&gt;&gt; field=title emptyValue=\&quot;RefNotFound\&quot;&gt;\n&lt;$reveal type=\&quot;nomatch\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;&lt;&lt;show-authors-in-references&gt;&gt;. (&lt;$view field=\&quot;bibtex-year\&quot;/&gt;). &lt;$text  text={{{ [{!!bibtex-title}lowercase[]sentencecase[]] }}} /&gt;. In &lt;span style=\&quot;font-style:italic\&quot;&gt;&lt;$view field=\&quot;bibtex-booktitle\&quot;/&gt;&lt;/span&gt;. pp. &lt;$view field=\&quot;bibtex-pages\&quot;/&gt;. &lt;a href={{{[&lt;currentTiddler&gt;get[bibtex-doi]]}}}&gt;&lt;$view field=\&quot;bibtex-doi\&quot;/&gt;&lt;/a&gt;&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;$reveal type=\&quot;match\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;Reference &lt;b&gt;&lt;$text text=&lt;&lt;reference&gt;&gt;/&gt;&lt;/b&gt; NOT FOUND. Check your input.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;/$set&gt;&lt;/$wikify&gt;\n\n&lt;!-- APA 7\nAuthor, A. A. (Date). Title of paper. In A. Editor &amp; B. Editor (Eds.), Title of proceedings (page numbers). Publisher. DOI OR URL if relevant.\n--&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/templates/reflist/numbered/article&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/templates/reflist/numbered/article&quot;,
+            &quot;created&quot;: &quot;20210407034252960&quot;,
+            &quot;list&quot;: &quot;article&quot;,
+            &quot;modified&quot;: &quot;20210917161906073&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;&lt;$wikify name=bibtexEntryTiddler text=&lt;&lt;reference&gt;&gt; &gt;\n&lt;$set name=currentTiddler tiddler=&lt;&lt;bibtexEntryTiddler&gt;&gt; field=title emptyValue=\&quot;RefNotFound\&quot;&gt;\n&lt;$reveal type=\&quot;nomatch\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;&lt;$view field=\&quot;bibtex-author\&quot;/&gt;, &lt;i&gt;&lt;span style=\&quot;text-transform: capitalize;\&quot;&gt;&lt;$view field=\&quot;bibtex-title\&quot;/&gt;&lt;/span&gt;&lt;/i&gt;, &lt;$view field=\&quot;bibtex-journal\&quot;/&gt;, &lt;$view field=\&quot;bibtex-year\&quot;/&gt;.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;$reveal type=\&quot;match\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;Reference &lt;b&gt;$p$&lt;/b&gt; NOT FOUND. Check your input.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;/$set&gt;&lt;/$wikify&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/templates/reflist/numbered/book&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/templates/reflist/numbered/book&quot;,
+            &quot;created&quot;: &quot;20210407034324705&quot;,
+            &quot;list&quot;: &quot;book&quot;,
+            &quot;modified&quot;: &quot;20210918164607908&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;&lt;$wikify name=bibtexEntryTiddler text=&lt;&lt;reference&gt;&gt; &gt;\n&lt;$set name=currentTiddler tiddler=&lt;&lt;bibtexEntryTiddler&gt;&gt; field=title emptyValue=\&quot;RefNotFound\&quot;&gt;\n&lt;$reveal type=\&quot;nomatch\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;&lt;&lt;show-authors-in-references&gt;&gt;, &lt;span style=\&quot;text-transform: capitalize;font-style:italic;\&quot;&gt;&lt;$view field=\&quot;bibtex-title\&quot;/&gt;&lt;/span&gt;, &lt;$view field=\&quot;bibtex-edition\&quot;/&gt;, &lt;$view field=\&quot;bibtex-year\&quot;/&gt;, &lt;$view field=\&quot;bibtex-address\&quot;/&gt;, &lt;$view field=\&quot;bibtex-publisher\&quot;/&gt;.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;$reveal type=\&quot;match\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;Reference &lt;b&gt;$p$&lt;/b&gt; NOT FOUND. Check your input.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;/$set&gt;&lt;/$wikify&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/templates/reflist/numbered/default&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/templates/reflist/numbered/default&quot;,
+            &quot;created&quot;: &quot;20210407034401566&quot;,
+            &quot;modified&quot;: &quot;20210917161906089&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;&lt;$wikify name=bibtexEntryTiddler text=&lt;&lt;reference&gt;&gt; &gt;\n&lt;$set name=currentTiddler tiddler=&lt;&lt;bibtexEntryTiddler&gt;&gt; field=\&quot;title\&quot; emptyValue=\&quot;RefNotFound\&quot;&gt;\n&lt;$reveal type=\&quot;nomatch\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;&lt;$view field=\&quot;bibtex-author\&quot;/&gt;, &lt;span style=\&quot;text-transform: capitalize;\&quot;&gt;&lt;$view field=\&quot;bibtex-title\&quot;/&gt;&lt;/span&gt;,&lt;i&gt;&lt;$view field=\&quot;bibtex-journal\&quot;/&gt;&lt;/i&gt;, &lt;$view field=\&quot;bibtex-year\&quot;/&gt;.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;$reveal type=\&quot;match\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;Reference &lt;b&gt;$p$&lt;/b&gt; NOT FOUND. Check your input.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;/$set&gt;&lt;/$wikify&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/templates/reflist/numbered/website&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/templates/reflist/numbered/website&quot;,
+            &quot;created&quot;: &quot;20210407034338287&quot;,
+            &quot;list&quot;: &quot;website&quot;,
+            &quot;modified&quot;: &quot;20210917161906093&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;&lt;$wikify name=bibtexEntryTiddler text=&lt;&lt;reference&gt;&gt; &gt;\n&lt;$set name=\&quot;curtid\&quot; tiddler=&lt;&lt;bibtexEntryTiddler&gt;&gt; field=\&quot;title\&quot; emptyValue=\&quot;RefNotFound\&quot;&gt;\n&lt;$reveal type=\&quot;nomatch\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;curtid&gt;&gt; &gt;\n&lt;li&gt;&lt;span style=\&quot;text-transform: capitalize;\&quot;&gt;&lt;$view field=\&quot;bibtex-title\&quot; tiddler=&lt;&lt;curtid&gt;&gt;/&gt;&lt;/span&gt;, &lt;a href={{{[&lt;curtid&gt;get[bibtex-url]]}}} target=\&quot;_blank\&quot;&gt;&lt;$text text={{{ [&lt;curtid&gt;get[bibtex-url]] }}}/&gt;&lt;/a&gt;, &lt;$view field=\&quot;bibtex-year\&quot; tiddler=&lt;&lt;curtid&gt;&gt;/&gt;.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;$reveal type=\&quot;match\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;curtid&gt;&gt; &gt;\n&lt;li&gt;Reference &lt;b&gt;$p$&lt;/b&gt; NOT FOUND. Check your input.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;/$set&gt;&lt;/$wikify&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/templates/reflist/website&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/templates/reflist/website&quot;,
+            &quot;created&quot;: &quot;20210406040657728&quot;,
+            &quot;list&quot;: &quot;website&quot;,
+            &quot;modified&quot;: &quot;20210917161906098&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Refnotes/ReflistTemplate&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;&lt;$wikify name=bibtexEntryTiddler text=&lt;&lt;reference&gt;&gt; &gt;\n&lt;$set name=currentTiddler tiddler=&lt;&lt;bibtexEntryTiddler&gt;&gt; field=\&quot;title\&quot; emptyValue=\&quot;RefNotFound\&quot;&gt;\n&lt;$reveal type=\&quot;nomatch\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;&lt;$text  text={{{ [{!!bibtex-title}lowercase[]sentencecase[]] }}} /&gt;. (&lt;$view field=\&quot;bibtex-year\&quot;/&gt;). &lt;a href={{!!bibtex-url}} target=\&quot;_blank\&quot;&gt;&lt;$text text={{!!bibtex-url}} /&gt;&lt;/a&gt;.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;$reveal type=\&quot;match\&quot; default=\&quot;RefNotFound\&quot; text=&lt;&lt;currentTiddler&gt;&gt; &gt;\n&lt;li&gt;Reference &lt;b&gt;&lt;$text text=&lt;&lt;reference&gt;&gt;/&gt;&lt;/b&gt; NOT FOUND. Check your input.&lt;/li&gt;\n&lt;/$reveal&gt;\n&lt;/$set&gt;&lt;/$wikify&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/ui/bibtexlibrary&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/ui/bibtexlibrary&quot;,
+            &quot;caption&quot;: &quot;Bibliography&quot;,
+            &quot;created&quot;: &quot;20181220153648454&quot;,
+            &quot;description&quot;: &quot;This code adds the `bibtex-entry` tag to all tiddlers imported by `BibTeX Importer` plugin thus having a `bibtex-title` field.&quot;,
+            &quot;modified&quot;: &quot;20210917161906108&quot;,
+            &quot;tags&quot;: &quot;$:/tags/SideBar&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define dispEntry()\n&lt;$link/&gt;\n&lt;$macrocall $name=stretchText text=\&quot;\&quot;\&quot;\n&lt;$view field=\&quot;bibtex-author\&quot;/&gt;. (&lt;$view field=\&quot;bibtex-year\&quot;/&gt;). &lt;$view field=\&quot;bibtex-title\&quot;/&gt;.\&quot;\&quot;\&quot; /&gt;\n\\end\n\n\n\\define searchFilter() [has[bibtex-title]search:$(sField)$[$(sTerm)$]]\n\n\\define bibLibrary()\n&lt;$vars sField={{{[&lt;searchTid&gt;get[field]] ~[[bibtex-author]]}}} sTerm={{{[&lt;searchTid&gt;get[text]]}}}&gt;\n\n&lt;!-- show hide entry details --&gt;\n&lt;div class=\&quot;tc-search refnotes-library\&quot; style=\&quot;margin:10px 0 0 20px;\&quot;&gt;\nShow and Hide Details: &amp;nbsp;\n&lt;$button class=\&quot;tc-btn-invisible\&quot;&gt;{{$:/core/images/down-arrow}}\n&lt;$list filter=\&quot;[subfilter&lt;searchFilter&gt;]\&quot;&gt;\n&lt;$action-setfield $tiddler=&lt;&lt;tTemp&gt;&gt; text=show /&gt;\n&lt;/$list&gt;\n&lt;/$button&gt;\n&lt;$button class=\&quot;tc-btn-invisible\&quot;&gt;{{$:/core/images/up-arrow}}\n&lt;$list filter=\&quot;[subfilter&lt;searchFilter&gt;]\&quot;&gt;\n&lt;$action-deletetiddler $tiddler=&lt;&lt;tTemp&gt;&gt; /&gt;\n&lt;/$list&gt;\n&lt;/$button&gt;\n&lt;/div&gt;\n\n&lt;!-- show the library data --&gt;\n&lt;ol&gt;\n&lt;$list filter=\&quot;[subfilter&lt;searchFilter&gt;]\&quot;&gt;\n&lt;li&gt;&lt;&lt;dispEntry&gt;&gt;&lt;/li&gt;\n&lt;/$list&gt;\n&lt;/ol&gt;\n&lt;/$vars&gt;\n\\end\n\n&lt;!-- interface --&gt;\n&lt;div style=\&quot;margin-bottom:8px;\&quot;&gt;\n&lt;&lt;process-entries \&quot;Process New Entries\&quot;&gt;&gt;\n{{$:/plugins/kookma/refnotes/ui/dropzone}}\n&lt;/div&gt;\n\n&lt;!-- make this optional\n[[Bibliography Table]]\n--&gt;\n\n&lt;&lt;searchUi&gt;&gt;\n\n&lt;&lt;bibLibrary&gt;&gt;\n\n\n\n&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/ui/dropzone&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/ui/dropzone&quot;,
+            &quot;caption&quot;: &quot;Dropzone&quot;,
+            &quot;created&quot;: &quot;20210813153727310&quot;,
+            &quot;modified&quot;: &quot;20210917161906113&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;&lt;$dropzone \n  deserializer=\&quot;application/x-bibtex\&quot;\n  filesOnly=no \n\timportTitle=\&quot;Import Bibtex\&quot;&gt;\n&lt;div class=\&quot;bibtex-dropzone\&quot; tabindex=1&gt;\nPaste your Bibtex Entry here\n&lt;/div&gt;\n&lt;/$dropzone&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/viewtemplates/article&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/viewtemplates/article&quot;,
+            &quot;created&quot;: &quot;20210403164845276&quot;,
+            &quot;list&quot;: &quot;article&quot;,
+            &quot;modified&quot;: &quot;20210917161906128&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Refnotes/Template&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define mainFields() bibtex-title bibtex-author bibtex-journal bibtex-year bibtex-pages bibtex-number bibtex-volume bibtex-doi bibtex-entry-type\n\n&lt;!-- display fields --&gt;\n&lt;$transclude tiddler=\&quot;$:/plugins/kookma/refnotes/viewtemplates/helper\&quot;/&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/viewtemplates/book&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/viewtemplates/book&quot;,
+            &quot;created&quot;: &quot;20210403164856132&quot;,
+            &quot;list&quot;: &quot;book&quot;,
+            &quot;modified&quot;: &quot;20210917161906138&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Refnotes/Template&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define mainFields() bibtex-title bibtex-author bibtex-year bibtex-publisher bibtex-entry-type\n\n&lt;$transclude tiddler=\&quot;$:/plugins/kookma/refnotes/viewtemplates/helper\&quot;/&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/viewtemplates/default&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/viewtemplates/default&quot;,
+            &quot;created&quot;: &quot;20210403165027581&quot;,
+            &quot;modified&quot;: &quot;20210917161906146&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Refnotes/Template&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define mainFields() bibtex-title bibtex-author bibtex-year bibtex-doi bibtex-entry-type\n\n&lt;!-- display fields --&gt;\n&lt;$transclude tiddler=\&quot;$:/plugins/kookma/refnotes/viewtemplates/helper\&quot;/&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/viewtemplates/helper&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/viewtemplates/helper&quot;,
+            &quot;created&quot;: &quot;20210405112132790&quot;,
+            &quot;modified&quot;: &quot;20210917161906155&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Refnotes/Template&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define display-bibtex-field()\n&lt;div class=\&quot;refnotes-bibtex-field\&quot;&gt;\n&lt;span&gt;&lt;$text text={{{ [&lt;currentField&gt;removeprefix[bibtex-]titlecase[]] }}} /&gt;&lt;/span&gt;\n&lt;span&gt;&lt;$transclude tiddler=&lt;&lt;currentTiddler&gt;&gt; field=&lt;&lt;currentField&gt;&gt; mode=inline /&gt;&lt;/span&gt;\n&lt;/div&gt;\n\\end\n\n&lt;!-- display main bibtex fields --&gt;\n&lt;$list filter=\&quot;[enlist&lt;mainFields&gt;]\&quot; variable=currentField&gt;\n&lt;&lt;display-bibtex-field&gt;&gt;\n&lt;/$list&gt;\n\n&lt;!-- display other bibtex fields --&gt;\n&lt;details class=\&quot;refnotes-details\&quot;&gt;\n  &lt;summary&gt;More details&lt;/summary&gt;\n&lt;$list filter=\&quot;[&lt;currentTiddler&gt;fields[]prefix[bibtex]sort[]] -[enlist&lt;mainFields&gt;]\&quot; variable=currentField&gt;\n&lt;&lt;display-bibtex-field&gt;&gt;\n&lt;/$list&gt;\n&lt;/details&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/viewtemplates/incollection&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/viewtemplates/incollection&quot;,
+            &quot;created&quot;: &quot;20210411044534237&quot;,
+            &quot;list&quot;: &quot;incollection&quot;,
+            &quot;modified&quot;: &quot;20210917161906165&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Refnotes/Template&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define mainFields() bibtex-title bibtex-author bibtex-year bibtex-booktitle bibtex-editor bibtex-publisher bibtex-entry-type\n\n&lt;$transclude tiddler=\&quot;$:/plugins/kookma/refnotes/viewtemplates/helper\&quot;/&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/viewtemplates/inproceedings&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/viewtemplates/inproceedings&quot;,
+            &quot;created&quot;: &quot;20210411094926217&quot;,
+            &quot;list&quot;: &quot;inproceedings&quot;,
+            &quot;modified&quot;: &quot;20210917161906174&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Refnotes/Template&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define mainFields() bibtex-title bibtex-author bibtex-year bibtex-booktitle bibtex-editor bibtex-doi bibtex-entry-type\n\n&lt;$transclude tiddler=\&quot;$:/plugins/kookma/refnotes/viewtemplates/helper\&quot;/&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/viewtemplates/main&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/viewtemplates/main&quot;,
+            &quot;created&quot;: &quot;20181220142502642&quot;,
+            &quot;modified&quot;: &quot;20210917161906181&quot;,
+            &quot;tags&quot;: &quot;$:/tags/ViewTemplate&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;&lt;$list filter=\&quot;[all[current]has[bibtex-title]]\&quot;&gt;\n&lt;$vars currentType={{{[&lt;currentTiddler&gt;get[bibtex-entry-type]lowercase[]] ~[[miscellaneous]]}}} &gt;\n&lt;$set name=\&quot;bodyLookup\&quot; \n      filter=\&quot;[all[tiddlers+shadows]tag[$:/tags/Refnotes/Template]contains:list&lt;currentType&gt;] +[limit[1]get[title]]\&quot;\n\t\t\tvalue=&lt;&lt;bodyLookup&gt;&gt; \n      emptyValue=\&quot;$:/plugins/kookma/refnotes/viewtemplates/default\&quot;&gt;\n&lt;$transclude tiddler=&lt;&lt;bodyLookup&gt;&gt; field=\&quot;text\&quot; mode=\&quot;inline\&quot;/&gt;\n&lt;/$set&gt;\n&lt;/$vars&gt;\n&lt;/$list&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/viewtemplates/thesis&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/viewtemplates/thesis&quot;,
+            &quot;created&quot;: &quot;20210410200742891&quot;,
+            &quot;list&quot;: &quot;phdthesis mastersthesis thesis&quot;,
+            &quot;modified&quot;: &quot;20210917161906189&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Refnotes/Template&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define mainFields() bibtex-title bibtex-author bibtex-year bibtex-school bibtex-entry-type\n\n&lt;$transclude tiddler=\&quot;$:/plugins/kookma/refnotes/viewtemplates/helper\&quot;/&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/viewtemplates/unpublished&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/viewtemplates/unpublished&quot;,
+            &quot;created&quot;: &quot;20210411041928587&quot;,
+            &quot;list&quot;: &quot;unpublished&quot;,
+            &quot;modified&quot;: &quot;20210917161906197&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Refnotes/Template&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define mainFields() bibtex-title bibtex-author bibtex-year bibtex-note bibtex-entry-type\n\n&lt;$transclude tiddler=\&quot;$:/plugins/kookma/refnotes/viewtemplates/helper\&quot;/&gt;&quot;
+        },
+        &quot;$:/plugins/kookma/refnotes/viewtemplates/website&quot;: {
+            &quot;title&quot;: &quot;$:/plugins/kookma/refnotes/viewtemplates/website&quot;,
+            &quot;created&quot;: &quot;20210403164529700&quot;,
+            &quot;list&quot;: &quot;website&quot;,
+            &quot;modified&quot;: &quot;20210917161906202&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Refnotes/Template&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;text&quot;: &quot;\\define mainFields() bibtex-title bibtex-url bibtex-year  bibtex-entry-type\n\n&lt;!-- display fields --&gt;\n&lt;$transclude tiddler=\&quot;$:/plugins/kookma/refnotes/viewtemplates/helper\&quot;/&gt;&quot;
+        }
+    }
+}</pre>
+</div>
 <div author="Joao Bolila" dependents="" description="Highlight.js syntax highlighting" list="readme usage howto license" name="Highlight" plugin-type="plugin" title="$:/plugins/tiddlywiki/highlight" type="application/json" version="5.1.23" revision="0" bag="default">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -11255,6 +11674,29 @@ https://ncase.me/remember/ar.html
   ** أن يكون لديك نظام تعلم واضح.
   ** ألا تتوقف  عن التعلم.
   ** أن تكون لديك رؤية وخارطة حول ما يجب أن تتعلمه وما تعرفه فعلا.</pre>
+</div>
+<div created="20211021123326202" modified="20211109000718549" tags="RTL التعلم الذاكرة" title="لم لا تعلمنا المدارس كيف نتعلم؟" type="text/vnd.tiddlywiki" revision="0" bag="default">
+<pre>أظن أن ردة فعل شائعة عند من يقرأ حول طرق التعلم الفعالة المدعومة بالأبحاث العلمية (مثل [[التكرار المتباعد]] و[[الاستذكار النشط]])
+هو سؤال على شكل، &quot;لم لم يخبرنا أحد بهذه الأفكار في المدراس؟&quot;. يصبح هذا السؤال أكثر مرارة عندما تدرك أن كثيرا منا
+كان يعاني في المدرسة لتعلم ما يتلقاه، وحتى لو نجح بتعلمه، فسيجد نفسه قد نسي أغلبه سرعان ما ينتهي الفصل الدراسي..
+نسيان المواد آخر الفصل أصبح من مراسم الحياة المدرسية المعتادة التي لا يجدها أحد تقريبا شيئا غريبا.
+لا أذكر أني سمعت أحدا يتسآل عن أفضل طرق الدراسة وما إذا كان هناك سبيل لتعلم أفضل يدوم أطول.
+كل ما رأيته هو أننا كطلاب ندرس بطرق مثل إعادة القراءة مرارا وتكرارا بدون تفاعل حقيقي أو فهم ذي معنى،
+ثم نراجع قبل الامتحانات بطريقة محمومة وننجح بطريقة أو بأخرى.
+
+Gwern Branwen صاحب موقع [[gwern.net]] وكاتب [[أفضل مرجع حول التكرار المتباعد على الإنترنت|https://www.gwern.net/Spaced-repetition]] -
+يذكر عدة أسباب لتفسير سبب عدم شيوع طرق التعلم الفعال&lt;&lt;fnote &quot;https://www.gwern.net/Spaced-repetition#if-youre-so-good-why-arent-you-rich&quot;&gt;&gt;. من هذه الأسباب:
+
+* أن طريقة الدراسة المعتادة، الدراسة المكثفة (cramming)، في الحقيقة تعمل وتعطي ثمارها، لكن على المدى القصير، وهو ما يهتم به معظمنا (لاجتياز الامتحان غالبا).
+* جهل بالطرق الفعالة: أظهرت دراسات عديدة أنه عند إخضاع أناس لتجارب درسوا فيها مادة معينة باستخدام كل من طريقة الدراسة المكثفة وطريقة التكرار المتباعد، فإن معظمهم يفضلون الدراسة المكثفة ويعتقدون أنها أكثر فعالية، حتى بعد أن تظهر نتيجة أدائهم العكس.
+* التكرار المتباعد يركز على ترسيخ المعرفة على المدى الطويل، وهو ما يجعله غير مشهور، فنتائجه قد لا تأتي سريعا.
+
+لكن يبقى سؤال هو لم //المدراس// نفسها، دور العلم، لا تخبرنا شيئا عن طرق التعلم، بينما
+تحشي رؤوسنا حشيا بمعلومات كثيرة قد لا تكون بتلك الأهمية؟
+ربما النظام التعليمي نفسه بكوادره ومعلميه أغلبه لا يعرف الكثير عن مجال البحث هذا وإيجاداته، لكن لماذا؟
+هل الأمر مجرد بطء متوقع من مؤسسة مترسخة في تطبيق نتائج بحوث مخبرية على أرض الواقع؟
+أذكر أنني قرأت بحثا عن هذا الموضوع بالتحديد، وهو مذكور في مقالة gwern. سأشير إليه هنا لاحقا.
+</pre>
 </div>
 <div created="20210827024744919" modified="20210827025552351" tags="RTL التعلم [[The Universe Of Memory]]" title="لم لا تعمل معظم تطبيقات التكرار المتباعد وكيفية إصلاح ذلك - universeofmemory.com" type="text/vnd.tiddlywiki" revision="0" bag="default">
 <pre>https://universeofmemory.com/spaced-repetition-apps-dont-work/
