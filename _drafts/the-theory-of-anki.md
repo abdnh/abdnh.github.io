@@ -1,3 +1,0 @@
-- spaced repetition
-- testing effect
-- interleaving
