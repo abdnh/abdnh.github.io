@@ -153,8 +153,13 @@ iframe {
     height: 800px;
 }
 
-.highlight {
+.highlighter-rouge, .highlight {
     direction: ltr;
+    text-align: left;
+    unicode-bidi: isolate;
+}
+
+.highlight {
     background-color: #FEFAC1;
     word-wrap: break-word;
     overflow: auto;
