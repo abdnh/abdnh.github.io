@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "كيف تصبح هاكرا حقيقيا: شاهد أنمياتك المفضلة من سطر الأوامر"
-tags: computer Anime
+tags: computer anime
 uuid: 76663eb0-0c1f-40d6-b13a-cec1b59f04c7
 ---
 
