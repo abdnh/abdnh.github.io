@@ -192,8 +192,8 @@ iframe {
 }
 
 #toc {
-    border: 1px solid black;
-    background-color: #FEFACF;
+    border: 2px dashed grey;
+    background-color: #FFF8E3;
 }
 
 #tags {
