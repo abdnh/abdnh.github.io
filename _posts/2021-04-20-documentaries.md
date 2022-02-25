@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "أفلام وثائقية"
+title: "مراجعات أفلام وثائقية"
+categories: reviews
 uuid: 6f61d2b6-cdaa-4b69-8514-7c3cbfe3bfcb
 ---
 

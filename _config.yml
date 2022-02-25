@@ -28,4 +28,4 @@ jekyll-archives:
     tag: tag-archive
   permalinks:
     tag: '/tag/:name/'
-    category: '/category/:name/'
+    category: '/:name/'
