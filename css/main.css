@@ -26,16 +26,19 @@ body {
     font-family: sans-serif;
 }
 
-#nav-links ul {
+#nav-links, #footer-links {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     list-style: none;
-    font-weight: bold;
     padding: 0;
 }
 
-#nav-links ul li {
+#nav-links {
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+
+#nav-links li {
     margin: 0.5rem;
 }
 
@@ -44,7 +47,7 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-    #nav-links ul {
+    #nav-links {
         flex-direction: column;
     }
     #posts > li {
@@ -53,10 +56,7 @@ body {
 }
 
 #footer-links {
-    display: flex;
     flex-direction: row;
-    padding: 0;
-    list-style: none;
 }
 
 #footer-links li {
