@@ -11,6 +11,10 @@ serve:
 twserve:
 	tiddlywiki curious/ --listen
 
+twpublish: curious/output/index.html
+	git add curious/index.html
+	git commit -m "TW publish"
+
 deploy:
 	git checkout master
 	git push
