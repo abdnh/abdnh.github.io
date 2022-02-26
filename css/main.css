@@ -52,6 +52,17 @@ body {
     }
 }
 
+#footer-links {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    list-style: none;
+}
+
+#footer-links li {
+    margin-left: 5px;
+}
+
 .post-header {
     border-bottom: var(--section-border);
     display: flex;
