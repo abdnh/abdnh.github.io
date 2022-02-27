@@ -1,18 +1,20 @@
 .PHONY: all serve twserve deploy
 
-all: curious/index.html
+TWDIR := curious
 
-curious/index.html:
-	tiddlywiki curious/ --output curious --build index
+all: $(TWDIR)/index.html
+
+$(TWDIR)/index.html: $(TWDIR)/tiddlers $(TWDIR)/plugins $(TWDIR)/tiddlywiki.info
+	tiddlywiki $(TWDIR)/ --output $(TWDIR) --build index
 
 serve:
 	bundle exec jekyll serve
 
 twserve:
-	tiddlywiki curious/ --listen
+	tiddlywiki $(TWDIR)/ --listen
 
-twpublish: curious/index.html
-	git add curious/index.html
+twpublish: $(TWDIR)/index.html
+	git add $(TWDIR)/index.html
 	git commit -m "TW publish"
 
 deploy:
