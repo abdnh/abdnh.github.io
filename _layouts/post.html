@@ -11,10 +11,10 @@ layout: default
 		{% endif %}
 		<div>
 			<div>
-				<time datetime="{{ page.date | date: "%Y-%m-%d"}}" title="تاريخ الإنشاء">{{ page.date | date: "%d/%m/%Y"}}</time>
+				<time datetime="{{ page.date | date: "%Y-%m-%d"}}" title="تاريخ الإنشاء">{{ page.date | date: "%Y-%m-%d"}}</time>
 				{% if page.last_modified_at != page.date %}
 				|
-				<a href="https://github.com/abdnh/abdnh.github.io/commits/master/{{ page.path }}"><time datetime="{{ page.last_modified_at | date: "%Y-%m-%d"}}" title="آخر تعديل">{{ page.last_modified_at | date: "%d/%m/%Y"}}</time></a>
+				<a href="https://github.com/abdnh/abdnh.github.io/commits/master/{{ page.path }}"><time datetime="{{ page.last_modified_at | date: "%Y-%m-%d"}}" title="آخر تعديل">{{ page.last_modified_at | date: "%Y-%m-%d"}}</time></a>
 				{% endif %}
 			</div>
 			<div id="tags">
