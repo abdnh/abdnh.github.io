@@ -1,7 +1,7 @@
 @import "github.css";
 
 :root {
-    --highlight-color: rgba(255,255,125,0.5);
+    --highlight-color: rgba(255, 255, 125, 0.5);
     --section-border: 1px solid #d5d5d5;
 }
 
@@ -46,14 +46,7 @@ body {
     text-decoration: none;
 }
 
-@media screen and (max-width: 800px) {
-    #nav-links {
-        flex-direction: column;
-    }
-    #posts > li {
-        font-size: 0.8em;
-    }
-}
+
 
 #footer-links {
     flex-direction: row;
@@ -113,7 +106,7 @@ a {
     padding-right: 0.5em;
 }
 
-#posts > li {
+#posts>li {
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
@@ -121,7 +114,7 @@ a {
     padding-bottom: 0.5rem;
 }
 
-#posts > li > a {
+#posts>li>a {
     overflow: hidden;
     text-overflow: ellipsis;
     padding-right: 0.5rem;
@@ -147,11 +140,6 @@ body {
     margin: 0 auto;
 }
 
-@media screen and (max-width: 1105px) {
-    body {
-		width: auto;
-	}
-}
 
 iframe {
     width: 100%;
@@ -181,7 +169,7 @@ iframe {
     border: unset;
 }
 
-.highlight > pre {
+.highlight>pre {
     margin: 0px;
 }
 
@@ -206,7 +194,7 @@ iframe {
     padding-right: 5px;
 }
 
-#tags > a {
+#tags>a {
     margin-left: 0.5em;
 }
 
@@ -216,4 +204,28 @@ footer {
 
 time {
     white-space: nowrap;
+}
+
+@media screen and (max-width: 1105px) {
+    body {
+        width: auto;
+    }
+
+    #sidebar {
+        position: initial;
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    #nav-links {
+        flex-direction: row;
+    }
+
+    main, footer {
+        margin: 0px 15px 0 15px;
+    }
+
+    #logo {
+        margin: auto;
+    }
 }
