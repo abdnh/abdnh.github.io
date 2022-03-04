@@ -213,3 +213,7 @@ iframe {
 footer {
     border-top: var(--section-border);
 }
+
+time {
+    white-space: nowrap;
+}
