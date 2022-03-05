@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # gem "jekyll", "~> 4.2.0"
-gem "github-pages", "~> 219", group: :jekyll_plugins
+gem "github-pages", "~> 225", group: :jekyll_plugins
 group :jekyll_plugins do
   gem "jekyll-toc", "~> 0.17.1"
   gem 'jgd', '~> 1.12'
