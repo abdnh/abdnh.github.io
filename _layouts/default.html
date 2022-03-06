@@ -6,7 +6,13 @@
 <body>
     {% include sidebar.html %}
     <main>
-        {{ content }}
+        {% if page.math %}
+            {% katexmm %}
+                {{ content }}
+            {% endkatexmm %}
+        {% else %}
+            {{ content }}
+        {% endif %}
     </main>
     {% include footer.html %}
 </body>

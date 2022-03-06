@@ -229,3 +229,7 @@ time {
         margin: auto;
     }
 }
+
+.katex {
+    direction: ltr;
+}
