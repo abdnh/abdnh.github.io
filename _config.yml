@@ -25,6 +25,10 @@ include:
 
 exclude:
   - Makefile
+  - curious
+
+keep_files:
+  - curious
 
 jekyll-archives:
   enabled: ['categories', 'tags']
