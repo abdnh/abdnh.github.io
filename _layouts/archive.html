@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
-{% capture title %}
+{% capture header %}
 {{ layout.label }}: {{ site.data.translations[page.title] | default: page.title }}
 {% endcapture %}
 
-{% include header.html title=title %}
+{% capture title %}
+{{ header }} - {{ site.title }}
+{% endcapture %}
+
+{% include_cached  header.html title=title math=false %}
 
 <body>
-    {% include sidebar.html %}
+    {% include_cached  sidebar.html %}
     <main>
         <header class="post-header">
-            <h1>{{ title }}</h1>
+            <h1>{{ header }}</h1>
         </header>
         <ul id="posts">
             {% for post in page.posts %}
@@ -20,7 +24,7 @@
             {% endfor %}
         </ul>
     </main>
-    {% include footer.html %}
+    {% include_cached  footer.html %}
 </body>
 
 </html>

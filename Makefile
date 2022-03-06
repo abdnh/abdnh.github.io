@@ -8,7 +8,7 @@ $(TWDIR)/index.html: $(TWDIR)/tiddlers $(TWDIR)/plugins $(TWDIR)/tiddlywiki.info
 	tiddlywiki $(TWDIR)/ --output $(TWDIR) --build index
 
 serve:
-	bundle exec jekyll serve
+	bundle exec jekyll serve --incremental --watch
 
 twserve:
 	tiddlywiki $(TWDIR)/ --listen

@@ -32,13 +32,13 @@ tags: anki memory computer
 بعد تنزيل البرنامج وفتحه، ستظهر لك نافذة كالتالي:
 
 
-{% include image.html file="anki-main-window.png"
+{% include_cached image.html file="anki-main-window.png"
    caption="نافذة أنكي الرئيسية"
 %}
 
 اضغط على زر **إضافة** في الأعلى لكي تظهر لك نافذة إدخال المعلومات التالية:
 
-{% include image.html file="anki-add-window.png"
+{% include_cached image.html file="anki-add-window.png"
    caption="نافذة إضافة البطاقات في أنكي"
 %}
 
@@ -52,7 +52,7 @@ tags: anki memory computer
 حسنا، ماذا سندخل في حقلي أمام وخلف؟ تذكر أننا نريد تعلم مفردات إنجليزية ومقابل كل كلمة في العربية،
 لذلك سندخل كلمة إنجليزية في حقل أمام، ومقابلها العربي في حقل خلف. لندخل مثلا كلمة melancholy.
 
-{% include image.html file="anki-filled-add-window.png"
+{% include_cached image.html file="anki-filled-add-window.png"
    caption="نافذة إضافة البطاقات في أنكي مع معلومات مدخلة"
 %}
 
@@ -63,19 +63,19 @@ tags: anki memory computer
 أوعية تخزن فيها بطاقاتك بشكل منظم حسب الموضوع مثلا. لدينا هنا فقط رزمة باسم «افتراضية».
 ستلاحظ أعلى قائمة الرزم كلمات مثل جديدة ومستحقة، وعدد 2 بالأزرق تحت عنوان «جديدة».
 
-{% include image.html file="anki-main-window-with-new-cards.png"
+{% include_cached image.html file="anki-main-window-with-new-cards.png"
    caption="نافذة أنكي الرئيسية بعد إضافة بطاقتين"
 %}
 
 لننقر على «افتراضية» يظهر لنا التالي:
 
-{% include image.html file="anki-overview-screen.png"
+{% include_cached image.html file="anki-overview-screen.png"
    caption="شاشة موجز الرزمة في أنكي"
 %}
 
 لننقر على «ادرس الآن» لنرى ما سيحصل.
 
-{% include image.html file="anki-review-front.png"
+{% include_cached image.html file="anki-review-front.png"
    alt="جانب بطاقة أمامي في أنكي"
 %}
 
@@ -84,7 +84,7 @@ tags: anki memory computer
 بعد أن نعصر أمخاخنا لبعض الوقت ونتذكر الكلمة (أو نستسلم)، سنجد زر «إظهار الجواب»
 في الأسفل ونضغط عليه.
 
-{% include image.html file="anki-review-back.png"
+{% include_cached image.html file="anki-review-back.png"
    alt="جانب بطاقة خلفي في أنكي"
 %}
 
@@ -105,20 +105,20 @@ tags: anki memory computer
 
 ستظهر لنا البطاقة الثانية التي أضفناها:
 
-{% include image.html file="anki-review-front-2.png"
+{% include_cached image.html file="anki-review-front-2.png"
    alt="مراجعة بطاقة ثانية في أنكي"
 %}
 
 لنقل إننا وجدنا هذه الكلمة سهلة أيضا لذلك أجبنا عنها فورا وضغطنا على زر «سهل»، لتظهر لنا الشاشة التالية:
 
-{% include image.html file="anki-congrats-screen.png"
+{% include_cached image.html file="anki-congrats-screen.png"
    caption="شاشة التهنئة في أنكي"
 %}
 
 انتهينا من دراسة هذه الرزمة المكونة من بطاقتين. إذا عدنا إلى الشاشة الرئيسية بالضغط
 على زر «رزم» في الأعلى فسنرى التالي:
 
-{% include image.html file="anki-main-window-after-studying-new-cards.png"
+{% include_cached image.html file="anki-main-window-after-studying-new-cards.png"
    caption="شاشة قائمة الرزم في أنكي بعد دراسة بطاقتين"
 %}
 
@@ -130,7 +130,7 @@ tags: anki memory computer
 
 عدنا بعد 4 أيام وفتحنا البرنامج ووجدنا التالي في الشاشة الرئيسية:
 
-{% include image.html file="anki-main-window-with-due-cards.png"
+{% include_cached image.html file="anki-main-window-with-due-cards.png"
    caption="شاشة أنكي الرئيسية بعد 4 أيام"
 %}
 
@@ -140,7 +140,7 @@ tags: anki memory computer
 سندخل إلى الرزمة الافتراضية الآن ونبدأ الدراسة كما فعلنا سابقا.
 سنقابل بطاقة كلمة melancholy التي درسنا منذ أيام، لنضغط على إظهار الجواب لكي نرى التالي:
 
-{% include image.html file="anki-review-back-after-4-days.png"
+{% include_cached image.html file="anki-review-back-after-4-days.png"
    caption="مراجعة بطاقة مجددا بعد 4 أيام"
 %}
 
@@ -160,11 +160,11 @@ tags: anki memory computer
 يمكن تمثيل فكرة تلاشي الذكريات مع الوقت بما يسمى *بمنحنى النسيان*، أو منحنى إبنجهاوس،
 نسبة إلى مكتشفه [هيرمان إبنجهاوس](https://ar.wikipedia.org/wiki/%D9%87%D9%8A%D8%B1%D9%85%D8%A7%D9%86_%D8%A5%D8%A8%D9%86%D8%AC%D9%87%D8%A7%D9%88%D8%B3).
 
-{% include image.html file="ltm/Ebbinghaus.png"
+{% include_cached image.html file="ltm/Ebbinghaus.png"
    caption="رسم بياني يظهر منحنى النسيان في حال تعلم معلومة وعدم مراجعتها بعد ذلك"
 %}
 
-{% include image.html file="ltm/Ebbinghaus_repeat.png"
+{% include_cached image.html file="ltm/Ebbinghaus_repeat.png"
    caption="رسم بياني يظهر انخفاض انحدار معدل النسيان مع كل مراجعة"
 %}
 
@@ -174,7 +174,7 @@ tags: anki memory computer
 
 نأتي الآن للبطاقة الثانية، بطاقة كلمة catastrophic (أو أي كلمة أخرى أضفتها بنفسك).
 
-{% include image.html file="anki-review-back-2-after-4-days.png"
+{% include_cached image.html file="anki-review-back-2-after-4-days.png"
    caption="مراجعة البطاقة الثانية بعد 4 أيام"
 %}
 
@@ -190,7 +190,7 @@ tags: anki memory computer
 
 ستكون أوقات المراجعة هذه المرة كالتالي:
 
-{% include image.html file="anki-card-2-after-failed-review.png"
+{% include_cached image.html file="anki-card-2-after-failed-review.png"
    caption="أوقات مراجعة البطاقة الثانية بعد مراجعة فاشلة"
 %}
 
@@ -198,7 +198,7 @@ tags: anki memory computer
 
 لنضغط على زر جيد وننهي مراجعتنا لليوم.
 
-{% include image.html file="anki-congrats-screen.png"
+{% include_cached image.html file="anki-congrats-screen.png"
    alt="شاشة التهنئة في أنكي"
 %}
 
@@ -273,7 +273,7 @@ tags: anki memory computer
 خذ هذه الصورة لبطاقة راجعتها اليوم (2021/12/08) وأضفتها في أواخر سنة 2018
 فيها الفاصل الزمني الخاص بزر «سهل» يتعدى العشر سنوات!
 
-{% include image.html file="anki-card-with-large-interval.png"
+{% include_cached image.html file="anki-card-with-large-interval.png"
    caption="بطاقة لها فاصل زمني كبير"
 %}
 

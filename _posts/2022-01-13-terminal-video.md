@@ -73,7 +73,7 @@ mpv --vo=sixel --profile=sw-fast --really-quiet anime.mp4 --vo-sixel-width=800 -
 {% endhighlight %}
 - استمتع بمشاهدة الأنمي!
 
-{% include image.html file="mlterm-linux.png"
+{% include_cached image.html file="mlterm-linux.png"
    caption="مشاهدة الأنمي من سطر الأوامر في لينكس"
 %}
 
@@ -103,7 +103,7 @@ mpv --vo=sixel --profile=sw-fast --really-quiet anime.mp4
 mpv --vo=sixel --aid=2 --sid=3 anime.mp4
 {% endhighlight %}
 
-{% include image.html file="mlterm-windows.png"
+{% include_cached image.html file="mlterm-windows.png"
    caption="مشاهدة الأنمي من سطر الأوامر في ويندوز"
 %}
 

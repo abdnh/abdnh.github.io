@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
-{% include header.html %}
+{% capture title %}{{ page.title | strip }}{% endcapture %}
+{% capture title %}{% if title != "" %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
+{% include_cached  header.html title=title math=page.math %}
 
 <body>
-    {% include sidebar.html %}
+    {% include_cached sidebar.html %}
     <main>
         {% if page.math %}
             {% katexmm %}
@@ -14,7 +16,7 @@
             {{ content }}
         {% endif %}
     </main>
-    {% include footer.html %}
+    {% include_cached  footer.html %}
 </body>
 
 </html>

@@ -11,13 +11,14 @@ plugins:
   - jekyll-last-modified-at
   - jekyll-archives
   - jekyll-katex
+  - jekyll-include-cache
 
-whitelist:
-  - jekyll-redirect-from
-  - jekyll-toc
-  - jekyll-last-modified-at
-  - jekyll-archives
-  - jekyll-katex
+# whitelist:
+#   - jekyll-redirect-from
+#   - jekyll-toc
+#   - jekyll-last-modified-at
+#   - jekyll-archives
+#   - jekyll-katex
 
 include:
   - CNAME
