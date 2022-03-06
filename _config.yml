@@ -26,9 +26,13 @@ include:
 exclude:
   - Makefile
   - curious
+  - assets
+  - css
 
 keep_files:
   - curious
+  - assets
+  - css
 
 jekyll-archives:
   enabled: ['categories', 'tags']
