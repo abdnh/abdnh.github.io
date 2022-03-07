@@ -12,6 +12,7 @@ GEM
     eventmachine (1.2.7-x64-mingw32)
     execjs (2.8.1)
     ffi (1.15.5)
+    ffi (1.15.5-x64-mingw-ucrt)
     ffi (1.15.5-x64-mingw32)
     forwardable-extended (2.6.0)
     http_parser.rb (0.8.0)
@@ -65,6 +66,8 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
+    nokogiri (1.13.3-x64-mingw-ucrt)
+      racc (~> 1.4)
     nokogiri (1.13.3-x64-mingw32)
       racc (~> 1.4)
     nokogiri (1.13.3-x86_64-linux)
@@ -94,8 +97,10 @@ GEM
       tzinfo (>= 1.0.0)
     unicode-display_width (1.8.0)
     wdm (0.1.1)
+    webrick (1.7.0)
 
 PLATFORMS
+  x64-mingw-ucrt
   x64-mingw32
   x86_64-linux
 
@@ -112,6 +117,7 @@ DEPENDENCIES
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
+  webrick (~> 1.7)
 
 BUNDLED WITH
    2.2.21
