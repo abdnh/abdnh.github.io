@@ -5,7 +5,6 @@ gem "liquid-c", "~> 4.0"
 
 group :jekyll_plugins do
   gem "jekyll-toc", "~> 0.17.1"
-  gem 'jgd', '~> 1.12'
   gem "jekyll-last-modified-at"
   gem 'jekyll-archives'
   gem 'jekyll-katex'
@@ -24,3 +23,4 @@ end
 gem "wdm", "~> 0.1.1"
 
 gem "webrick", "~> 1.7"
+
