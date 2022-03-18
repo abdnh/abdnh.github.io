@@ -25,6 +25,7 @@ include:
 
 exclude:
   - Makefile
+  - TODO.md
 
 jekyll-archives:
   enabled: ['categories', 'tags']
