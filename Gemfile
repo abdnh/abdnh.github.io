@@ -24,3 +24,5 @@ gem "wdm", "~> 0.1.1"
 
 gem "webrick", "~> 1.7"
 
+# for jekyll-katex
+gem 'therubyracer', '~> 0.12.3'
