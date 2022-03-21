@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>خوارزمية «ساحة تحويل السكك الحديدية» لحساب العبارات الرياضية - مدونة عبدو الفضولية</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="alternate" type="application/atom+xml" href="/feed/" title="Atom Feed">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+</head>
+
+
+<body>
+    <div id="sidebar">
+    <a href="/"><img src="/favicon.ico" id="logo" alt="شعار المدونة؛ فضولي" width="64" height="64"></a>
+    <ul id="nav-links">
+        <li><a id="about" href="/about">حول</a></li>
+        <li><a id="wiki" href="/curious/">ويكي</a></li>
+    </ul>
+</div>
+    <main>
+        <div class="post">
+	<header class="post-header">
+		
+		<h1>خوارزمية «ساحة تحويل السكك الحديدية» لحساب العبارات الرياضية</h1>
+		
+		<div>
+			<div>
+				<time datetime="2021-08-23" title="تاريخ الإنشاء">2021-08-23</time>
+				
+				|
+				<a href="https://github.com/abdnh/abdnh.github.io/commits/master/_posts/2021-08-23-shunting-yard-algorithm.md"><time datetime="2022-03-21" title="آخر تعديل">2022-03-21</time></a>
+				
+			</div>
+			<div id="tags">
+				
+				<a href="/tag/computer">حاسوب</a>
+				
+				<a href="/tag/algorithms">خوارزميات</a>
+				
+			</div>
+		</div>
+	</header>
+	<article>
+		
+		<p>خوارزمية <a href="https://www.youtube.com/watch?v=CE-7Qptga7c">ساحة تحويل السكك الحديدية</a> (<a href="https://en.wikipedia.org/wiki/Shunting-yard_algorithm">Shunting-yard algorithm</a>)
+هي خوارزمية يمكن استخدامها لتحليل العبارات الرياضية المكتوبة بالصيغة المعتادة المعروفة (مثل “5 + 3”)،
+والتي تدعى <a href="https://ar.wikipedia.org/wiki/%D8%AA%D8%B1%D9%85%D9%8A%D8%B2_%D8%B6%D9%85%D9%86%D9%8A">ترميزا ضمنيا</a> (<a href="https://en.wikipedia.org/wiki/Infix_notation">Infix notation</a>)،
+وتحويلها إلى عبارات مكتوبة بصيغة مثل <span dir="ltr">“5 3 +”</span>
+حيث يكتب رمز كل عملية بعد <a href="https://ar.wikipedia.org/wiki/%D9%85%D8%B9%D8%A7%D9%85%D9%84_%D8%AD%D8%B3%D8%A7%D8%A8%D9%8A">معاملاتها</a> (الأعداد) التي تعمل عليها.
+تدعى هذه الصيغة الأخيرة ترميز بولنديا معكوسا (<a href="https://en.wikipedia.org/wiki/Reverse_Polish_notation">Reverse Polish notation</a>)</p>
+
+<p>تعمل الخوارزمية بتوظيف بنية بيانات مشهورة وبسيطة وهي <a href="https://ar.wikipedia.org/wiki/%D9%85%D9%83%D8%AF%D8%B3_(%D8%A8%D9%86%D9%8A%D8%A9_%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA)">المكدس</a> (stack)،
+حيث تخزن مكدسين (مكدس “عمليات” ومكدس “مخرجات”) وتحلل كل عملية ومعاملاتها وتضيفها إلى واحد من المكدسين بترتيب يراعي قواعد
+أولوية العمليات المعروفة في الرياضيات<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>. ينتج لدينا بعدها مكدس واحد غير فارغ (وهو مكدس المخرجات)
+يمكن ببساطة إخراج العمليات منه بترتيب <em>من يدخل أخيراً يخرج أولاً</em> (Last-In-First-Out)‏
+وإخراج معاملات كل عملية وإجراء العملية ثم إدخال النتيجة إلى المكدس مجددا واستخدامها كمعامل للعمليات المتبقية،
+ليبقى لدينا في النهاية عدد واحد في مكدس المخرجات (بافتراض أن العبارة ليس فيها أي أخطاء) هو نتيجة العبارة الرياضية كلها.
+كما يمكننا إنتاج عبارة جديدة بالصيغة البولندية المعكوسة من هذا المكدس بدون حساب النتيجة،
+إذا كان ما يهمنا هو تحويل العبارة فقط وليس حساب نتيجتها.</p>
+
+<h2 id="أمثلة">أمثلة</h2>
+
+<p>تعمل الخوارزمية على مكدسين اثنين كما قلنا: لندعُ الأول مكدس العمليات (operations)، والثاني مكدس المخرجات (output).
+لنأخذ العبارة التالية البسيطة كمثال عن كيفية عمل الخوارزمية: “<code dir="ltr">3 + 7</code>”.</p>
+
+<p>1) نصادف أولا الرقم 3 ونضيفه إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: 
+output: 3</code></pre></figure>
+
+<p>2) ثم تأتي عملية الجمع فنضيفها إلى مكدس العمليات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: +
+output: 3</code></pre></figure>
+
+<p>3) أخيرا يأتي الرقم 7 فنضيفه إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: +
+output: 3 7</code></pre></figure>
+
+<p>4) انتهينا من قراءة العبارة. الآن نخرج كل العمليات من مكدس العمليات بترتيب LIFO كما هو مبدأ عمل المكدس
+  ونضيفها إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations:
+output: 3 7 +</code></pre></figure>
+
+<p>5) تنتج لدينا العبارة التالية: “<code dir="ltr">3 7 +</code>”</p>
+
+<p>لاحظ أننا أضفنا كل المعاملات (الأرقام) إلى مكدس المخرجات فور مصادفتنا لها،
+بينما أضفنا عملية الجمع إلى مكدس العمليات ثم نقلناها إلى مكدس المخرجات بعد الانتهاء من قراءة
+العبارة كلها. يمكننا بعدها إخراج كل عملية ومعاملاتها من مكدس المخرجات وحساب النتيجة وإدخال النتيجة
+إلى المكدس مجددا لكي تشارك في حساب العمليات المتبقية (هنا ليس لدينا غير عملية واحدة).</p>
+
+<hr />
+<p>كان هذا مثالا بسيطا. لنأخذ مثالا أكثر تعقيدا بقليل: “<code dir="ltr">7 * 2 + 3</code>”.</p>
+
+<p>1) نضيف العدد 7 إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: 
+output: 7</code></pre></figure>
+
+<p>2) نضيف العملية * إلى مكدس العمليات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: *
+output: 7</code></pre></figure>
+
+<p>3) نضيف العدد 2 إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: *
+output: 7 2</code></pre></figure>
+
+<p>4) نصل لعملية الجمع. في العادة سنضيفها إلى مكدس العمليات، لكن لأن هناك عملية قبلها
+  لها أولوية أعلى (عملية الضرب)، فيجب نقل عملية الضرب إلى مكدس المخرجات أولا ثم فعل ذلك للحفاظ على ترتيب العمليات الصحيح.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: +
+output: 7 2 *</code></pre></figure>
+
+<p>5) نضيف بعدها العدد 3 إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: +
+output: 7 2 * 3</code></pre></figure>
+
+<p>6) انتهينا من قراءة العبارة. ننقل كل العمليات المتبقية من مكدس العمليات إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations:
+output: 7 2 * 3 +</code></pre></figure>
+
+<p>كيف يمكننا حساب نتيجة العبارة الآن؟ ببساطة نخرج آخر عنصر من مكدس المخرجات (والذي
+يجب أن يكون عملية وليس عددا إذا كانت العبارة صحيحة) ونخرج أعدادا من المعاملات الموجودة
+بعده في المكدس حسب عدد المعاملات التي تأخذها العملية (ستكون معلومات كل عملية من
+أولوية وعدد معاملات مخزنةً مسبقا لدينا) ثم نجري العملية.
+في مثالنا هذا سنخرج عملية الجمع والعدد 3 بعدها، لكن عملية الجمع تأخذ معاملين والعنصر
+بعد 3 ليس عددا بل عملية الضرب، فما العمل هنا؟ ما سنفعله هنا هو حساب العملية الأخرى
+التي صادفناها (الضرب) بالطريقة نفسها واستخدام نتيجتها كمعامل للجمع بجانب العدد 3.
+بهذا الشكل نكون قد أجرينا العمليات بترتيب صحيح. بعد حساب عملية الضرب يصبح المكدس
+بهذا الشكل:</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations:
+output: 14 3 +</code></pre></figure>
+
+<p>نجري الآن عملية الجمع لنحصل على 17 كناتج نهائي للعبارة.</p>
+
+<hr />
+<p>لنأخذ عبارة شبيهة لكن هذه المرة مع أقواس لنرى كيف تتعامل معها الخوارزمية: “<code dir="ltr">7 * (2 + 3)</code>”.</p>
+
+<p>1) نضيف العدد 7 إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: 
+output: 7</code></pre></figure>
+
+<p>2) نضيف العملية * إلى مكدس العمليات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: *
+output: 7</code></pre></figure>
+
+<p>3) نضيف القوس الأيسر “)” إلى مكدس العمليات:</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: * (
+output: 7</code></pre></figure>
+
+<p>4) نضيف العدد 2 إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: * (
+output: 7 2</code></pre></figure>
+
+<p>5) نأتي لعملية الجمع. في المثال السابق نظرنا إلى آخر عملية في مكدس العمليات (الضرب) وقررنا 
+أن ننقلها إلى مكدس المخرجات لأن لها أولوية أعلى من الجمع. هذه المرة نصادف القوس الأيسر، فما العمل؟
+في هذه الحالة، نضيف العملية الحالية (الجمع) إلى مكدس العمليات ونستمر بقراءة العبارة ببساطة.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: * ( +
+output: 7 2</code></pre></figure>
+
+<p>6) نضيف العدد 3 إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: * ( +
+output: 7 2 3</code></pre></figure>
+
+<p>8) نصادف القوس الأيمن “(“. لا نضيفه لأي من المكدسات، بل نبدأ بإخراج عمليات من مكدس
+العمليات وننقلها إلى مكدس المخرجات حتى نصادف قوسا أيسر “)” أو يصبح مكدس العمليات فارغا
+تماما بدون أن نجد قوسا أيسر (في هذه الحالة هناك قوس ناقص يمكننا إعلام المستخدم عنه).
+بفرض أننا وجدنا قوسا أيسر، نخرجه من مكدس العمليات ونتخلص منه.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: *
+output: 7 2 3 +</code></pre></figure>
+
+<p>9) انتهينا من قراءة العبارة. ننقل كل العمليات المتبقية من مكدس العمليات إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations:
+output: 7 2 3 + *</code></pre></figure>
+
+<p>إذا نردنا حساب النتيجة فسنتبع الخطوات التالية:</p>
+
+<p>1) نبدأ بعملية الضرب ونجد أنها تعتمد على عملية قبلها وهي عملية الجمع.</p>
+<div dir="ltr">7 <span style="text-decoration: underline;">2 3 +</span> *</div>
+
+<p>2) نحسب عملية الجمع (“<code dir="ltr">2 3 +</code>”) لنحصل على العبارة التالية:</p>
+<div dir="ltr"><span style="text-decoration: underline;">7</span> <span style="text-decoration: underline;">5</span> *</div>
+
+<p>3) حصلنا على معاملات عملية الضرب العددية. نجري الآن العملية لنحصل على 35 كناتج نهائي.</p>
+
+<hr />
+<p>لنأخذ مثالا آخر يوضح فكرة مهمة قد يسهو عنها من يريد تطبيق الخوارزمية (مثلي): “<code dir="ltr">5 - 2 - 2</code>”</p>
+
+<p>1) نضيف العدد 5 إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations:
+output: 5</code></pre></figure>
+
+<p>2) نضيف عملية الطرح إلى مكدس العمليات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: -
+output: 5</code></pre></figure>
+
+<p>3) نضيف العدد 2 إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: -
+output: 5 2</code></pre></figure>
+
+<p>4) نأتي لعملية الطرح الثانية. ننظر لآخر عملية في مكدس العمليات ونجد العملية نفسها، لذلك فأولويات العمليتين متساويتان طبعا.
+ما العمل الآن؟ هل (1) نضيف العملية الحالية إلى مكدس العمليات أم (2) يجب أولا أن ننقل العملية السابقة
+من مكدس العمليات إلى مكدس المخرجات ثم نفعل ذلك؟
+فكر بما سيحدث في كلا الحالتين وجرب رسم حالة المكدسين كما نفعل هنا على ورقة قبل الاستمرار بالقراءة.</p>
+
+<p>دعنا نجرب كلا الخيارين ونرى:</p>
+
+<p>إذا اخترنا (1) فسننتهي بالعبارة البولندية المعكوسة “<code dir="ltr">5 2 2 - -</code>”.</p>
+
+<p>إذا اخترنا (2) فستنتج العبارة “<code dir="ltr">5 2 - 2 -</code>”.</p>
+
+<p>ناتج (1) هو 5 بينما ناتج (2) هو 1. من البديهي أن الخيار (2) هو الصحيح حسب قواعد الرياضيات المعتادة.</p>
+
+<p>عبارة “<code dir="ltr">5 - 2 - 2</code>” في الحقيقة يتم تحليلها كأنها كتبت “<code dir="ltr">(5 - 2) - 2</code>”.</p>
+
+<p>هناك عمليات مثل الطرح والقسمة تعارف الناس على حسابها بهذا الشكل، حيث يتم تجميع عوامل كل عملية بدءًا من اليسار،
+بينما هناك عمليات تُحسَب من اليمين (كما سنرى لاحقا). يعرف مفهوم اتجاه إجراء العمليات المتطابقة
+باسم «ترابط العمليات» (<a href="https://en.wikipedia.org/wiki/Operator_associativity">operator associativity</a>)
+في لغات البرمجة. تدعى عمليات مثل الطرح والقسمة left-associative operators،
+بينما يقال لعمليات تُجمَّع من اليمين إلى اليسار إنها right-associative operators.</p>
+
+<p>ستصبح المكدسات بهذا الشكل بعد أن تعرفنا على فكرة ترابط العمليات ونقلنا عملية الطرح السابقة
+من مكدس العمليات إلى مكدس المخرجات ثم أضفنا عملية الطرح الثانية الحالية إلى مكدس العمليات:</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: -
+output: 5 2 -</code></pre></figure>
+
+<p>لنستمر بتحليل العبارة:</p>
+
+<p>5) نضيف العدد 2 إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: -
+output: 5 2 - 2</code></pre></figure>
+
+<p>6) انتهينا من قراءة العبارة. ننقل كل العمليات من مكدس العمليات إلى مكدس المخرجات لنحصل على:</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations:
+output: 5 2 - 2 -</code></pre></figure>
+
+<hr />
+<p>لنأخذ مثالا آخر يوضح فكرة ترابط العمليات أكثر: “<code dir="ltr">2^2^3</code>”
+(يدل <code class="language-plaintext highlighter-rouge">^</code> هنا على عملية <a href="https://ar.wikipedia.org/wiki/%D8%B1%D9%81%D8%B9_(%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA)">الرفع إلى أس</a>)</p>
+
+<p>1) نضيف العدد 2 إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations:
+output: 2</code></pre></figure>
+
+<p>2) نضيف العملية ^ إلى مكدس العمليات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: ^
+output: 2</code></pre></figure>
+
+<p>3) نضيف العدد 2 إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: ^
+output: 2 2</code></pre></figure>
+
+<p>4) نأتي لعملية الرفع إلى أس الثانية. ننظر لآخر عملية في مكدس العمليات ونجد العملية نفسها، لذلك فأولويات العمليتين متساويتان.
+في المثال السابق نقلنا آخر عملية في مكدس العمليات إلى مكدس المخرجات لأن عملية الطرح left-associative،
+لكن هل عملية الرفع إلى أس كذلك؟ غالبا لا، عملية الرفع إلى أس تعمل من اليمين إلى اليسار، أي <span dir="ltr">right-associative</span>.<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>
+هذا يعني أن عبارة “<code dir="ltr">2^2^3</code>” يتم تحليلها كـ “<code dir="ltr">2^(2^3)</code>”.
+لذلك سنضيف العملية الحالية إلى مكدس العمليات ونستمر ببساطة.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: ^ ^
+output: 2 2</code></pre></figure>
+
+<p>5) نضيف العدد 3 إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations: ^ ^
+output: 2 2 3</code></pre></figure>
+
+<p>6) انتهينا من قراءة العبارة. ننقل كل العمليات من مكدس العمليات إلى مكدس المخرجات.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">operations:
+output: 2 2 3 ^ ^</code></pre></figure>
+
+<p>نتجت لدينا العبارة البولندية المعكوسة “<code dir="ltr">2 2 3 ^ ^</code>” والتي ناتجها هو 256،
+بينما لو عاملنا عملية الرفع إلى أس على أنها left-associative فستنتج العبارة “<code dir="ltr">2 2 ^ 3 ^</code>”
+والتي ناتجها هو 64.</p>
+
+<h2 id="استعراض-تفاعلي-للخوارزمية">استعراض تفاعلي للخوارزمية</h2>
+
+<p>استخدم هذا البرنامج التفاعلي المضمن لفهم الخوارزمية أكثر . جرب إدخال عبارة رياضية ما والضغط على «تشغيل»
+لكي يحسبه البرنامج، ثم اضغط «إيقاف» واستخدم خياري «التقدم بخطوة» و«الرجوع بخطوة» لفحص عمل الخوارزمية خطوة بخطوة.</p>
+
+<iframe src="https://www.abdnh.net/shunting-yard-algorithm-demo/?lang=ar"></iframe>
+
+<p>اضغط على هذا الرابط إذا كانت نافذة البرنامج لا تظهر كليا أو هناك مشكلة في عرضها: <a href="https://www.abdnh.net/shunting-yard-algorithm-demo/?lang=ar">https://www.abdnh.net/shunting-yard-algorithm-demo/?lang=ar</a></p>
+
+<h2 id="خطوات-عمل-الخوارزمية">خطوات عمل الخوارزمية</h2>
+
+<p>بعد أن نظرنا إلى عدة أمثلة، يمكننا استنتاج خطوات عمل الخوارزمية وكتابتها بشكل شبه منهجي على
+النحو التالي:</p>
+
+<p>1) نقرأ حدا من حدود العبارة الرياضية المدخلة إذا كان ما يزال هناك حدود.</p>
+
+<p>2) إذا كان الحد عددا نضيفه إلى مكدس المخرجات</p>
+
+<p>3) إذا كان الحد عملية غير الأقواس (لنقل لها O<sub>1</sub>)، نبدأ بنقل كل عملية O<sub>2</sub> من مكدس العمليات
+  إلى مكدس المخرجات ما دامت (1) ليست أقواسا <strong>و</strong> (2) أولويتها أعلى من أولوية O<sub>1</sub> <strong>أو</strong>
+  للعمليتين أولويات متساوية <strong>و</strong> عملية O<sub>1</sub> هي left-associative، ثم ندخل O<sub>1</sub>
+  إلى مكدس العمليات. يمكن التعبير عن الشرط بال<a href="https://ar.wikipedia.org/wiki/%D8%B3%D9%88%D8%AF%D9%88%D9%83%D9%88%D8%AF">سودوكود</a>:</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">(o2 is not a parenthesis) AND ((o2.precedence &gt; o1.precedence) OR (o2.precedence == o1.precedence &amp;&amp; o1 is left-associative))</code></pre></figure>
+
+<p>4) إذا كان الحد قوسا أيسر “)”، نضيفه إلى مكدس العمليات.</p>
+
+<p>5) إذا كان الحد قوسا أيمن “(“،نبدأ بنقل عمليات من مكدس العمليات إلى مكدس المخرجات ما
+  دامت ليست أقواسا يسرى، ثم نخرج القوس الأيسر من مكدس العمليات وتخلص منه. إذا لم يوجد
+  قوس أيسر فهناك خطأ في العبارة.</p>
+
+<p>6) بعد الانتهاء من قراءة كل حدود العبارة، ننقل كل العمليات من مكدس العمليات إلى مكدس المخرجات.</p>
+
+<p>ينتج لدينا في مكدس المخرجات عبارة رياضية بالصيغة البولندية المعكوسة بعد هذه العملية.
+إذا كان هدفنا هو حساب ناتج العملية وليس إنتاج عبارة بصيغة مختلفة، فبدل عملية نقل العمليات
+إلى مكدس المخرجات المتكررة في عدة خطوات (3، 5، 6)، يمكننا ببساطة إخراج عوامل كل
+عملية من هذه العمليات وحساب ناتجها وإضافته إلى مكدس المخرجات.</p>
+
+<h2 id="تطبيق-للخوارزمية">تطبيق للخوارزمية</h2>
+
+<p>لتطبيق للخوارزمية بلغة C، انظر هذه المكتبة التي كتبتها: <a href="https://github.com/abdnh/math-eval">https://github.com/abdnh/math-eval</a></p>
+
+<h2 id="وصلات-خارجية">وصلات خارجية</h2>
+
+<p>سأضع هنا وصلات إنترنت للاستزادة أكثر حول الموضوع:</p>
+
+<ul>
+  <li>فيديوهات يوتيوب على قناة Computerphile:
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=7ha78yWRDlE">Reverse Polish Notation and The Stack</a></li>
+      <li><a href="https://www.youtube.com/watch?v=TrfcJCulsF4">Reverse Polish Grows on Trees</a></li>
+    </ul>
+  </li>
+</ul>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>انظر <a href="https://ar.wikipedia.org/wiki/%D8%AA%D8%B1%D8%AA%D9%8A%D8%A8_%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA_%D8%A7%D9%84%D8%AD%D8%B3%D8%A7%D8%A8%D9%8A%D8%A9#%D8%AA%D8%B1%D8%AA%D9%8A%D8%A8_%D9%85%D8%B3%D8%AA%D9%88%D9%89_%D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA">ويكيبيديا</a> حول ترتيب العمليات. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>ليس هناك في الحقيقة إجماع حول هذه القاعدة لكن يبدو أن الحساب من اليمين (right-associative) هو الشائع بين لغات البرمجة. انظر <a href="https://codeplea.com/exponentiation-associativity-options">https://codeplea.com/exponentiation-associativity-options</a> لمزيد من التفاصيل. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+	</article>
+</div>
+
+    </main>
+    <footer id="footer" dir="ltr">
+    <ul id="footer-links">
+        <li><a id="feed" rel="alternate" type="application/atom+xml" href="/feed"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-rss"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                    <path
+                        d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z" />
+                </svg></a></li>
+        <li><a id="source" href="https://github.com/abdnh/abdnh.github.io"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    fill="currentColor" class="bi bi-code" viewBox="0 0 16 16">
+                    <path
+                        d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z" />
+                </svg></a></li>
+    </ul>
+</footer>
+</body>
+
+</html>

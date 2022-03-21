@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>كيف تصبح هاكرا حقيقيا: شاهد أنمياتك المفضلة من سطر الأوامر - مدونة عبدو الفضولية</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="alternate" type="application/atom+xml" href="/feed/" title="Atom Feed">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+</head>
+
+
+<body>
+    <div id="sidebar">
+    <a href="/"><img src="/favicon.ico" id="logo" alt="شعار المدونة؛ فضولي" width="64" height="64"></a>
+    <ul id="nav-links">
+        <li><a id="about" href="/about">حول</a></li>
+        <li><a id="wiki" href="/curious/">ويكي</a></li>
+    </ul>
+</div>
+    <main>
+        <div class="post">
+	<header class="post-header">
+		
+		<h1>كيف تصبح هاكرا حقيقيا: شاهد أنمياتك المفضلة من سطر الأوامر</h1>
+		
+		<div>
+			<div>
+				<time datetime="2022-01-13" title="تاريخ الإنشاء">2022-01-13</time>
+				
+				|
+				<a href="https://github.com/abdnh/abdnh.github.io/commits/master/_posts/2022-01-13-terminal-video.md"><time datetime="2022-03-21" title="آخر تعديل">2022-03-21</time></a>
+				
+			</div>
+			<div id="tags">
+				
+				<a href="/tag/computer">حاسوب</a>
+				
+				<a href="/tag/anime">anime</a>
+				
+			</div>
+		</div>
+	</header>
+	<article>
+		
+		<p>حسنا، لقد رميت ويندوز في سلة المهملات وانتقلت إلى لينكس بعد عدة محاولات باءت بالفشل
+لأن تعريف الواي فاي اللعين يأبى إلا أن لا يعمل. لكنه يعمل الآن، وأخيرا!
+وكأي مستخدم لينكس ونيرد أصيل، فقد تعلمت استخدام سطر الأوامر وبدأت تستخدمه لكل
+أعمالك الحاسوبية… ما عدا مشاهدة أنمياتك المفضلة (احتمال أنك مستخدم لينكس ومتابع أنمي في الوقت نفسه يقارب 99%).
+لكنك تشعر بالذنب والخوف من أن تُتهم بأنك شخص عادي (أو normie) بسبب ذلك.</p>
+
+<p>لا تقلق! سأشرح لك في هذه المقالة كيف يمكنك مشاهدة شخصيات الموي المفضلة لديك
+بدون مغادرة الطرفية!</p>
+
+<h2 id="المتطلبات">المتطلبات</h2>
+
+<p>نحتاج البرامج التالية لتنفيذ هدفنا النبيل:</p>
+<ul>
+  <li>مكتبة <a href="https://github.com/saitoha/libsixel">libsixel</a> لدعم صيغة رسوميات <a href="https://en.wikipedia.org/wiki/Sixel">Sixel</a>
+(وهي ما سيمكننا من عرض الفيديو في الطرفية).</li>
+  <li>مشغل وسائط <a href="https://mpv.io/">mpv</a>.</li>
+  <li>محاكي الطرفية <a href="http://mlterm.sourceforge.net/">mlterm</a>.</li>
+</ul>
+
+<p>سأشرح كيفية التنصيب للتوزيعات المبنية على ديبيان، لكن يمكنك طبعا تطبيق تعليمات مشابهة في أي توزيعة.</p>
+
+<h2 id="التنصيب-على-توزيعات-ديبيان">التنصيب على توزيعات ديبيان</h2>
+
+<ul>
+  <li>نصب libsixel باستخدام الأمر التالي:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">sudo apt install libsixel-dev</code></pre></figure>
+
+<ul>
+  <li>نصب mlterm باستخدام</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">sudo apt install mlterm</code></pre></figure>
+
+<p>جئنا للجزء الصعب: مشغل mpv لا يأتي عادة مع دعم لصيغة Sixel، لذلك لن تعمل النسخة المنصبة بمدير الحزم APT غالبا.
+الحل هو أن نبني نسختنا الخاصة من البرنامج من الشفرة المصدرية مع تفعيل دعم Sixel.
+لبناء البرنامج اتبع الخطوات التالية:</p>
+<ul>
+  <li>نزل كود mpv باستخدام git في مجلد ما:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">git clone https://github.com/mpv-player/mpv</code></pre></figure>
+
+<ul>
+  <li>يدعم mpv كل من أداتي بناء meson و waf. سنستخدم هنا meson، لذلك نصبه باستخدام الأمر التالي<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">pip3 install --user meson</code></pre></figure>
+
+<p>يبدو أن إصدار meson الموجود في APT لا يعمل مع mpv في وقت كتابة هذه الأسطر لأنه قديم بعض الشيء.</p>
+<ul>
+  <li>ابنِ mpv ونصبه باستخدام الأوامر التالية<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">meson build -D sixel=enabled
+meson compile -C build
+meson install -C build</code></pre></figure>
+
+<p>إذا صادفت أي أخطاء حول مكاتب متطلبة ناقصة، جرب هذا الأمر لتنزيلها:</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext"> sudo apt build-dep mpv</code></pre></figure>
+
+<p>أو ابحث في الإنترنت حول كيفية تنصيب المكتبة الناقصة.</p>
+
+<p>انتهينا من تفاصيل التنصيب المملة وحان وقت المتعة!</p>
+
+<ul>
+  <li>افتح طرفية mlterm بتشغيل الأمر <code class="language-plaintext highlighter-rouge">mlterm</code> من طرفيتك المفضلة.</li>
+  <li>اذهب إلى مجلد فيه فيديوهات الأنمي المفضل لديك باستخدام <code class="language-plaintext highlighter-rouge">cd</code>.</li>
+  <li>نفذ الأمر التالي مع تغيير اسم الفيديو <code class="language-plaintext highlighter-rouge">anime.mp4</code>:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">mpv --vo=sixel --profile=sw-fast --really-quiet anime.mp4</code></pre></figure>
+
+<ul>
+  <li>يمكنك أيضا تغيير حجم نافذة الفيديو باستخدم خيارات <code class="language-plaintext highlighter-rouge">--vo-sixel-width=&lt;width&gt;, --vo-sixel-height=&lt;height&gt;</code>‏<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">mpv --vo=sixel --profile=sw-fast --really-quiet anime.mp4 --vo-sixel-width=800 --vo-sixel-height=600</code></pre></figure>
+
+<ul>
+  <li>استمتع بمشاهدة الأنمي!</li>
+</ul>
+
+<figure>
+   <img src="assets/images/mlterm-linux.png" alt="مشاهدة الأنمي من سطر الأوامر في لينكس" />
+   <figcaption>مشاهدة الأنمي من سطر الأوامر في لينكس</figcaption>
+</figure>
+
+<h2 id="التنصيب-على-ويندوز">التنصيب على ويندوز</h2>
+
+<p>قبل أن تتهمني بالخيانة العظمى وتغلق الصفحة، تريث قليلا. إنما أشرح الطريقة على ويندوز
+فقط لكي أقنع المساكين مستخدمي ويندوز بروعة سطر الأوامر وأجعلهم يتنقلون إلى لينكس.<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup></p>
+
+<p>خطوات التنصيب على ويندوز كالتالي:</p>
+<ul>
+  <li>بجانب <a href="#المتطلبات">المتطلبات الأساسية</a> تحتاج أيضا إلى تثبيت حزمة <a href="https://www.msys2.org/">MSYS2</a>.
+اذهب إلى <a href="https://www.msys2.org/#installation">https://www.msys2.org/#installation</a> ونزل البرنامج.</li>
+  <li>نزل mlterm من خلال الموقع الرسمي (نسخة msys2): <a href="http://mlterm.sourceforge.net/bin.html">http://mlterm.sourceforge.net/bin.html</a></li>
+  <li>انسخ مجلدات “bin”, “etc”, “lib” و “libexec” في الملف المضغوط الذي نزلته (mlterm-msys2-YYYYMMDD.zip)
+إلى مجلد <code class="language-plaintext highlighter-rouge">c:\msys64\usr</code> (أو المجلد الذي نصبت فيه MSYS2)، حيث تكون ملفات كل مجلد داخل المجلد ذي الاسم نفسه في
+<code class="language-plaintext highlighter-rouge">c:\msys64\usr</code>.</li>
+  <li>اتبع تعليمات بناء mpv من المصدر الموجودة في وثائق البرنامج هنا: <a href="https://github.com/mpv-player/mpv/blob/master/DOCS/compile-windows.md#native-compilation-with-msys2">https://github.com/mpv-player/mpv/blob/master/DOCS/compile-windows.md#native-compilation-with-msys2</a>
+مع فارق أنه في خطوة أمر <code class="language-plaintext highlighter-rouge">waf configure</code> عليك أيضا تفعيل دعم Sixel بإضافة الخيار
+<code class="language-plaintext highlighter-rouge">--enable-sixel</code> للأمر الأساسي.</li>
+  <li>افتح طرفية mlterm بتشغيل الأمر <code class="language-plaintext highlighter-rouge">mlterm</code> من طرفية MSYS2.</li>
+  <li>يمكنك الآن تشغيل الأنمي المفضل بأمر مثل التالي (انظر تعليمات لينكس حول الخيارات):</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">mpv --vo=sixel --profile=sw-fast --really-quiet anime.mp4</code></pre></figure>
+
+<ul>
+  <li>يبدو أن واجهة mpv الرسومية الافتراضية لا تعمل مع وضع Sixel في ويندوز، لذلك قد تحتاج لاستخدام بعض الخيارات
+قبل تشغيل الفيديو لكي تختار ملف الترجمة أو الصوت (إذا كان الفيديو يتضمن أكثر من ترجمة أو صوت). يمكن استخدام خيارات <code class="language-plaintext highlighter-rouge">--aid</code> و <code class="language-plaintext highlighter-rouge">--sid</code> لتحقيق ذلك:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">mpv --vo=sixel --aid=2 --sid=3 anime.mp4</code></pre></figure>
+
+<figure>
+   <img src="assets/images/mlterm-windows.png" alt="مشاهدة الأنمي من سطر الأوامر في ويندوز" />
+   <figcaption>مشاهدة الأنمي من سطر الأوامر في ويندوز</figcaption>
+</figure>
+
+<h2 id="خاتمة">خاتمة</h2>
+
+<p>أرجو أن يكون هذا الشرح مفيدا. مشاهدة ممتعة!</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://mesonbuild.com/Getting-meson.html#installing-meson-with-pip">https://mesonbuild.com/Getting-meson.html#installing-meson-with-pip</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p><a href="https://github.com/mpv-player/mpv#meson">https://github.com/mpv-player/mpv#meson</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>انظر <a href="https://mpv.io/manual/master/#video-output-drivers-sixel">https://mpv.io/manual/master/#video-output-drivers-sixel</a> لقائمة الخيارات المتعلقة بـ Sixel. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>اعتراف خطير: كاتب هذه المقالة كتب المقالة في ويندوز 10. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+	</article>
+</div>
+
+    </main>
+    <footer id="footer" dir="ltr">
+    <ul id="footer-links">
+        <li><a id="feed" rel="alternate" type="application/atom+xml" href="/feed"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-rss"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                    <path
+                        d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z" />
+                </svg></a></li>
+        <li><a id="source" href="https://github.com/abdnh/abdnh.github.io"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    fill="currentColor" class="bi bi-code" viewBox="0 0 16 16">
+                    <path
+                        d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z" />
+                </svg></a></li>
+    </ul>
+</footer>
+</body>
+
+</html>

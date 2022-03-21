@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>تعريف ببرنامج mpvacious لتعلم اللغات من خلال مقاطع الفيديو - مدونة عبدو الفضولية</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="alternate" type="application/atom+xml" href="/feed/" title="Atom Feed">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+</head>
+
+
+<body>
+    <div id="sidebar">
+    <a href="/"><img src="/favicon.ico" id="logo" alt="شعار المدونة؛ فضولي" width="64" height="64"></a>
+    <ul id="nav-links">
+        <li><a id="about" href="/about">حول</a></li>
+        <li><a id="wiki" href="/curious/">ويكي</a></li>
+    </ul>
+</div>
+    <main>
+        <div class="post">
+	<header class="post-header">
+		
+		<h1>تعريف ببرنامج mpvacious لتعلم اللغات من خلال مقاطع الفيديو</h1>
+		
+		<div>
+			<div>
+				<time datetime="2022-03-12" title="تاريخ الإنشاء">2022-03-12</time>
+				
+				|
+				<a href="https://github.com/abdnh/abdnh.github.io/commits/master/_posts/2022-03-12-mpvacious.md"><time datetime="2022-03-21" title="آخر تعديل">2022-03-21</time></a>
+				
+			</div>
+			<div id="tags">
+				
+				<a href="/tag/anki">Anki</a>
+				
+				<a href="/tag/languages">لغات</a>
+				
+				<a href="/tag/english">لغة إنجليزية</a>
+				
+			</div>
+		</div>
+	</header>
+	<article>
+		
+		<h2 id="مقدمة">مقدمة</h2>
+
+<p><a href="https://github.com/Ajatt-Tools/mpvacious">mpvacious</a> هو برنامج يعمل كإضافة لمشغل
+الفيديو <a href="https://mpv.io/">mpv</a>، وظيفته تسهيل عملية اقتطاع مقاطع مختارة من الفيديو
+مع ترجمتها وصنع بطاقات لبرنامج <a href="anki-intro.md">Anki</a>
+منها لكي تراجعها مرارا وتكرارا وتتعلم أي كلمة أو عبارة غير مألوفة في المقطع.</p>
+
+<p>تدعى عملية انتقاء جمل من فيديوهات تشاهدها أو نصوص تقرأها أو أي شيء تستهلكه باللغة
+التي تتعلمها عموما بـ”تعدين الجمل” (sentence mining)، وهي طريقة ممتعة للتعلم من السياق.</p>
+
+<p>شاهد هذا الفيديو المسجل من قبل مؤلف mpvacious لنبذة سريعة عنه: <a href="https://www.youtube.com/watch?v=vU85ramvyo4">https://www.youtube.com/watch?v=vU85ramvyo4</a></p>
+
+<h2 id="المتطلبات">المتطلبات</h2>
+
+<ol>
+  <li>حمل mpv ونصبه من هنا: <a href="https://mpv.io/installation/">https://mpv.io/installation/</a></li>
+  <li>نزل mpvacious من هنا: <a href="https://github.com/Ajatt-Tools/mpvacious/archive/refs/heads/master.zip">https://github.com/Ajatt-Tools/mpvacious/archive/refs/heads/master.zip</a> واتبع تعليمات تنصيبه.</li>
+</ol>
+
+<p>سأفترض أن لديك معرفة تقنية تساعدك على تنصيب المتطلبات بنفسك باتباع التعليمات.
+إذا وجدت نفسك ضائعا تماما فعلى الأغلب ليس mpvacious مخصصا لك، فهو يحتاج معرفة تقنية لدرجة معينة.</p>
+
+<h2 id="استعراض">استعراض</h2>
+
+<p>لنأخذ جولة سريعة مع mpvacious من خلال استعراض مكتوب مع الصور لكي نأخذ فكرة عن كيفية عمله.</p>
+
+<p>بعد تنصيب mpvacious (تفاصيل التنصيب في الأسفل)، نفتح ملف الفيديو الذي نريد مشاهدته في mpv.</p>
+
+<p>أتعلم حاليا اللغة التركية. مؤخرا وجدت قناة يوتيوب تنشر أنيميشن/أفلام متحركة تركية (<a href="https://www.youtube.com/c/YunusEmreG%C3%BCnd%C3%BCz/">Yunus Emre Gündüz</a>)
+وأدمنت عليها وبدأت باستخدام mpvacious لتعلم أي عبارة لا أعرفها تمر علي.</p>
+
+<p>لنأخذ مثالا سريعا مع فيديو من هذه القناة: <a href="https://www.youtube.com/watch?v=B9Gj0Xq8D3A">https://www.youtube.com/watch?v=B9Gj0Xq8D3A</a></p>
+
+<p>بعد أن حملنا الفيديو وشغلناه باستخدام mpv، لنقل إنك وصلنا إلى مقطع نريد صنع بطاقة أنكي منه.</p>
+
+<p><img src="assets/images/mpvacious-1.png" alt="" /></p>
+
+<p>أول شيء سنفعله هو فتح قائمة خيارات mpvacious بالضغط على <kbd>a</kbd> ليظهر التالي.</p>
+
+<p><img src="assets/images/mpvacious-2.png" alt="" /></p>
+
+<p>ثم نضغط على <kbd>i</kbd> لتظهر لنا قائمة بهذا الشكل فيها بعض اختصارات لوحة المفاتيح واستخداماتها.</p>
+
+<p><img src="assets/images/mpvacious-3.png" alt="" /></p>
+
+<p>الاختصارات المظهرة هي أكثر الاختصارات التي ستحتاج لاستخدامها في mpvacious.
+إذا كنت تعرف بعض الإنجليزية يمكنك غالبا أن تفهم أساسيات استخدام البرنامج من الواجهة.</p>
+
+<p>لكي نخبر mpvacious بالمقطع الذي نريد استخراجه، علينا أن نحدد بدايته ونهايته.
+أسهل طريقة لذلك هي بالضغط على زر <kbd>c</kbd> والذي يضبط بداية المقطع ونهايته حسب
+توقيت الترجمة الظاهرة حاليا.</p>
+
+<p><img src="assets/images/mpvacious-4.png" alt="" /></p>
+
+<p>إذا كان توقيت الترجمة دقيقا يتزامن مع حديث الشخصيات فهذا الخيار مريح جدا
+(سنرى ما يمكننا فعله إذا لم يكن التوقيت جيدا لاحقا).</p>
+
+<p>بعد أن حددنا بداية المقطع ونهايته يمكننا الضغط على <kbd>n</kbd> لكي نضيف بطاقة إلى أنكي.</p>
+
+<p><img src="assets/images/mpvacious-5.png" alt="" /></p>
+
+<p>لنذهب الآن إلى أنكي ونفتح البطاقة التي أضافها mpvacious.</p>
+
+<p><img src="assets/images/mpvacious-anki-1.png" alt="" /></p>
+
+<p>وجدنا أن mpvacious قد استخرج الصوت وأضافه للجانب الأمامي للبطاقة مع صورة مأخوذة
+في لحظة إضافتنا للبطاقة. مهمتنا هنا هي 1) الاستماع للمقطع الصوتي طبعا، 2) ملاحظة
+أي شيء لم نفهمه في العبارة (كلمات، تعابير، إلخ). ثم نظهر الجواب ليظهر لنا التالي:</p>
+
+<p><img src="assets/images/mpvacious-anki-2.png" alt="" /></p>
+
+<p>ظهرت لدينا الجملة النصية مع معلومات الفيديو المأخوذة منه. نقييم الآن فهمنا
+ونختار زر تقييم إجابة.</p>
+
+<p>لنأخذ مثالا آخر. هذه المرة مع لغة أخرى ومقطع من مسلسل <a href="https://en.wikipedia.org/wiki/Mind_Your_Language">Mind Your Language</a> (أنصح متعلمي الإنجليزية بمشاهدته)
+وليكن المقطع الذي نريد استخراجه يمتد على مدى عبارتين نريد تضمينهما في البطاقة نفسها.</p>
+
+<p><img src="assets/images/mpvacious-6.png" alt="" /></p>
+
+<p>نبدأ أولا بالذهاب لأول عبارة ونضغط على <kbd>c</kbd> كما سبق
+لكي يتم تحديد بداية المقطع ونهايته. لكننا نريد أيضا تضمين العبارة التالية لذلك علينا
+تعديل وقت نهاية المقطع. أسهل طريقة لفعل هذا هنا هو ببساطة تقديم الفيديو إلى حين
+ظهور ترجمة العبارة التالية. سنلاحظ أن mpvacious يعدل نهاية المقطع تلقائيا.</p>
+
+<video controls="">
+  <source src="assets/video/mpvacious-demo-1.mp4" type="video/mp4" />
+</video>
+
+<p>الآن ما علينا إلا الضغط على <kbd>n</kbd> لإضافة البطاقة.
+جدير بالملاحظة أن لقطة الشاشة التي يأخذها البرنامج ويحفظها في البطاقة تكون مأخوذة
+من لحظة الضغط على زر <kbd>n</kbd>. من المفيد الاعتناء بالتقاط صور معبرة عن المشهد ومميزة
+فهذا قد يساعدك مثلا على تذكر المشهد وسياقه عند رؤية الصورة في أنكي.</p>
+
+<p>حسنا، ماذا لو كانت توقيت الترجمة سيئا جدا لا يتزامن مع الحديث أو ماذا لو كانت لا توجد ترجمة
+أصلا لكنك ما زلت تريد اقتطاع مقطع وإضافته؟</p>
+
+<p>إذا قرأت خيارات القائمة فسترى أن هناك خيارات لضبط بداية المقطع ونهايته حسب اللحظة الحالية
+بغض النظر عن توقيت الترجمة. هذه الاختصارات هي <kbd>s</kbd> و <kbd>e</kbd>.</p>
+
+<p>لنأخذ مثالا عن توقيت ترجمة متأخر:</p>
+
+<video controls="">
+  <source src="assets/video/mpvacious-demo-2.mp4" type="video/mp4" />
+</video>
+
+<p>استخدام هذه الخيارات أصعب بطبيعة الحال لأنك تحتاج للتأكد يدويا من أنك تضمن
+بداية الجملة إلى نهايتها في المقطع بدون اقتصاص كلمة بدون قصد قد تضر بفهمك للسياق.</p>
+
+<p>لنر كيف ستظهر البطاقة في أنكي:</p>
+
+<p><img src="assets/images/mpvacious-anki-3.png" alt="" /></p>
+
+<p>إذا كنت تقرأ بنباهة فستلاحظ أن عبارة “Goodnight! - I’ve locked up the tea room Sid - Thanks Glad”
+تم تضمينها مع أننا لم نمضها في المقطع الصوتي. هذا لأن توقيت الترجمة ليس دقيقا طبعا
+وmpvacious يعتمد عليه لاستخراج النص المرافق للصوت. يمكننا هنا ببساطة حذف النص الزائد
+يدويا عندما نراجع البطاقة.</p>
+
+<p>لكن ماذا لو كنت تريد تقطيع فيديو ليس له ترجمة؟ عندها سيكون حقل النص فارغا وسيرفض mpvacious
+إنشاء بطاقة بسبب ذلك. لكن هناك حل لهذا سأشرحه لاحقا يجعل البرنامج يسمح بإضافة البطاقة على كل حال
+مع نص تنبيهي كهذا:</p>
+
+<p><img src="assets/images/mpvacious-anki-4.png" alt="" /></p>
+
+<p>يمكنك هنا استغلال الفرصة لكي تصغي السمع وتكتب النص بنفسك وتضيفه عند مراجعة البطاقة.</p>
+
+<h2 id="ضبط-mpvacious">ضبط mpvacious</h2>
+
+<p>بعد أن أخذنا جولة قصيرة مع mpvacious لندخل في التفاصيل الدسمة وطريقة إعداد
+البرنامج وتخصيصه. أولا سننشئ ملفا باسم <code class="language-plaintext highlighter-rouge">subs2srs.conf</code> ونضعه في مجلد
+<code class="language-plaintext highlighter-rouge">mpv/script-opts/</code>. سيحتوي هذا الملف إعدادات مثل الزرمة التي سيحفظ
+mpvacious البطاقات فيها ونوع الملحوظة (notetype) المستخدم وأشياء أخرى.
+هنا مثال عن ملف: <a href="https://github.com/Ajatt-Tools/mpvacious/blob/master/.github/RELEASE/subs2srs.conf">https://github.com/Ajatt-Tools/mpvacious/blob/master/.github/RELEASE/subs2srs.conf</a> مع شرح لكل الخيارات.</p>
+
+<p>هذه إعداداتي التي أستخدمها للغة الإنجليزية مثلا:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deck_name=en::09. mined sentences
+model_name=Mined Sentence
+sentence_field=sentence
+audio_field=audio
+image_field=image
+miscinfo_field=source
+create_deck=yes
+nuke_spaces=no
+allow_duplicates=no
+</code></pre></div></div>
+
+<p>سيحفظ mpvacious بيانات المقطع بهذا الشكل حسب هذه الإعدادات:</p>
+
+<p><img src="assets/images/mpvacious-anki-5.png" alt="" /></p>
+
+<p>بجانب أول الخيارات والتي هي مخصصة لضبط توزيع الحقول والرزمة ونوع الملحوظة المستخدمين،
+يجدر التركيز على آخر ثلاث خيارات:</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">create_deck</code>: يجعل هذا الخيار البرنامج ينشئ الرزمة المضبوطة بخيار <code class="language-plaintext highlighter-rouge">deck_name</code>
+إذا لم تكن موجودة بالفعل في أنكي.</li>
+  <li><code class="language-plaintext highlighter-rouge">nuke_spaces</code>: البرنامج يزيل المسافات بين كل كلمة من نص المقطع بشكل افتراضي.
+هذا لأن استخدامه الأكبر هو لتعلم لغات شرق آسيا مثل الصينية واليابانية والتي لا تستخدم المسافات بين الكلمات.
+نحتاج لإلغاء تفعيل هذا الخيار لأغلب اللغات الأخرى وإلا ظهرت النصوص كطلاسم بدون مسافات.</li>
+  <li><code class="language-plaintext highlighter-rouge">allow_duplicates</code>: قلنا سابقا إن mpvacious يرفض استيراد المقاطع التي لا ترجمات لها.
+ضبط هذا الخيار لقيمة <code class="language-plaintext highlighter-rouge">no</code> يجعله يستورد المقاطع على أي حال مع العبارة التنبيهية التي رأيناها.</li>
+</ol>
+
+<h2 id="استخدام-mpvacious-مع-عدة-لغات">استخدام mpvacious مع عدة لغات</h2>
+
+<p>إذا كنت مهووسا بتعلم اللغات فقد ترغب في استخدام mpvacious لتعلم أكثر من لغة،
+وستحتاج غالبا لأن تستخدم إعدادات مختلفة لكل لغة، مثل الرزمة المستخدمة وخيار <code class="language-plaintext highlighter-rouge">nuke_spaces</code>.</p>
+
+<p>يدعم mpvacious استخدام عدة ملفات إعدادات يمكن تفعيل واحد منها والتنقل بينها
+باستخدام زر <code class="language-plaintext highlighter-rouge">p</code> عندما تكون قائمة البرنامج ظاهرة. يظهر الملف المفعل حاليا بجانب “Active profile” في الواجهة.
+إذا عدت إلى الصور السابقة في المقالة فستجد أنني استخدمت ملفي إعدادات مختلفة لكل
+من اللغتين الإنجليزية والتركية.</p>
+
+<p>لكي تستخدم هذه الميزة عليك أولا إنشاء ملف باسم <code class="language-plaintext highlighter-rouge">subs2srs_profiles.conf</code> في مجلد <code class="language-plaintext highlighter-rouge">mpv/script-opts/</code>
+تعرّف فيه أسماء ملفات الإعدادات الموجودة في المجلد نفسه وذات اللاحقة <code class="language-plaintext highlighter-rouge">conf</code> بهذا الشكل:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>profiles=subs2srs,english,turkish
+active=subs2srs
+</code></pre></div></div>
+<p>سيكون ملف <code class="language-plaintext highlighter-rouge">subs2srs.conf</code> الافتراضي في هذه الحالة.</p>
+
+<p>لدي شخصيا ثلاث ملفات إعدادات للغات الإنجليزية والتركية واليابانية.</p>
+
+<h2 id="خاتمة">خاتمة</h2>
+
+<p>كان هذا تعريفا قصيرا لأداة تعرفت عليها مؤخرا ووجدتها مفيدة جدا لإنعاش روتيني التعليمي.
+سأضع مصادر للاستزادة حول mpvacious وأدوات مشابهة.</p>
+
+<h2 id="مراجع">مراجع</h2>
+
+<ul>
+  <li>وثائق mpvacious الرسمية والتحميل: <a href="https://github.com/Ajatt-Tools/mpvacious">https://github.com/Ajatt-Tools/mpvacious</a></li>
+  <li><a href="http://subs2srs.sourceforge.net/">أداة subs2srs</a> عريقة ومصدر إلهام mpvacious. فرقها الأكبر أنها أوتوماتيكية تماما تقتطع المقاطع حسب توقيت الترجمة وتضيفها كلها إلى Anki.
+مفيدة إذا كان لديك ترجمة بتوقيت ممتاز وتريد إضافة كل المقاطع في فيديو بسرعة.</li>
+  <li>هناك عدة إضافات لـAnki تساعد على إنشاء بطاقات على طراز subs2srs. ابحث عن “subs2srs” في صفحة <a href="https://ankiweb.net/shared/addons/2.1">https://ankiweb.net/shared/addons/2.1</a>.</li>
+</ul>
+
+	</article>
+</div>
+
+    </main>
+    <footer id="footer" dir="ltr">
+    <ul id="footer-links">
+        <li><a id="feed" rel="alternate" type="application/atom+xml" href="/feed"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-rss"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                    <path
+                        d="M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z" />
+                </svg></a></li>
+        <li><a id="source" href="https://github.com/abdnh/abdnh.github.io"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    fill="currentColor" class="bi bi-code" viewBox="0 0 16 16">
+                    <path
+                        d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z" />
+                </svg></a></li>
+    </ul>
+</footer>
+</body>
+
+</html>
