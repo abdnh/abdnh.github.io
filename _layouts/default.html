@@ -8,13 +8,7 @@
 <body>
     {% include_cached sidebar.html %}
     <main>
-        {% if page.math %}
-            {% katexmm %}
-                {{ content }}
-            {% endkatexmm %}
-        {% else %}
-            {{ content }}
-        {% endif %}
+        {{ content }}
     </main>
     {% include_cached  footer.html %}
 </body>
