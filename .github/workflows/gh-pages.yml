@@ -11,6 +11,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Install Node.js
+      run: sudo apt-get install nodejs
+
     - uses: actions/cache@v2
       with:
         path: vendor/bundle
