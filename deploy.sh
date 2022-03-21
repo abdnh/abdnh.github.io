@@ -7,11 +7,8 @@ set -e
 set -o pipefail
 
 URL=$(git config --get remote.origin.url)
-# CLONE_FROM="."
 BRANCH="gh-pages"
 BRANCH_FROM="master"
-# DEPLOY_CONFIG="_config_deploy.yml"
-# BUNDLE="bundle exec"
 BUNDLE=""
 DRAFTS=$6
 SRC=$(pwd)
@@ -31,16 +28,9 @@ cd "${CLONE}"
 echo -e "\nBuilding Jekyll site:"
 rm -rf _site
 
-# popd
-# if [ -r ${DEPLOY_CONFIG} ]; then
-#   ${BUNDLE} jekyll build --config _config.yml,${DEPLOY_CONFIG}
-# else
-#   ${BUNDLE} jekyll build
-# fi
-# jekyll build -d ${CLONE}/_site
+
 jekyll build
 
-# pushd "${CLONE}"
 if [ ! -e _site ]; then
   echo -e "\nJekyll didn't generate anything in _site!"
   exit -1
