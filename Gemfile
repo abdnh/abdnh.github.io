@@ -7,7 +7,7 @@ group :jekyll_plugins do
   gem "jekyll-toc", "~> 0.17.1"
   gem "jekyll-last-modified-at"
   gem 'jekyll-archives'
-  # gem 'jekyll-katex'
+  gem 'jekyll-katex'
   gem 'jekyll-redirect-from', '~> 0.16.0'
   gem "jekyll-include-cache"
 end
