@@ -1,6 +1,7 @@
 permalink: /:categories/:title
 repo_url: https://github.com/abdnh/abdnh.github.io
 title: مدونة عبدو الفضولية
+name: Abdo
 markdown: kramdown
 encoding: utf-8
 safe: true
