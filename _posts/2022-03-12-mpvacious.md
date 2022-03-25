@@ -86,7 +86,7 @@ uuid: d3b562d9-4197-40c3-9c12-04754fc60761
 ظهور ترجمة العبارة التالية. سنلاحظ أن mpvacious يعدل نهاية المقطع تلقائيا.
 
 <video controls>
-  <source src="assets/video/mpvacious-demo-1.mp4" type="video/mp4">
+  <source src="/assets/video/mpvacious-demo-1.mp4" type="video/mp4">
 </video>
 
 الآن ما علينا إلا الضغط على <kbd>n</kbd> لإضافة البطاقة.
@@ -103,7 +103,7 @@ uuid: d3b562d9-4197-40c3-9c12-04754fc60761
 لنأخذ مثالا عن توقيت ترجمة متأخر:
 
 <video controls>
-  <source src="assets/video/mpvacious-demo-2.mp4" type="video/mp4">
+  <source src="/assets/video/mpvacious-demo-2.mp4" type="video/mp4">
 </video>
 
 استخدام هذه الخيارات أصعب بطبيعة الحال لأنك تحتاج للتأكد يدويا من أنك تضمن
