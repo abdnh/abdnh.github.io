@@ -4,7 +4,7 @@ My personal blog in Arabic. Built with Jekyll.
 
 ## Build Instructions
 
-I build the site locally and push it to Github,
+I deploy the site using an [action](.github/workflows/gh-pages.yml),
 and don't use Github-provided Jekyll setup because
 some of the plugins I need are not whitelisted.
 
