@@ -4,7 +4,7 @@
 	<title>مدونة عبدو الفضولية</title>
 	<link rel="alternate" type="text/html" href="https://www.abdnh.net"/>
 	<link rel="self" type="application/atom+xml" href="feed.atom"/>
-	<updated>2022-03-25T14:54:15+00:00</updated>
+	<updated>2022-03-25T20:24:49+00:00</updated>
 	<id>urn:uuid:c9b04d1a-a946-485c-a6e2-b5745e097d65</id>
 	<author>
 		<name>Abdo</name>
@@ -209,6 +209,7 @@ active=subs2srs
   &lt;li&gt;&lt;a href=&quot;http://subs2srs.sourceforge.net/&quot;&gt;أداة subs2srs&lt;/a&gt; عريقة ومصدر إلهام mpvacious. فرقها الأكبر أنها أوتوماتيكية تماما تقتطع المقاطع حسب توقيت الترجمة وتضيفها كلها إلى Anki.
 مفيدة إذا كان لديك ترجمة بتوقيت ممتاز وتريد إضافة كل المقاطع في فيديو بسرعة.&lt;/li&gt;
   &lt;li&gt;هناك عدة إضافات لـAnki تساعد على إنشاء بطاقات على طراز subs2srs. ابحث عن “subs2srs” في صفحة &lt;a href=&quot;https://ankiweb.net/shared/addons/2.1&quot;&gt;https://ankiweb.net/shared/addons/2.1&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;“خدعة” بسيطة &lt;a href=&quot;https://www.youtube.com/watch?v=MadpZEBFHIc&quot;&gt;تعلمتها مؤخرا&lt;/a&gt; هي إنشاء عدة حسابات يوتيوب باستخدام الإيميل نفسه وتخصيص كل منها للغة من اللغات التي أتعلمها حيث أشترك بقنوات تنشر محتوى بتلك اللغة فقط لخلق بيئة للانغماس فيها. أحمل فيديوهات من القنوات وأستخدمها مع mpvacious أيضا.&lt;/li&gt;
 &lt;/ul&gt;
 </content>
 	</entry>
