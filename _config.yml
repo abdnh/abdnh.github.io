@@ -4,6 +4,7 @@ title: مدونة عبدو الفضولية
 markdown: kramdown
 encoding: utf-8
 safe: true
+feed: feed.atom
 
 plugins:
   - jekyll-redirect-from
@@ -12,13 +13,6 @@ plugins:
   - jekyll-archives
   - jekyll-katex
   - jekyll-include-cache
-
-# whitelist:
-#   - jekyll-redirect-from
-#   - jekyll-toc
-#   - jekyll-last-modified-at
-#   - jekyll-archives
-#   - jekyll-katex
 
 include:
   - CNAME
