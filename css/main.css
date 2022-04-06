@@ -12,13 +12,11 @@
 
 #logo {
     margin: 0.5rem;
-    transition: filter 2s 1s linear, width 1.5s 3s, max-width 0s 3s;
+    transition: transform 5s 0.5s linear;
 }
 
 #logo:hover {
-    filter: saturate(100) hue-rotate(100deg);
-    width: 50vw;
-    max-width: inherit;
+    transform: rotate(360deg);
 }
 
 img, video {
