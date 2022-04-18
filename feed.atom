@@ -4,7 +4,7 @@
 	<title>مدونة عبدو الفضولية</title>
 	<link rel="alternate" type="text/html" href="https://www.abdnh.net"/>
 	<link rel="self" type="application/atom+xml" href="feed.atom"/>
-	<updated>2022-04-15T02:56:36+00:00</updated>
+	<updated>2022-04-18T23:15:28+00:00</updated>
 	<id>urn:uuid:c9b04d1a-a946-485c-a6e2-b5745e097d65</id>
 	<author>
 		<name>Abdo</name>
@@ -388,6 +388,9 @@ meson install -C build&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;/figure&gt;
 
 &lt;h2 id=&quot;خاتمة&quot;&gt;خاتمة&lt;/h2&gt;
+
+&lt;p&gt;بقيت مشكلة قد تعيق مسريتك الطرفية وهي سؤال هل عليك مغادرة الطرفية لكي تحمل فيديوهات الأنمي قبل مشاهدتها في الطرفية؟
+الجواب هو لحسن الحظ لا! أداة &lt;a href=&quot;https://github.com/pystardust/ani-cli&quot;&gt;ani-cli&lt;/a&gt; تسمح لك بتحميل الأنمي من راحة طرفيتك!&lt;/p&gt;
 
 &lt;p&gt;أرجو أن يكون هذا الشرح مفيدا. مشاهدة ممتعة!&lt;/p&gt;
 
