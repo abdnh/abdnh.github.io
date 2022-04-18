@@ -110,6 +110,9 @@ mpv --vo=sixel --aid=2 --sid=3 anime.mp4
 
 ## خاتمة
 
+بقيت مشكلة قد تعيق مسريتك الطرفية وهي سؤال هل عليك مغادرة الطرفية لكي تحمل فيديوهات الأنمي قبل مشاهدتها في الطرفية؟
+الجواب هو لحسن الحظ لا! أداة [ani-cli](https://github.com/pystardust/ani-cli) تسمح لك بتحميل الأنمي من راحة طرفيتك!
+
 أرجو أن يكون هذا الشرح مفيدا. مشاهدة ممتعة!
 
 [^1]: <https://mesonbuild.com/Getting-meson.html#installing-meson-with-pip>
