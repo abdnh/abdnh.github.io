@@ -224,6 +224,7 @@ time {
 
     #nav-links {
         flex-direction: row;
+        justify-content: center;
     }
 
     main, footer {
