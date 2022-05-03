@@ -151,4 +151,4 @@ YouGlish هو موقع لتعلم لغات يوفر محرك بحث لمقاطع
 
 ## مشاريع برمجية أخرى
 
-لدي مشاريع أخرى صغيرة أغلبها ليس مفيدا لأحد غيري: https://github.com/abdnh?tab=repositories&q=&type=source&language=&sort=
+لدي مشاريع أخرى صغيرة أغلبها ليس مفيدا لأحد غيري: <https://github.com/abdnh?tab=repositories&q=&type=source&language=&sort=>
