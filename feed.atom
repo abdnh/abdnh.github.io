@@ -4,13 +4,167 @@
 	<title>مدونة عبدو الفضولية</title>
 	<link rel="alternate" type="text/html" href="https://www.abdnh.net"/>
 	<link rel="self" type="application/atom+xml" href="feed.atom"/>
-	<updated>2022-05-06T05:03:19+00:00</updated>
+	<updated>2022-05-16T09:15:11+00:00</updated>
 	<id>urn:uuid:c9b04d1a-a946-485c-a6e2-b5745e097d65</id>
 	<author>
 		<name>Abdo</name>
 		 <uri>https://www.abdnh.net/</uri>
 	</author>
 
+	
+	<entry>
+		<title>مشاريع</title>
+		<link rel="alternate" type="text/html" href="https://www.abdnh.net/projects"/>
+		<published>2022-05-02T00:00:00+00:00</published>
+		<id>urn:uuid:</id>
+		<content type="html">&lt;p&gt;سأكتب هنا عن بعض مشاريعي (البرمجية غالبا) التي أعمل عليها، غالبا للتعلم والترفيه.
+أحب التقنية وعمل أدواتي البرمجية الخاصة ككل من يحب البرمجة، وأحب التعلم من أجل التعلم،
+لذلك لن أهمل ذكر التفاصيل التقنية “المملة” بجانب الكلام عن الأهداف المعنوية.&lt;/p&gt;
+
+&lt;h2 id=&quot;مدونة-عبدو-الفضولية&quot;&gt;&lt;a href=&quot;/&quot;&gt;مدونة عبدو الفضولية&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;هذه المدونة التي تقرأها حاليا. أنشأتها قبل حوالي سنتين لكي أكتب عن كل ما يهمني.
+أصبحت قبلها بسنوات مدمنا على قراءة المدونات (التقنية غالبا) وأصبح لدي اهتمام مكثف
+بمواضيع محددة غير معروفة نسبيا جعلني أشعر بالثقة بأن لدي ما أقوله عنها، حتى لو كان سطحيا.
+من المواضيع التي أردت الكتابة عنها واكتساب معرفة واسعة فيها هي موضوع طرق التعلم المبنية على أبحاث علمية (تأثير الاختبار، التكرار المتباعد)
+واستخدام أدوات تقنية تستغل هذه الطرق (مثل &lt;a href=&quot;/anki-intro&quot;&gt;Anki&lt;/a&gt;).
+موضوع متعلق آخر يهمني هو تعلم اللغات باستخدام هذه الطرق وشرح استخدام كثير من الأدوات التقنية الموجودة في الساحة.
+بجانب مواضيع التعلم، أريد أيضا تحسين مهاراتي التقنية من خلال شرح ما أتعلمه.
+أخذ الوقت بكتابة الشروحات يساعدني على تعميق فهمي بغض النظر عما إذا كان أحد يقرأ ما أكتبه ويفهم منه شيئا :)&lt;/p&gt;
+
+&lt;p&gt;لنتحدث قليلا عن الجانب التقني للمدونة: المدونة مبنية على أداة Jekyll الشهيرة لبناء المواقع الثابتة
+(التي لا تتطلب قواعد بيانات وتخزين بيانات متغيرة للمستخدمين مثلا).
+تصميم المدونة اخترت عمله بنفسي من الصفر وجعله بسيطا وإعطاءه طابعي الخاص، لأن المدونة
+مشروع تعلم بشكل أساسي. المدونة لا تستخدم أي جافاسكربت حاليا بالمناسبة والصفحات تفتح بسرعة البرق!
+المدونة &lt;a href=&quot;https://github.com/abdnh/abdnh.github.io/&quot;&gt;مستضافة&lt;/a&gt; على خدمة GitHub Pages المجانية.
+تكلفة المدونة هي فقط تكلفة اسم النطاق الخاص (والذي ليس ضروريا).&lt;/p&gt;
+
+&lt;h2 id=&quot;ويكي-عبدو-الفضولية&quot;&gt;&lt;a href=&quot;/curious&quot;&gt;ويكي عبدو الفضولية&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;“ويكي” شخصية مرافقة لمدونة عبدو الفضولية أكتب فيها بشكل مشتت أكثر وأكثر أريحية وإيجازا.
+هدفي من عملها هو أولا عمل مخزون شخصي عن كل ما أتعلمه وأعرفه يتكون من منشورات قصيرة يمكن
+ربطها والإحالة إليها بسهولة. بدأت مؤخرا بكتابة منشورات مؤرخة على شكل “&lt;a href=&quot;/curious/#%D9%8A%D9%88%D9%85%D9%8A%D8%A7%D8%AA%20%D9%81%D8%B6%D9%88%D9%84%D9%8A&quot;&gt;يوميات&lt;/a&gt;”
+مثل منشورات مواقع التواصل الاجتماعي.&lt;/p&gt;
+
+&lt;p&gt;الويكي مبنية على برنامج TiddlyWiki المخصص لتدوين الملحوظات وتنظيم المعرفة.
+أكبر نقطة قوة لـTiddlyWiki هي ميزات ربط المنشورات وتخصيصها بحيث يكون كل منشور صغيرا لكن يمكن ربطه
+مع منشورات أخرى واستخدامه بشكل متكرر داخل منشورات أخرى وإجراء عمليات بحث على المنشورات حسب الموضوع
+والمعلومات المتعلقة بكل منشور بسهولة.&lt;/p&gt;
+
+&lt;p&gt;بدأت باستخدام TiddlyWiki قبل سنوات لتدوين يومياتي الشخصية، لكن معرفتي بميزات البرنامج القوية كانت (وما زالت) ضئيلة.
+أخطط لتعميق فهمي للبرنامج وتحسين الويكي (من ناحية المظهر والتنظيم).&lt;/p&gt;
+
+&lt;h2 id=&quot;إثراء-المحتوى-العربي-حول-طرق-التعلم-واستخدام-التقنية-لتعزيز-التعلم&quot;&gt;إثراء المحتوى العربي حول طرق التعلم واستخدام التقنية لتعزيز التعلم&lt;/h2&gt;
+
+&lt;p&gt;من أكبر اهتماماتي حاليا هي طرق التعلم كما قلت. هناك نقص واضح في المحتوى العربي حول الموضوع طبعا.
+بدأت مؤخرا بالمساهمة تدريجيا في ما أعرفه حول الموضوع. بحكم هووسي ببرنامج Anki واستخدامي له منذ سنوات،
+بدأت بترجمة البرنامج وما يتعلق به من دلائل استخدام ووثائق. أكملت أولا ترجمة برنامج الكمبيوتر وتطبيقات الجوال (أندرويد وأيفون).
+ثم انتقلت إلى دليل الاستخدام و&lt;a href=&quot;https://github.com/abdnh/anki-manual/&quot;&gt;ترجمته ليصبح أحدث وأكمل ترجمة&lt;/a&gt;
+للدليل من بين الترجمات الموجودة للغات مختلفة.
+كما أساهم في &lt;a href=&quot;https://t.me/Ankiarabic_QA&quot;&gt;مجموعة صغيرة على التلجرام&lt;/a&gt; لمستخدمي أنكي العرب.&lt;/p&gt;
+
+&lt;p&gt;على نطاق أوسع، هناك مقالات إنجليزية ممتعة حول موضوع الذاكرة أود ترجمتها أو على الأقل تلخيصها بالعربية.
+أبرزها مما أعرفه هي مقالة لمايكل نيلسن باسم “تعزيز الذاكرة طويلة الأمد” يمكن قراءة ترجمتي لها هنا:
+&lt;a href=&quot;/ltm&quot;&gt;تعزيز الذاكرة طويلة الأمد - مايكل نيلسن (مترجم)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;أود أيضا أن أساهم في الكتابة في مواقع لها نفوذ أكبر من مدونتي هذه التي لا يقرأها أحد. أود المساهمة في ويكيبيديا العربية حول الموضوع.&lt;/p&gt;
+
+&lt;p&gt;على نطاق أوسع أكثر، أريد التعمق والقراءة في الأبحاث العلمية حول الذاكرة وطرق التعلم وعمل تجاربي الخاصة لفهم ذاكرتي وتعزيز
+تعلمي الخاص.&lt;/p&gt;
+
+&lt;h2 id=&quot;المساهمة-في-المشاريع-مفتوحة-المصدر&quot;&gt;المساهمة في المشاريع مفتوحة المصدر&lt;/h2&gt;
+
+&lt;p&gt;أحب المساهمة في مشاريع الآخرين البرمجية والتعلم منها. بدأت قبل سنتين بالمساهمة بشكل رئيسي
+&lt;a href=&quot;https://github.com/ankitects/anki&quot;&gt;بتطوير أنكي&lt;/a&gt; وإصلاح بعض الأعطال وإضافة الميزات البسيطة.
+كانت وما زالت هذه تجربة ممتعة. قراءة أكواد الآخرين ومحاولة فهمها ومناقشة التغييرات مع المطورين الآخرين
+فرصة ثرية للتعلم واكتساب الخبرة بسرعة.&lt;/p&gt;
+
+&lt;h2 id=&quot;إضافات-anki&quot;&gt;إضافات Anki&lt;/h2&gt;
+
+&lt;p&gt;من أكبر نقاط قوة Anki (بجانب جعل الذاكرة خيار لحد ما) هو كونه مفتوح المصدر وقابل للتخصيص كيفما تريد.
+البرنامج يدعم نظام إضافات (add-ons) يمكن من خلالها تخصيص كل شيء تقريبا في البرنامج.
+هناك مجتمع نشط لحد ما من مطوري الإضافات ومستخدميها.
+بدأت بتعلم عمل إضافات بسيطة لاستخدامي الشخصي منذ سنوات، لكن مؤخرا تعمقت أكثر وبدأت أكتب إضافات أكثر تعقيدا وأشاركها
+مع الناس. بدأ الأمر عندما طلب مني شخص في مجموعة التلجرام الآنفة الذكر أن أعدل على إضافة &lt;a href=&quot;https://ankiweb.net/shared/info/2084557901&quot;&gt;LPCG&lt;/a&gt; المستخدمة لاستيراد الأبيات لكي أعربها وأضيف ميزات إضافية لها لاستيراد المنظومات.
+عدلت الإضافة ونشرتها وهي الآن تستخدم في المجموعة لعمل زرم بطاقات Anki ومشاركتها مع المستخدمين:
+&lt;a href=&quot;https://ankiweb.net/shared/info/1642554134&quot;&gt;ARLPCG (مستورد المنظومات والقصائد)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/abdnh/AnkiLPCG/ar/shot1.png&quot; alt=&quot;واجهة إضافة ARLPCG&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;عملت بعدها على بعض الإضافات المفيدة للمستخدمين العرب خصوصا، منها:&lt;/p&gt;
+
+&lt;h3 id=&quot;arqimporter-مستورد-الأسئلة-العربية&quot;&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/1299710950&quot;&gt;ARQImporter (مستورد الأسئلة العربية)&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;إضافة مشتقة من ARLPCG لاستيراد الأسئلة العربية المميزة من ملفات نصية مميزة برموز معينة.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/abdnh/ARQImporter/master/screenshots/dialog.jpg&quot; alt=&quot;واجهة إضافة ARQImporter&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;armajor-نظام-المذكرات-الصوتي-للعربية&quot;&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/616438440&quot;&gt;ArMajor (نظام المذكرات الصوتي للعربية)&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;نظام مذكرات مستوحى من كتاب &lt;a href=&quot;/books/alasmaaekolaha&quot;&gt;الأسماء كلها&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/abdnh/armajor/master/shot-1.png&quot; alt=&quot;واجهة إضافة ArMajor&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;dawwen-importer-مستورد-دوّن&quot;&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/1670363972&quot;&gt;Dawwen Importer (مستورد دوّن)&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;مستورد لملحوظات تطبيق &lt;a href=&quot;https://play.google.com/store/apps/details?id=com.dawwen&quot;&gt;دوّن&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;bidi-tools&quot;&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/281067366&quot;&gt;BiDi Tools&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;إضافة للتعامل مع النصوص التي تكتب من اليمين إلى اليسار مثل العربية.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/abdnh/anki-bidi-tools/master/demo/editor.png&quot; alt=&quot;واجهة إضافة BiDi Tools في محرر أنكي&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;نشرت بعدها عدة إضافات لتعلم اللغات خصوصا أذكر منها:&lt;/p&gt;
+
+&lt;h3 id=&quot;aglish&quot;&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/38866997&quot;&gt;Aglish&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;إضافة لاستخدام خدمة &lt;a href=&quot;https://youglish.com/&quot;&gt;YouGlish&lt;/a&gt; داخل بطاقات أنكي.
+YouGlish هو موقع لتعلم لغات يوفر محرك بحث لمقاطع اليوتيوب التي تتوفر لها ملفات ترجمة (captions).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/aglish.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;wiktionary&quot;&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/2087444887&quot;&gt;Wiktionary&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/abdnh/anki-wiktionary/master/images/dialog.png&quot; alt=&quot;واجهة إضافة Wiktionary&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;هذه الإضافة تساعد على ملء البطاقات بتعاريف المفردات والجمل باستخدم قواميس مشروع Wiktionary الضخمة. طورت الإضافة لعميل في موقع &lt;a href=&quot;https://www.fiverr.com/abd_nh/develop-an-anki-addon&quot;&gt;Fiverr&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;trdict&quot;&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/351090164&quot;&gt;TRDict&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/abdnh/anki-trdict/master/shots/dialog.png&quot; alt=&quot;واجهة إضافة TRDict&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;هذه الإضافة توفر قاموس وميزات مفيدة لمتعلمي اللغة التركية.&lt;/p&gt;
+
+&lt;h3 id=&quot;ankiapp-importer&quot;&gt;&lt;a href=&quot;https://ankiweb.net/shared/info/2072125761&quot;&gt;AnkiApp Importer&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;هناك عدة تطبيقات تستغل اسم Anki الأصلي وتحاول جذب المستخدمين لها وتستغل عدم معرفة المستخدمين لجني المال منهم.
+هذه التطبيقات غالبا لا توفر ما يوفره أنكي من الميزات المتقدمة. أشهر مقلد لأنكي هو تطبيق يدعى AnkiApp
+خدع كثيرا من المستخدمين لكي يظنوا أنه أنكي الأصلي. &lt;a href=&quot;https://forums.ankiweb.net/&quot;&gt;منتديات أنكي الرسمية&lt;/a&gt;
+تعج بمنشورات حول مستخدمين يسألون حول AnkiApp ظنا منهم أنه تطبيق رسمي من مؤلف أنكي الأصلي.
+مؤخرا طلب مني أحد الأخوة من مجموعة التلجرام العربية أن أساعده على تصدير رزمه من هذا التطبيق. وجدت عندها
+أن التطبيق للأسف بدأ يطلب اشتراكا مدفوعا لكي يسمح للمستخدمين بتصدير رزمهم من التطبيق بسهولة.
+لكن لا شيء تقني لا يمكن كسر قيده، لذلك فقد نجحت في إيجاد طريقة بسيطة لاستخراج الرزم من بيانات تطبيق الكمبيوتر المحلية
+ونشرت إضافة تساعد على استيراد رزم AnkiApp إلى Anki الأصلي.&lt;/p&gt;
+
+&lt;h3 id=&quot;incontext&quot;&gt;&lt;a href=&quot;https://github.com/abdnh/anki-incontext&quot;&gt;InContext&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/incontext.png&quot; alt=&quot;واجهة إضافة InContext&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;هذه إضافة لتعلم اللغات توفر واجهة لجلب الجمل من عدة مصادر أونلاين وأوفلاين مع إمكانية دعم أي لغة.
+توفر الإضافة خيار لإظهار جمل عشوائية في البطاقات أيضا.
+هذه الإضافة ما زالت في مراحل التطوير الأولى، ولدي خطط لإضافة ميزات وتحسينات كثيرة.
+هذه أكثر إضافة متحمس للعمل عليها حاليا لأن لدي هوس بجمع آلاف الجمل في اللغات التي أتعلمها وتكديسها.&lt;/p&gt;
+
+&lt;h3 id=&quot;إضافات-أخرى&quot;&gt;إضافات أخرى&lt;/h3&gt;
+
+&lt;p&gt;نشرت وما زلت أنشر عديد من الإضافات الأخرى يمكن الاطلاع عليها هنا: &lt;a href=&quot;https://github.com/abdnh?tab=repositories&amp;amp;q=anki&amp;amp;type=&amp;amp;language=&amp;amp;sort=&quot;&gt;https://github.com/abdnh?tab=repositories&amp;amp;q=anki&amp;amp;type=&amp;amp;language=&amp;amp;sort=&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;مشاريع-برمجية-أخرى&quot;&gt;مشاريع برمجية أخرى&lt;/h2&gt;
+
+&lt;p&gt;لدي مشاريع أخرى صغيرة أغلبها ليس مفيدا لأحد غيري: &lt;a href=&quot;https://github.com/abdnh?tab=repositories&amp;amp;q=&amp;amp;type=source&amp;amp;language=&amp;amp;sort=&quot;&gt;https://github.com/abdnh?tab=repositories&amp;amp;q=&amp;amp;type=source&amp;amp;language=&amp;amp;sort=&lt;/a&gt;&lt;/p&gt;
+</content>
+	</entry>
 	
 	<entry>
 		<title>تعريف ببرنامج mpvacious لتعلم اللغات من خلال مقاطع الفيديو</title>
@@ -2834,16 +2988,6 @@ Cepeda &lt;em&gt;et al&lt;/em&gt;, &lt;a href=&quot;https://augmentingcognition.
 
 &lt;p&gt;حكاية ذي القرنين هي تذكير لنا بمبادئ النهضة وما نفتقده منها، مبادئ إنزال الفكر على أرض الواقع
 وإثبات صلاحيته حتى يتم التمكين.&lt;/p&gt;
-</content>
-	</entry>
-	
-	<entry>
-		<title>ويكي TiddlyWiki للملحوظات</title>
-		<link rel="alternate" type="text/html" href="https://www.abdnh.net/tiddlywiki-blog"/>
-		<published>2021-05-16T00:00:00+00:00</published>
-		<id>urn:uuid:fc245433-6a14-4191-9c00-aa67ff1179f4</id>
-		<content type="html">&lt;p&gt;أنشأت “ويكي شخصية” مخصصة لتدوين أي فكرة مشتتة تخطر ببالي لا تناسب مقالة كاملة أو تدوين شروحات قصيرة لأفكار تهمني على شكل ويكي:
-&lt;a href=&quot;curious/index.html&quot;&gt;الويكي&lt;/a&gt;&lt;/p&gt;
 </content>
 	</entry>
 	
