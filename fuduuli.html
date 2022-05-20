@@ -3,16 +3,10 @@
 
 
 
-
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>&#8295;
-
-وسم: لغة إنجليزية
- - مدونة عبدو الفضولية
-&#8297;</title>
+    <title>&#8295;فضولي - مدونة عبدو الفضولية&#8297;</title>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="alternate" type="application/atom+xml" href="feed.atom" title="Atom Feed">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -30,20 +24,35 @@
     </ul>
 </div>
     <main>
-        <header class="post-header">
-            <h1>
-وسم: لغة إنجليزية
-</h1>
-        </header>
-        <ul id="posts">
-            
-            <li><time datetime="2022-03-12">2022-03-12</time> » <a
-                    href="/mpvacious">تعريف ببرنامج mpvacious لتعلم اللغات من خلال مقاطع الفيديو</a></li>
-            
-            <li><time datetime="2021-04-26">2021-04-26</time> » <a
-                    href="/english-dictionaries">قواميس اللغة الإنجليزية على الإنترنت - فوائد ومقارنات</a></li>
-            
-        </ul>
+        <meta http-equiv="refresh" content="2;url=/fuduuli-clock/" />
+
+<style>
+	#nav-links {
+		position: absolute;
+		transition: transform 0.5s 0s linear;
+	}
+	#logo {
+		position: absolute;
+		transition: transform 0.5s 0s linear;
+	}
+	#footer-links {
+		display: none;
+	}
+</style>
+
+<script>
+	const navLinks = document.getElementById("nav-links");
+	navLinks.style.transform = 'translateY(-200px)';
+    navLinks.style.transform += 'translateX(150px)';
+	navLinks.style.transform += 'rotate(0.25turn)';
+	const logo = document.getElementById("logo");
+	logo.parentElement.removeAttribute('href');
+	logo.style.transform = 'translateY(200px)';
+    logo.style.transform += 'translateX(-40vw)';
+	logo.style.transform += 'scale(5)';
+</script>
+
+
     </main>
     <footer id="footer" dir="ltr">
     <ul id="footer-links">
