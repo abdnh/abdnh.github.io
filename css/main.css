@@ -112,9 +112,12 @@ a {
 }
 
 #posts>li {
-    margin-bottom: 1rem;
     display: flex;
     align-items: center;
+}
+
+#posts>li:not(:last-of-type) {
+    margin-bottom: 1rem;
     border-bottom: 1px dashed #383838;
     padding-bottom: 0.5rem;
 }
