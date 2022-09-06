@@ -64,7 +64,7 @@ body {
     margin-left: 5px;
 }
 
-.post-header {
+#post-header {
     border-bottom: var(--section-border);
     display: flex;
     flex-direction: row;
@@ -178,7 +178,7 @@ iframe {
     margin: 0px;
 }
 
-.post li {
+#post li {
     margin-bottom: 1rem;
     margin-top: 1rem;
 }

@@ -3,7 +3,7 @@ layout: default
 title: حول هذه المدونة
 ---
 
-<header class="post-header">
+<header id="post-header">
 	<h1>حول هذه المدونة</h1>
 </header>
 
