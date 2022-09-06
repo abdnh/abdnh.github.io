@@ -239,3 +239,21 @@ time {
 .katex {
     direction: ltr;
 }
+
+@media print {
+    @page {
+        margin: 1cm 0 1cm 0;
+    }
+
+    #sidebar, #footer, #post-meta {
+        display: none;
+    }
+
+    body {
+        width: auto;
+    }
+
+    main {
+        margin: 0 1cm 0 1cm;
+    }
+}
