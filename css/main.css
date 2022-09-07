@@ -5,6 +5,14 @@
     --section-border: 1px solid #d5d5d5;
 }
 
+body {
+    background-color: #FFF8E7;
+    font-family: sans-serif;
+    width: 1120px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
 #sidebar {
     position: absolute;
     width: 100px;
@@ -17,21 +25,6 @@
 
 #logo:hover {
     transform: rotate(360deg);
-}
-
-img, video {
-    height: auto;
-    max-width: 100%;
-    display: block;
-    margin: 5px auto;
-}
-
-body {
-    background-color: #FFF8E7;
-    font-family: sans-serif;
-    width: 1120px;
-    margin: 0 auto;
-    line-height: 1.5;
 }
 
 #nav-links, #footer-links {
@@ -54,60 +47,8 @@ body {
     text-decoration: none;
 }
 
-
-
-#footer-links {
-    flex-direction: row;
-}
-
-#footer-links li {
-    margin-left: 5px;
-}
-
-#post-header {
-    border-bottom: var(--section-border);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-bottom: 5px;
-}
-
-h1, time, article {
-    margin: 5px;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid black;
-    padding: 5px;
-}
-
-figcaption {
-    text-align: center;
-    padding: 3px;
-    font-style: italic;
-}
-
-.footnotes {
-    border-top: var(--section-border);
-    font-size: smaller;
-}
-
-[role="doc-endnote"] {
-    transition: background-color 0.5s ease-in;
-}
-
-[role="doc-endnote"]:target {
-    background-color: var(--highlight-color);
-}
-
-a {
-    overflow-wrap: break-word;
+main, footer {
+    margin: 0px 105px 0 15px;
 }
 
 #posts {
@@ -133,6 +74,80 @@ a {
     text-decoration: none;
 }
 
+#post li {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+#post-header {
+    border-bottom: var(--section-border);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+}
+
+time {
+    white-space: nowrap;
+}
+
+#tags {
+    margin-top: 5px;
+    padding-right: 5px;
+}
+
+#tags>a {
+    margin-left: 0.5em;
+}
+
+#post-description {
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#toc {
+    border: 2px dashed grey;
+    background-color: #FFF8E3;
+}
+
+h1, time, article {
+    margin: 5px;
+}
+
+a {
+    overflow-wrap: break-word;
+}
+
+img, video {
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 5px auto;
+}
+
+iframe {
+    width: 100%;
+    height: 800px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+figcaption {
+    text-align: center;
+    padding: 3px;
+    font-style: italic;
+}
+
 .quote {
     font: italic 22px / 1.4em sans-serif;
     padding: 5px 10px 5px 20px;
@@ -142,14 +157,6 @@ a {
     box-shadow: rgb(221, 221, 221) 4px 4px;
 }
 
-main, footer {
-    margin: 0px 105px 0 15px;
-}
-
-iframe {
-    width: 100%;
-    height: 800px;
-}
 
 .highlighter-rouge, .highlight {
     direction: ltr;
@@ -178,37 +185,29 @@ iframe {
     margin: 0px;
 }
 
-#post li {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+#footer-links {
+    flex-direction: row;
 }
 
-#post-description {
-    font-style: italic;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+#footer-links li {
+    margin-left: 5px;
 }
 
-#toc {
-    border: 2px dashed grey;
-    background-color: #FFF8E3;
+.footnotes {
+    border-top: var(--section-border);
+    font-size: smaller;
 }
 
-#tags {
-    margin-top: 5px;
-    padding-right: 5px;
+[role="doc-endnote"] {
+    transition: background-color 0.5s ease-in;
 }
 
-#tags>a {
-    margin-left: 0.5em;
+[role="doc-endnote"]:target {
+    background-color: var(--highlight-color);
 }
 
 footer {
     border-top: var(--section-border);
-}
-
-time {
-    white-space: nowrap;
 }
 
 @media screen and (max-width: 1105px) {
@@ -222,6 +221,10 @@ time {
         margin: 0 auto;
     }
 
+    #logo {
+        margin: auto;
+    }
+
     #nav-links {
         flex-direction: row;
         justify-content: center;
@@ -229,10 +232,6 @@ time {
 
     main, footer {
         margin: 0px 15px 0 15px;
-    }
-
-    #logo {
-        margin: auto;
     }
 }
 
@@ -245,12 +244,12 @@ time {
         margin: 1cm 0 1cm 0;
     }
 
-    #sidebar, #footer, #post-meta {
-        display: none;
-    }
-
     body {
         width: auto;
+    }
+
+    #sidebar, #footer, #post-meta {
+        display: none;
     }
 
     main {
