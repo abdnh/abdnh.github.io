@@ -1,0 +1,126 @@
+[
+    {
+        "name": "ARLPCG",
+        "desc": "نسخة معدلة من إضافة [LPCG](https://ankiweb.net/shared/info/2084557901). تشمل التعديلات تعريب الإضافة وميزات إضافية مفيدة لاستيراد المنظومات.",
+        "image": "https://raw.githubusercontent.com/abdnh/AnkiLPCG/ar/shot1.png",
+        "links": [
+            "https://github.com/abdnh/ankiLPCG",
+            "https://ankiweb.net/shared/info/1642554134"
+        ]
+    },
+    {
+        "name": "ARQImporter",
+        "desc": "إضافة أنكي مشتقة من [ARLPCG](#arlpcg) لاستيراد الأسئلة العربية من الملفات النصية المميزة برموز معينة.",
+        "image": "https://raw.githubusercontent.com/abdnh/ARQImporter/master/screenshots/dialog.jpg",
+        "links": [
+            "https://github.com/abdnh/ARQImporter",
+            "https://ankiweb.net/shared/info/1299710950"
+        ]
+    },
+    {
+        "name": "Aglish",
+        "desc": "إضافة أنكي لاستخدام خدمة [YouGlish](https://youglish.com/) داخل البطاقات. YouGlish هو موقع لتعلم لغات يوفر محرك بحث لمقاطع اليوتيوب التي تتوفر لها ملفات ترجمة (captions).",
+        "image": "/assets/images/aglish.png",
+        "links": [
+            "https://github.com/abdnh/aglish",
+            "https://ankiweb.net/shared/info/38866997"
+        ]
+    },
+    {
+        "name": "AnkiApp Importer",
+        "desc": "إضافة أنكي لاستيراد الرزم من تطبيق AnkiApp إلى Anki. رغم اسمه، AnkiApp هو مقلّد [لا علاقة له بأنكي](https://faqs.ankiweb.net/ankiapp-is-not-part-of-the-anki-ecosystem.html) ولا يقدم ما يقدمه أنكي وللأسف يخدع كثيرا من الناس لكي يظنوا أنه أنكي الأصلي. مؤخرا قفل التطبيق ميزة تصدير الرزم خلف اشتراك مدفوع (paywall كما يقال)، لكن لا شيء رقمي لا يمكن كسره، لذلك طورت هذه الإضافة لمساعدة ضحايا التطبيق.",
+        "image": "",
+        "links": [
+            "https://github.com/abdnh/AnkiApp-Importer",
+            "https://ankiweb.net/shared/info/2072125761"
+        ]
+    },
+    {
+        "name": "ArMajor",
+        "desc": "هذا تطبيق لنظام المذكرات الصوتي ([Mnemonic major system](https://en.wikipedia.org/wiki/Mnemonic_major_system)) للغة العربية كإضافة أنكي. النظام المستخدم مأخوذ من [كتاب الأسماء كلها](/books/alasmaaekolaha).",
+        "image": "https://raw.githubusercontent.com/abdnh/armajor/master/shot-1.png",
+        "links": [
+            "https://github.com/abdnh/armajor",
+            "https://ankiweb.net/shared/info/616438440"
+        ]
+    },
+    {
+        "name": "BiDi Tools",
+        "desc": "إضافة أنكي تضيف أدوات في المحرر للتعامل مع [النصوص ثنائية الاتجاه](https://ar.wikipedia.org/wiki/%D9%86%D8%B5_%D8%AB%D9%86%D8%A7%D8%A6%D9%8A_%D8%A7%D9%84%D8%A7%D8%AA%D8%AC%D8%A7%D9%87) وهي النصوص التي تحتوي على أبجديات مختلفة لها اتجاهات مختلفة (مثل النصوص التي تحتوي على كلمات عربية وإنجليزية).",
+        "image": "https://raw.githubusercontent.com/abdnh/anki-bidi-tools/master/demo/editor.png",
+        "links": [
+            "https://github.com/abdnh/anki-bidi-tools",
+            "https://ankiweb.net/shared/info/281067366"
+        ]
+    },
+    {
+        "name": "Dawwen Importer (مستورد دوّن)",
+        "desc": "مستورد لملحوظات تطبيق [دوّن](https://play.google.com/store/apps/details?id=com.dawwen). أظن هذه أول إضافة أنشرها على العلن. كتبتها تحت طلب مشرف قناة تلجرام [Anki للتكرار المتباعد](https://t.me/Anki_arabic).",
+        "image": "",
+        "links": [
+            "https://github.com/abdnh/armajor",
+            "https://ankiweb.net/shared/info/1670363972"
+        ]
+    },
+    {
+        "name": "InContext",
+        "desc": "إضافة أنكي تظهر جمل عشوائية حسب كلمة محددة كل مرة تراجع فيها بطاقة.",
+        "image": "/assets/images/incontext.png",
+        "links": [
+            "https://github.com/abdnh/anki-incontext"
+        ]
+    },
+    {
+        "name": "TRDict",
+        "desc": "إضافة أنكي لتسهيل تعبئة البطاقات بتعاريف الكلمات التركية ومعلومات أخرى.",
+        "image": "https://raw.githubusercontent.com/abdnh/anki-trdict/master/shots/dialog.png",
+        "links": [
+            "https://github.com/abdnh/anki-trdict",
+            "https://ankiweb.net/shared/info/351090164"
+        ]
+    },
+    {
+        "name": "Wiktionary",
+        "desc": "إضافة أنكي لاستيراد قواميس ويكاموس (Wiktionary) من موقع [kaikki.org](https://kaikki.org/)",
+        "image": "https://raw.githubusercontent.com/abdnh/anki-wiktionary/master/images/dialog.png",
+        "links": [
+            "https://github.com/abdnh/anki-wiktionary",
+            "https://ankiweb.net/shared/info/2087444887"
+        ]
+    },
+    {
+        "name": "ZIM Reader",
+        "desc": "إضافة أنكي لاستيراد ملفات صيغة [ZIM](https://en.wikipedia.org/wiki/ZIM_(file_format)). هذه الصيغة مستخدمة خصوصا لتخزين محتويات ويكبيديا والمشاريع الشقيقة مثل ويكاموس (Wiktionary). الإضافة مشتقة من إضافة [Wiktionary](#wiktionary)",
+        "image": "https://raw.githubusercontent.com/abdnh/anki-zim-reader/master/images/dialog.png",
+        "links": [
+            "https://github.com/abdnh/anki-zim-reader",
+            "https://ankiweb.net/shared/info/951350249"
+        ]
+    },
+    {
+        "name": "مدونة عبدو الفضولية",
+        "desc": "هذه المدونة التي تقرأها حاليا.",
+        "image": "/favicon.png",
+        "links": [
+            "https://www.abdnh.net/",
+            "https://github.com/abdnh/abdnh.github.io"
+        ]
+    },
+    {
+        "name": "ويكي عبدو الفضولية",
+        "desc": "\"ويكي شخصية\" مرافقة لهذه المدونة مبنية على برنامج [TiddlyWiki](https://tiddlywiki.com/) المخصص لتدوين الملحوظات وتنظيم المعرفة.",
+        "image": "/assets/images/tiddly-fuduuli.png",
+        "links": [
+            "https://www.abdnh.net/curious/",
+            "https://github.com/abdnh/curious"
+        ]
+    },
+    {
+        "name": "مشاريع أخرى",
+        "desc": "لدي مشاريع بعضها صغير قد لا يكون مفيدا لأحد غيري وبعضها ما زال في مرحلة التطوير الأولية",
+        "image": "",
+        "links": [
+            "https://github.com/abdnh?tab=repositories&q=&type=source&language=&sort="
+        ]
+    }
+]
