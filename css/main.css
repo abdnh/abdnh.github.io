@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #FFF8E7;
+    background-color: #fff8e7;
     font-family: sans-serif;
     width: 1120px;
     margin: 0 auto;
@@ -27,7 +27,8 @@ body {
     transform: rotate(360deg);
 }
 
-#nav-links, #footer-links {
+#nav-links,
+#footer-links {
     display: flex;
     list-style: none;
     padding: 0;
@@ -47,7 +48,8 @@ body {
     text-decoration: none;
 }
 
-main, footer {
+main,
+footer {
     margin: 0px 105px 0 15px;
 }
 
@@ -110,10 +112,12 @@ time {
 
 #toc {
     border: 2px dashed grey;
-    background-color: #FFF8E3;
+    background-color: #fff8e3;
 }
 
-h1, time, article {
+h1,
+time,
+article {
     margin: 5px;
 }
 
@@ -121,7 +125,8 @@ a {
     overflow-wrap: break-word;
 }
 
-img, video {
+img,
+video {
     height: auto;
     max-width: 100%;
     display: block;
@@ -137,7 +142,8 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     border: 1px solid black;
     padding: 5px;
 }
@@ -157,15 +163,15 @@ figcaption {
     box-shadow: rgb(221, 221, 221) 4px 4px;
 }
 
-
-.highlighter-rouge, .highlight {
+.highlighter-rouge,
+.highlight {
     direction: ltr;
     text-align: left;
     unicode-bidi: isolate;
 }
 
 .highlight {
-    background-color: #FEFAC1;
+    background-color: #fefac1;
     word-wrap: break-word;
     overflow: auto;
     padding: 0.5em;
@@ -177,7 +183,8 @@ figcaption {
     width: 100%;
 }
 
-.rouge-table td, rouge-table th {
+.rouge-table td,
+rouge-table th {
     border: unset;
 }
 
@@ -269,7 +276,8 @@ footer {
         justify-content: center;
     }
 
-    main, footer {
+    main,
+    footer {
         margin: 0px 15px 0 15px;
     }
 }
@@ -287,7 +295,9 @@ footer {
         width: auto;
     }
 
-    #sidebar, #footer, #post-meta {
+    #sidebar,
+    #footer,
+    #post-meta {
         display: none;
     }
 
