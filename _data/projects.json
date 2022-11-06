@@ -20,7 +20,7 @@
     {
         "name": "Aglish",
         "desc": "إضافة أنكي لاستخدام خدمة [YouGlish](https://youglish.com/) داخل البطاقات. YouGlish هو موقع لتعلم لغات يوفر محرك بحث لمقاطع اليوتيوب التي تتوفر لها ملفات ترجمة (captions).",
-        "image": "/assets/images/aglish.png",
+        "image": "https://raw.githubusercontent.com/abdnh/aglish/master/images/logo-256w.png",
         "links": [
             "https://github.com/abdnh/aglish",
             "https://ankiweb.net/shared/info/38866997"
