@@ -3,7 +3,7 @@
 all: serve
 
 serve:
-	bundle exec jekyll serve --incremental --watch
+	bundle exec jekyll serve --watch
 
 deploy:
 	git checkout master
