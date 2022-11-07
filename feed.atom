@@ -4,7 +4,7 @@
 	<title>مدونة عبدو الفضولية</title>
 	<link rel="alternate" type="text/html" href="https://www.abdnh.net"/>
 	<link rel="self" type="application/atom+xml" href="feed.atom"/>
-	<updated>2022-11-06T01:16:16+00:00</updated>
+	<updated>2022-11-07T10:44:40+00:00</updated>
 	<id>urn:uuid:c9b04d1a-a946-485c-a6e2-b5745e097d65</id>
 	<author>
 		<name>Abdo</name>
@@ -189,7 +189,7 @@
 &lt;/div&gt;
 
 &lt;div class=&quot;project&quot; id=&quot;ويكي-عبدو-الفضولية&quot;&gt;
-    &lt;img class=&quot;project-icon&quot; src=&quot;/assets/images/tiddly-fuduuli.png&quot; /&gt;
+    &lt;img class=&quot;project-icon&quot; src=&quot;/assets/images/tiddly-fuduli.png&quot; /&gt;
     &lt;p class=&quot;project-name&quot;&gt;ويكي عبدو الفضولية&lt;/p&gt;
     &lt;div class=&quot;project-description&quot;&gt;&lt;p&gt;“ويكي شخصية” مرافقة لهذه المدونة مبنية على برنامج &lt;a href=&quot;https://tiddlywiki.com/&quot;&gt;TiddlyWiki&lt;/a&gt; المخصص لتدوين الملحوظات وتنظيم المعرفة.&lt;/p&gt;
 &lt;/div&gt;
