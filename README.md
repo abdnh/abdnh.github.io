@@ -25,4 +25,4 @@ and it's painfully slow (My plain site takes about 12s to build on WSL, while it
 
 The site is licensed under the [Creative Commons public domain (CC-0)](https://creativecommons.org/publicdomain/zero/1.0/) license.
 
-The RSS and code icons are taken from the [Bootstrap Icons](https://icons.getbootstrap.com/) project and licensed under the MIT license.
+Some icons are taken from the [Bootstrap Icons](https://icons.getbootstrap.com/) project and licensed under the MIT license.

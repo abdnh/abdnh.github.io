@@ -3,6 +3,7 @@ repo_url: https://github.com/abdnh/abdnh.github.io
 url: https://www.abdnh.net
 title: مدونة عبدو الفضولية
 name: Abdo
+email: abdo@abdnh.net
 markdown: kramdown
 encoding: utf-8
 safe: true
