@@ -55,8 +55,6 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     liquid (4.0.3)
-    liquid-c (4.0.0)
-      liquid (>= 3.0.0)
     listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -101,7 +99,6 @@ DEPENDENCIES
   jekyll-last-modified-at
   jekyll-redirect-from (~> 0.16.0)
   jekyll-toc (~> 0.17.1)
-  liquid-c (~> 4.0)
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
