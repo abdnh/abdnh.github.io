@@ -4,7 +4,7 @@
 	<title>مدونة عبدو الفضولية</title>
 	<link rel="alternate" type="text/html" href="https://www.abdnh.net"/>
 	<link rel="self" type="application/atom+xml" href="feed.atom"/>
-	<updated>2022-12-04T21:54:18+00:00</updated>
+	<updated>2022-12-05T01:40:12+00:00</updated>
 	<id>urn:uuid:c9b04d1a-a946-485c-a6e2-b5745e097d65</id>
 	<author>
 		<name>Abdo</name>
@@ -19,6 +19,62 @@
 		<updated></updated>
 		<id>urn:uuid:4ddfeeee-07fd-4cda-8217-753c9b3b9905</id>
 		<content type="html">&lt;p&gt;هذه قائمة لبعض مشاريعي في عالم الإنترنت. أغلب هذه المشاريع برمجية وتتمحور حول برنامج &lt;a href=&quot;/anki-intro&quot;&gt;Anki&lt;/a&gt; حاليا.&lt;/p&gt;
+
+&lt;div class=&quot;project&quot; id=&quot;aglish&quot;&gt;
+    &lt;img class=&quot;project-icon&quot; src=&quot;https://raw.githubusercontent.com/abdnh/aglish/master/images/logo-256w.png&quot; /&gt;
+    &lt;p class=&quot;project-name&quot;&gt;Aglish&lt;/p&gt;
+    &lt;div class=&quot;project-description&quot;&gt;&lt;p&gt;إضافة أنكي لاستخدام خدمة &lt;a href=&quot;https://youglish.com/&quot;&gt;YouGlish&lt;/a&gt; داخل البطاقات. YouGlish هو موقع لتعلم لغات يوفر محرك بحث لمقاطع اليوتيوب التي تتوفر لها ملفات ترجمة (captions).&lt;/p&gt;
+&lt;/div&gt;
+    &lt;div class=&quot;project-links&quot;&gt;
+        
+            &lt;a href=&quot;https://github.com/abdnh/aglish&quot;&gt;&lt;/a&gt;
+        
+            &lt;a href=&quot;https://ankiweb.net/shared/info/38866997&quot;&gt;&lt;/a&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;project&quot; id=&quot;wiktionary&quot;&gt;
+    &lt;img class=&quot;project-icon&quot; src=&quot;https://raw.githubusercontent.com/abdnh/anki-wiktionary/master/images/dialog.png&quot; /&gt;
+    &lt;p class=&quot;project-name&quot;&gt;Wiktionary&lt;/p&gt;
+    &lt;div class=&quot;project-description&quot;&gt;&lt;p&gt;إضافة أنكي لاستيراد قواميس ويكاموس (Wiktionary) من موقع &lt;a href=&quot;https://kaikki.org/&quot;&gt;kaikki.org&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+    &lt;div class=&quot;project-links&quot;&gt;
+        
+            &lt;a href=&quot;https://github.com/abdnh/anki-wiktionary&quot;&gt;&lt;/a&gt;
+        
+            &lt;a href=&quot;https://ankiweb.net/shared/info/2087444887&quot;&gt;&lt;/a&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;project&quot; id=&quot;trdict&quot;&gt;
+    &lt;img class=&quot;project-icon&quot; src=&quot;https://raw.githubusercontent.com/abdnh/anki-trdict/master/shots/dialog.png&quot; /&gt;
+    &lt;p class=&quot;project-name&quot;&gt;TRDict&lt;/p&gt;
+    &lt;div class=&quot;project-description&quot;&gt;&lt;p&gt;إضافة أنكي لتسهيل تعبئة البطاقات بتعاريف الكلمات التركية ومعلومات أخرى.&lt;/p&gt;
+&lt;/div&gt;
+    &lt;div class=&quot;project-links&quot;&gt;
+        
+            &lt;a href=&quot;https://github.com/abdnh/anki-trdict&quot;&gt;&lt;/a&gt;
+        
+            &lt;a href=&quot;https://ankiweb.net/shared/info/351090164&quot;&gt;&lt;/a&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;project&quot; id=&quot;zim-reader&quot;&gt;
+    &lt;img class=&quot;project-icon&quot; src=&quot;https://raw.githubusercontent.com/abdnh/anki-zim-reader/master/images/dialog.png&quot; /&gt;
+    &lt;p class=&quot;project-name&quot;&gt;ZIM Reader&lt;/p&gt;
+    &lt;div class=&quot;project-description&quot;&gt;&lt;p&gt;إضافة أنكي لاستيراد ملفات صيغة &lt;a href=&quot;https://en.wikipedia.org/wiki/ZIM_(file_format)&quot;&gt;ZIM&lt;/a&gt;. هذه الصيغة مستخدمة خصوصا لتخزين محتويات ويكبيديا والمشاريع الشقيقة مثل ويكاموس (Wiktionary). الإضافة مشتقة من إضافة &lt;a href=&quot;#wiktionary&quot;&gt;Wiktionary&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+    &lt;div class=&quot;project-links&quot;&gt;
+        
+            &lt;a href=&quot;https://github.com/abdnh/anki-zim-reader&quot;&gt;&lt;/a&gt;
+        
+            &lt;a href=&quot;https://ankiweb.net/shared/info/951350249&quot;&gt;&lt;/a&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;div class=&quot;project&quot; id=&quot;arlpcg&quot;&gt;
     &lt;img class=&quot;project-icon&quot; src=&quot;https://raw.githubusercontent.com/abdnh/AnkiLPCG/ar/shot1.png&quot; /&gt;
@@ -44,20 +100,6 @@
             &lt;a href=&quot;https://github.com/abdnh/ARQImporter&quot;&gt;&lt;/a&gt;
         
             &lt;a href=&quot;https://ankiweb.net/shared/info/1299710950&quot;&gt;&lt;/a&gt;
-        
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;project&quot; id=&quot;aglish&quot;&gt;
-    &lt;img class=&quot;project-icon&quot; src=&quot;https://raw.githubusercontent.com/abdnh/aglish/master/images/logo-256w.png&quot; /&gt;
-    &lt;p class=&quot;project-name&quot;&gt;Aglish&lt;/p&gt;
-    &lt;div class=&quot;project-description&quot;&gt;&lt;p&gt;إضافة أنكي لاستخدام خدمة &lt;a href=&quot;https://youglish.com/&quot;&gt;YouGlish&lt;/a&gt; داخل البطاقات. YouGlish هو موقع لتعلم لغات يوفر محرك بحث لمقاطع اليوتيوب التي تتوفر لها ملفات ترجمة (captions).&lt;/p&gt;
-&lt;/div&gt;
-    &lt;div class=&quot;project-links&quot;&gt;
-        
-            &lt;a href=&quot;https://github.com/abdnh/aglish&quot;&gt;&lt;/a&gt;
-        
-            &lt;a href=&quot;https://ankiweb.net/shared/info/38866997&quot;&gt;&lt;/a&gt;
         
     &lt;/div&gt;
 &lt;/div&gt;
@@ -128,48 +170,6 @@
             &lt;a href=&quot;https://github.com/abdnh/anki-incontext&quot;&gt;&lt;/a&gt;
         
             &lt;a href=&quot;https://ankiweb.net/shared/info/385420176&quot;&gt;&lt;/a&gt;
-        
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;project&quot; id=&quot;trdict&quot;&gt;
-    &lt;img class=&quot;project-icon&quot; src=&quot;https://raw.githubusercontent.com/abdnh/anki-trdict/master/shots/dialog.png&quot; /&gt;
-    &lt;p class=&quot;project-name&quot;&gt;TRDict&lt;/p&gt;
-    &lt;div class=&quot;project-description&quot;&gt;&lt;p&gt;إضافة أنكي لتسهيل تعبئة البطاقات بتعاريف الكلمات التركية ومعلومات أخرى.&lt;/p&gt;
-&lt;/div&gt;
-    &lt;div class=&quot;project-links&quot;&gt;
-        
-            &lt;a href=&quot;https://github.com/abdnh/anki-trdict&quot;&gt;&lt;/a&gt;
-        
-            &lt;a href=&quot;https://ankiweb.net/shared/info/351090164&quot;&gt;&lt;/a&gt;
-        
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;project&quot; id=&quot;wiktionary&quot;&gt;
-    &lt;img class=&quot;project-icon&quot; src=&quot;https://raw.githubusercontent.com/abdnh/anki-wiktionary/master/images/dialog.png&quot; /&gt;
-    &lt;p class=&quot;project-name&quot;&gt;Wiktionary&lt;/p&gt;
-    &lt;div class=&quot;project-description&quot;&gt;&lt;p&gt;إضافة أنكي لاستيراد قواميس ويكاموس (Wiktionary) من موقع &lt;a href=&quot;https://kaikki.org/&quot;&gt;kaikki.org&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-    &lt;div class=&quot;project-links&quot;&gt;
-        
-            &lt;a href=&quot;https://github.com/abdnh/anki-wiktionary&quot;&gt;&lt;/a&gt;
-        
-            &lt;a href=&quot;https://ankiweb.net/shared/info/2087444887&quot;&gt;&lt;/a&gt;
-        
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;project&quot; id=&quot;zim-reader&quot;&gt;
-    &lt;img class=&quot;project-icon&quot; src=&quot;https://raw.githubusercontent.com/abdnh/anki-zim-reader/master/images/dialog.png&quot; /&gt;
-    &lt;p class=&quot;project-name&quot;&gt;ZIM Reader&lt;/p&gt;
-    &lt;div class=&quot;project-description&quot;&gt;&lt;p&gt;إضافة أنكي لاستيراد ملفات صيغة &lt;a href=&quot;https://en.wikipedia.org/wiki/ZIM_(file_format)&quot;&gt;ZIM&lt;/a&gt;. هذه الصيغة مستخدمة خصوصا لتخزين محتويات ويكبيديا والمشاريع الشقيقة مثل ويكاموس (Wiktionary). الإضافة مشتقة من إضافة &lt;a href=&quot;#wiktionary&quot;&gt;Wiktionary&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-    &lt;div class=&quot;project-links&quot;&gt;
-        
-            &lt;a href=&quot;https://github.com/abdnh/anki-zim-reader&quot;&gt;&lt;/a&gt;
-        
-            &lt;a href=&quot;https://ankiweb.net/shared/info/951350249&quot;&gt;&lt;/a&gt;
         
     &lt;/div&gt;
 &lt;/div&gt;
