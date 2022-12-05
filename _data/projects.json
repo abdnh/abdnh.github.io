@@ -1,5 +1,41 @@
 [
     {
+        "name": "Aglish",
+        "desc": "إضافة أنكي لاستخدام خدمة [YouGlish](https://youglish.com/) داخل البطاقات. YouGlish هو موقع لتعلم لغات يوفر محرك بحث لمقاطع اليوتيوب التي تتوفر لها ملفات ترجمة (captions).",
+        "image": "https://raw.githubusercontent.com/abdnh/aglish/master/images/logo-256w.png",
+        "links": [
+            "https://github.com/abdnh/aglish",
+            "https://ankiweb.net/shared/info/38866997"
+        ]
+    },
+    {
+        "name": "Wiktionary",
+        "desc": "إضافة أنكي لاستيراد قواميس ويكاموس (Wiktionary) من موقع [kaikki.org](https://kaikki.org/)",
+        "image": "https://raw.githubusercontent.com/abdnh/anki-wiktionary/master/images/dialog.png",
+        "links": [
+            "https://github.com/abdnh/anki-wiktionary",
+            "https://ankiweb.net/shared/info/2087444887"
+        ]
+    },
+    {
+        "name": "TRDict",
+        "desc": "إضافة أنكي لتسهيل تعبئة البطاقات بتعاريف الكلمات التركية ومعلومات أخرى.",
+        "image": "https://raw.githubusercontent.com/abdnh/anki-trdict/master/shots/dialog.png",
+        "links": [
+            "https://github.com/abdnh/anki-trdict",
+            "https://ankiweb.net/shared/info/351090164"
+        ]
+    },
+    {
+        "name": "ZIM Reader",
+        "desc": "إضافة أنكي لاستيراد ملفات صيغة [ZIM](https://en.wikipedia.org/wiki/ZIM_(file_format)). هذه الصيغة مستخدمة خصوصا لتخزين محتويات ويكبيديا والمشاريع الشقيقة مثل ويكاموس (Wiktionary). الإضافة مشتقة من إضافة [Wiktionary](#wiktionary)",
+        "image": "https://raw.githubusercontent.com/abdnh/anki-zim-reader/master/images/dialog.png",
+        "links": [
+            "https://github.com/abdnh/anki-zim-reader",
+            "https://ankiweb.net/shared/info/951350249"
+        ]
+    },
+    {
         "name": "ARLPCG",
         "desc": "نسخة معدلة من إضافة [LPCG](https://ankiweb.net/shared/info/2084557901). تشمل التعديلات تعريب الإضافة وميزات إضافية مفيدة لاستيراد المنظومات.",
         "image": "https://raw.githubusercontent.com/abdnh/AnkiLPCG/ar/shot1.png",
@@ -15,15 +51,6 @@
         "links": [
             "https://github.com/abdnh/ARQImporter",
             "https://ankiweb.net/shared/info/1299710950"
-        ]
-    },
-    {
-        "name": "Aglish",
-        "desc": "إضافة أنكي لاستخدام خدمة [YouGlish](https://youglish.com/) داخل البطاقات. YouGlish هو موقع لتعلم لغات يوفر محرك بحث لمقاطع اليوتيوب التي تتوفر لها ملفات ترجمة (captions).",
-        "image": "https://raw.githubusercontent.com/abdnh/aglish/master/images/logo-256w.png",
-        "links": [
-            "https://github.com/abdnh/aglish",
-            "https://ankiweb.net/shared/info/38866997"
         ]
     },
     {
@@ -69,33 +96,6 @@
         "links": [
             "https://github.com/abdnh/anki-incontext",
             "https://ankiweb.net/shared/info/385420176"
-        ]
-    },
-    {
-        "name": "TRDict",
-        "desc": "إضافة أنكي لتسهيل تعبئة البطاقات بتعاريف الكلمات التركية ومعلومات أخرى.",
-        "image": "https://raw.githubusercontent.com/abdnh/anki-trdict/master/shots/dialog.png",
-        "links": [
-            "https://github.com/abdnh/anki-trdict",
-            "https://ankiweb.net/shared/info/351090164"
-        ]
-    },
-    {
-        "name": "Wiktionary",
-        "desc": "إضافة أنكي لاستيراد قواميس ويكاموس (Wiktionary) من موقع [kaikki.org](https://kaikki.org/)",
-        "image": "https://raw.githubusercontent.com/abdnh/anki-wiktionary/master/images/dialog.png",
-        "links": [
-            "https://github.com/abdnh/anki-wiktionary",
-            "https://ankiweb.net/shared/info/2087444887"
-        ]
-    },
-    {
-        "name": "ZIM Reader",
-        "desc": "إضافة أنكي لاستيراد ملفات صيغة [ZIM](https://en.wikipedia.org/wiki/ZIM_(file_format)). هذه الصيغة مستخدمة خصوصا لتخزين محتويات ويكبيديا والمشاريع الشقيقة مثل ويكاموس (Wiktionary). الإضافة مشتقة من إضافة [Wiktionary](#wiktionary)",
-        "image": "https://raw.githubusercontent.com/abdnh/anki-zim-reader/master/images/dialog.png",
-        "links": [
-            "https://github.com/abdnh/anki-zim-reader",
-            "https://ankiweb.net/shared/info/951350249"
         ]
     },
     {
