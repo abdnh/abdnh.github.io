@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.2.0"
+gem 'jekyll', '~> 4.3', '>= 4.3.2'
 # Disabled due to random errors I started getting
 # gem "liquid-c", "~> 4.0"
 
