@@ -8,7 +8,6 @@ group :jekyll_plugins do
   gem "jekyll-toc", "~> 0.17.1"
   gem "jekyll-last-modified-at"
   gem 'jekyll-archives'
-  gem 'jekyll-katex'
   gem 'jekyll-redirect-from', '~> 0.16.0'
   gem "jekyll-include-cache"
 end
@@ -25,5 +24,4 @@ gem "wdm", "~> 0.1.1"
 
 gem "webrick", "~> 1.7"
 
-# for jekyll-katex
-# gem 'therubyracer', '~> 0.12.3'
+gem "therubyrhino", "~> 2.1"

@@ -14,7 +14,6 @@ plugins:
   - jekyll-toc
   - jekyll-last-modified-at
   - jekyll-archives
-  - jekyll-katex
   - jekyll-include-cache
 
 include:

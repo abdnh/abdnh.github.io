@@ -3,7 +3,7 @@
 
 {% capture title %}{{ page.title | strip }}{% endcapture %}
 {% capture title %}{% if title != "" %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
-{% include_cached  header.html title=title math=page.math %}
+{% include_cached  header.html title=title %}
 
 <body>
     {% include_cached sidebar.html %}

@@ -282,10 +282,6 @@ footer {
     }
 }
 
-.katex {
-    direction: ltr;
-}
-
 @media print {
     @page {
         margin: 1cm 0 1cm 0;
