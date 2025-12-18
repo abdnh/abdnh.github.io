@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="alternate" type="application/atom+xml" href="feed.atom" title="Atom Feed">
     <link rel="icon" type="image/png" href="/favicon.png">
-    
 </head>
 
 
@@ -34,7 +33,7 @@
 				<time datetime="2022-01-13" title="تاريخ الإنشاء">2022-01-13</time>
 				
 				|
-				<a href="https://github.com/abdnh/abdnh.github.io/commits/master/_posts/2022-01-13-terminal-video.md"><time datetime="2022-04-18" title="آخر تعديل">2022-04-18</time></a>
+				<a href="https://github.com/abdnh/abdnh.github.io/commits/master/_posts/2022-01-13-terminal-video.md"><time datetime="2022-04-19" title="آخر تعديل">2022-04-19</time></a>
 				
 			</div>
 			<div id="tags">
@@ -93,14 +92,14 @@
 <figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">git clone https://github.com/mpv-player/mpv</code></pre></figure>
 
 <ul>
-  <li>يدعم mpv كل من أداتي بناء meson و waf. سنستخدم هنا meson، لذلك نصبه باستخدام الأمر التالي<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>:</li>
+  <li>يدعم mpv كل من أداتي بناء meson و waf. سنستخدم هنا meson، لذلك نصبه باستخدام الأمر التالي<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>:</li>
 </ul>
 
 <figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">pip3 install --user meson</code></pre></figure>
 
 <p>يبدو أن إصدار meson الموجود في APT لا يعمل مع mpv في وقت كتابة هذه الأسطر لأنه قديم بعض الشيء.</p>
 <ul>
-  <li>ابنِ mpv ونصبه باستخدام الأوامر التالية<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>:</li>
+  <li>ابنِ mpv ونصبه باستخدام الأوامر التالية<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>:</li>
 </ul>
 
 <figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">meson build -D sixel=enabled
@@ -124,7 +123,7 @@ meson install -C build</code></pre></figure>
 <figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">mpv --vo=sixel --profile=sw-fast --really-quiet anime.mp4</code></pre></figure>
 
 <ul>
-  <li>يمكنك أيضا تغيير حجم نافذة الفيديو باستخدم خيارات <code class="language-plaintext highlighter-rouge">--vo-sixel-width=&lt;width&gt;, --vo-sixel-height=&lt;height&gt;</code>‏<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>:</li>
+  <li>يمكنك أيضا تغيير حجم نافذة الفيديو باستخدم خيارات <code class="language-plaintext highlighter-rouge">--vo-sixel-width=&lt;width&gt;, --vo-sixel-height=&lt;height&gt;</code>‏<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup>:</li>
 </ul>
 
 <figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">mpv --vo=sixel --profile=sw-fast --really-quiet anime.mp4 --vo-sixel-width=800 --vo-sixel-height=600</code></pre></figure>
@@ -141,7 +140,7 @@ meson install -C build</code></pre></figure>
 <h2 id="التنصيب-على-ويندوز">التنصيب على ويندوز</h2>
 
 <p>قبل أن تتهمني بالخيانة العظمى وتغلق الصفحة، تريث قليلا. إنما أشرح الطريقة على ويندوز
-فقط لكي أقنع المساكين مستخدمي ويندوز بروعة سطر الأوامر وأجعلهم يتنقلون إلى لينكس.<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup></p>
+فقط لكي أقنع المساكين مستخدمي ويندوز بروعة سطر الأوامر وأجعلهم يتنقلون إلى لينكس.<sup id="fnref:4"><a href="#fn:4" class="footnote" rel="footnote" role="doc-noteref">4</a></sup></p>
 
 <p>خطوات التنصيب على ويندوز كالتالي:</p>
 <ul>
@@ -181,16 +180,16 @@ meson install -C build</code></pre></figure>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1" role="doc-endnote">
+    <li id="fn:1">
       <p><a href="https://mesonbuild.com/Getting-meson.html#installing-meson-with-pip">https://mesonbuild.com/Getting-meson.html#installing-meson-with-pip</a> <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2" role="doc-endnote">
+    <li id="fn:2">
       <p><a href="https://github.com/mpv-player/mpv#meson">https://github.com/mpv-player/mpv#meson</a> <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:3" role="doc-endnote">
+    <li id="fn:3">
       <p>انظر <a href="https://mpv.io/manual/master/#video-output-drivers-sixel">https://mpv.io/manual/master/#video-output-drivers-sixel</a> لقائمة الخيارات المتعلقة بـ Sixel. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:4" role="doc-endnote">
+    <li id="fn:4">
       <p>اعتراف خطير: كاتب هذه المقالة كتب المقالة في ويندوز 10. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
