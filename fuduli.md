@@ -24,7 +24,8 @@ title: فضولي
 	navLinks.style.transform += 'rotate(0.25turn)';
 	const logo = document.getElementById("logo");
 	logo.parentElement.removeAttribute('href');
-	logo.style.transform = 'translateY(200px)';
-    logo.style.transform += 'translateX(-40vw)';
-	logo.style.transform += 'scale(5)';
+	const rect = logo.getBoundingClientRect();
+	const dx = document.documentElement.clientWidth / 2 - (rect.left + rect.width / 2);
+	const dy = document.documentElement.clientHeight / 2 - (rect.top + rect.height / 2);
+	logo.style.transform = `translate(${dx}px, ${dy}px) scale(5)`;
 </script>
