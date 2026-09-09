@@ -3,7 +3,7 @@ layout: default
 title: فضولي
 ---
 
-<meta http-equiv="refresh" content="2;url=/fuduli-clock/">
+<meta http-equiv="refresh" content="2;url=https://www.abdnh.net/fuduli-clock/">
 <style>
 	#nav-links {
 		position: absolute;
